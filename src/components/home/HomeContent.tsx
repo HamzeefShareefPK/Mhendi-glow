@@ -3,7 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Lightbulb, Star, Sparkles } from "lucide-react";
+import {
+  ArrowRight, Lightbulb, Star, Sparkles,
+  Leaf, Droplets, Droplet, Clock, Flame, FlaskConical, Heart,
+  PenLine, Sun, TestTube, BookOpen, Search,
+} from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -51,10 +55,12 @@ function ContentImage({ src, alt, caption, className = "" }: { src: string; alt:
   );
 }
 
-function TipCard({ icon, title, text }: { icon: string; title: string; text: string }) {
+function TipCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
   return (
     <div className="flex gap-4 p-5 bg-white dark:bg-henna-900 rounded-2xl border border-henna-200/60 dark:border-henna-800 shadow-sm hover:shadow-md transition-shadow">
-      <div className="w-10 h-10 rounded-xl bg-henna-100 dark:bg-henna-800 flex items-center justify-center text-xl shrink-0">{icon}</div>
+      <div className="w-10 h-10 rounded-xl bg-henna-100 dark:bg-henna-800 flex items-center justify-center shrink-0">
+        {icon}
+      </div>
       <div>
         <h4 className="font-semibold text-henna-900 dark:text-henna-100 text-sm mb-1">{title}</h4>
         <p className="text-henna-600 dark:text-henna-400 text-sm leading-relaxed">{text}</p>
@@ -436,13 +442,13 @@ export default function HomeContent() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
           {[
-            { icon: "🌿", title: "Use Natural Henna Only",    text: "Always use 100% natural henna powder without chemical additives. Black henna contains PPD which can cause severe allergic reactions and is harmful to skin. Pure henna gives the best natural reddish-brown color and is safe for all skin types including children." },
-            { icon: "🍋", title: "Lemon-Sugar Sealant",       text: "Apply a lemon-sugar mixture on dried mehndi every hour while wearing it. This keeps the paste moist and pushes more dye into the skin for a darker stain. The acid in lemon juice also helps break down the skin's surface slightly, allowing deeper dye penetration." },
-            { icon: "⏰", title: "Keep It On Longer",         text: "The most important tip: keep the mehndi on for 8–12 hours minimum. Overnight application is ideal. Every extra hour of contact time means significantly darker color. Removing mehndi after only 2–3 hours will result in a pale, orange stain that fades quickly." },
-            { icon: "🔥", title: "Warmth Helps Dye Release", text: "After applying mehndi, exposing your hands to gentle heat — like sitting near a heater or warm lamp — speeds up the dye release and intensifies the color. The warmth opens skin pores slightly, allowing the lawsone dye to penetrate more deeply into the keratin layer." },
-            { icon: "💧", title: "Avoid Water for 24 Hours", text: "Do not wash the design area for at least 12–24 hours after removing the paste. Water exposure immediately after removal is the number one cause of light, patchy mehndi. The color needs time to fully oxidize in air before it can withstand water contact." },
-            { icon: "🫒", title: "Oil After Removal",         text: "After scraping off the paste, immediately rub mustard oil or clove oil into the design. The compound eugenol in clove oil reacts with henna to produce a significantly darker stain. Warming the oil slightly before applying enhances this effect." },
-            { icon: "🧴", title: "Moisturize Daily",         text: "Apply coconut oil or body oil to your mehndi design every day. Well-moisturized skin retains mehndi color for up to 3 weeks, while dry skin causes rapid fading. Avoid exfoliating or scrubbing the design area while you want to preserve the mehndi." },
+            { icon: <Leaf size={18} className="text-green-600" />,       title: "Use Natural Henna Only",    text: "Always use 100% natural henna powder without chemical additives. Black henna contains PPD which can cause severe allergic reactions and is harmful to skin. Pure henna gives the best natural reddish-brown color and is safe for all skin types including children." },
+            { icon: <Sun size={18} className="text-yellow-500" />,        title: "Lemon-Sugar Sealant",       text: "Apply a lemon-sugar mixture on dried mehndi every hour while wearing it. This keeps the paste moist and pushes more dye into the skin for a darker stain. The acid in lemon juice also helps break down the skin's surface slightly, allowing deeper dye penetration." },
+            { icon: <Clock size={18} className="text-orange-500" />,      title: "Keep It On Longer",         text: "The most important tip: keep the mehndi on for 8–12 hours minimum. Overnight application is ideal. Every extra hour of contact time means significantly darker color. Removing mehndi after only 2–3 hours will result in a pale, orange stain that fades quickly." },
+            { icon: <Flame size={18} className="text-red-500" />,         title: "Warmth Helps Dye Release", text: "After applying mehndi, exposing your hands to gentle heat — like sitting near a heater or warm lamp — speeds up the dye release and intensifies the color. The warmth opens skin pores slightly, allowing the lawsone dye to penetrate more deeply into the keratin layer." },
+            { icon: <Droplet size={18} className="text-blue-500" />,      title: "Avoid Water for 24 Hours", text: "Do not wash the design area for at least 12–24 hours after removing the paste. Water exposure immediately after removal is the number one cause of light, patchy mehndi. The color needs time to fully oxidize in air before it can withstand water contact." },
+            { icon: <FlaskConical size={18} className="text-amber-600" />, title: "Oil After Removal",         text: "After scraping off the paste, immediately rub mustard oil or clove oil into the design. The compound eugenol in clove oil reacts with henna to produce a significantly darker stain. Warming the oil slightly before applying enhances this effect." },
+            { icon: <Heart size={18} className="text-pink-500" />,        title: "Moisturize Daily",         text: "Apply coconut oil or body oil to your mehndi design every day. Well-moisturized skin retains mehndi color for up to 3 weeks, while dry skin causes rapid fading. Avoid exfoliating or scrubbing the design area while you want to preserve the mehndi." },
           ].map((tip) => (
             <TipCard key={tip.title} icon={tip.icon} title={tip.title} text={tip.text} />
           ))}
@@ -676,32 +682,32 @@ export default function HomeContent() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {[
             {
-              icon: "🪄",
+              icon: <PenLine size={18} className="text-purple-500" />,
               title: "Mehndi Cones",
               text: "Ready-made plastic mehndi cones are available at every mehndi supply shop and online. For beginners, buy a pack of 12–24 pre-filled natural henna cones. For advanced users, buy empty cones and fill them with fresh homemade paste. The quality of the cone tip directly affects line precision — invest in quality cones.",
             },
             {
-              icon: "🌿",
+              icon: <Leaf size={18} className="text-green-600" />,
               title: "Natural Henna Powder",
               text: "Always choose body-quality henna powder with a bright green color and fresh earthy smell. Rajasthani henna from Sojat (India) is considered the finest quality globally. Store henna powder in an airtight container in a cool, dry place. Old or poorly stored henna gives weak, pale stains regardless of technique.",
             },
             {
-              icon: "🍋",
+              icon: <Sun size={18} className="text-yellow-500" />,
               title: "Lemon Juice & Sugar",
               text: "Fresh lemon juice is essential both in the henna paste and as a sealant applied during wear. Sugar adds stickiness that helps the paste adhere to skin and prevents early cracking. Mix equal parts lemon juice and sugar, heat gently until sugar dissolves, and apply with a cotton swab while wearing mehndi.",
             },
             {
-              icon: "🫙",
+              icon: <TestTube size={18} className="text-amber-600" />,
               title: "Essential Oils",
               text: "Eucalyptus oil, clove oil, cajeput oil, and lavender oil are all used in mehndi paste to boost dye release. A few drops of these oils in the paste significantly deepen the final color. Eucalyptus and tea tree oils also help preserve the paste and prevent bacterial growth during the resting period.",
             },
             {
-              icon: "🔍",
+              icon: <BookOpen size={18} className="text-blue-500" />,
               title: "Reference Designs",
-              text: "Good design references are essential for quality mehndi. MehndiGlow offers 1000+ high-resolution designs across 12 categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
+              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 1000+ high-resolution designs across 12 categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
             },
             {
-              icon: "🧴",
+              icon: <Droplets size={18} className="text-teal-500" />,
               title: "Aftercare Oils",
               text: "Mustard oil, coconut oil, olive oil, and clove oil are all used for mehndi aftercare. Apply immediately after removing the dried paste and continue applying daily to maintain color. Avoid petroleum-based products and heavy chemical creams on mehndi as these can strip the color faster.",
             },
