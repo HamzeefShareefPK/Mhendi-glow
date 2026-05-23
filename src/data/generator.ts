@@ -203,6 +203,9 @@ const TAGS: Record<string, string[]> = {
   "front-hand-mehndi":["front hand","full","floral","simple"],
 };
 
+// ── All category slugs ───────────────────────────────────────────────────────
+export const ALL_CATEGORY_SLUGS = Object.keys(CATEGORY_START);
+
 // ── Main generator ────────────────────────────────────────────────────────────
 // Strategy: cycle through ALL 33 photos before repeating any.
 // On each new cycle, apply a different URL variant for genuinely different framing.
@@ -249,4 +252,14 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
   }
 
   return designs;
+}
+
+// ── Get ALL designs across every category (for static params + page lookup) ──
+// count = how many designs to generate per category (default 20)
+export function getAllDesigns(count = 20): Design[] {
+  const all: Design[] = [];
+  for (const cat of ALL_CATEGORY_SLUGS) {
+    all.push(...generateCategoryDesigns(cat, count));
+  }
+  return all;
 }

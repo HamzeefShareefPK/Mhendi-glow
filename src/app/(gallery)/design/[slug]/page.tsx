@@ -9,22 +9,35 @@ import Breadcrumb      from "@/components/seo/Breadcrumb";
 import JsonLd          from "@/components/seo/JsonLd";
 import { imageObjectSchema } from "@/lib/seo";
 import { designs } from "@/data";
+import { getAllDesigns } from "@/data/generator";
+
+// Merge hardcoded designs with all generated designs (deduplicated by slug)
+function getMergedDesigns() {
+  const generated = getAllDesigns(20); // 20 per category × 12 categories = 240
+  const existingSlugs = new Set(designs.map((d) => d.slug));
+  const newDesigns = generated.filter((d) => !existingSlugs.has(d.slug));
+  return [...designs, ...newDesigns];
+}
+
+// Cache at module level so it's computed once per server start
+const allDesigns = getMergedDesigns();
 
 interface Props {
   params: { slug: string };
 }
 
 export async function generateStaticParams() {
-  return designs.map((d) => ({ slug: d.slug }));
+  return allDesigns.map((d) => ({ slug: d.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const d = designs.find((x) => x.slug === params.slug);
+  const d = allDesigns.find((x) => x.slug === params.slug);
   if (!d) return {};
+  const catDisplay = d.category.replace(/-mehndi$/, "").replace(/-/g, " ");
   return {
-    title: `${d.title} — Free Download | MehndiGlow`,
-    description: `${d.description} Download this beautiful ${d.category.replace("-", " ")} design for free. Part of our ${d.category.replace("-", " ")} collection 2024.`,
-    keywords: [...d.tags, d.category.replace("-", " "), "mehndi design", "free download"],
+    title: `${d.title} — Free Download | MehndiDesignPics`,
+    description: `${d.description} Download this beautiful ${catDisplay} mehndi design for free. Part of our ${catDisplay} mehndi collection 2026.`,
+    keywords: [...d.tags, d.category.replace(/-/g, " "), "mehndi design", "free download", "henna"],
     alternates: { canonical: `https://mehndidesignpics.com/design/${d.slug}` },
     openGraph: {
       title: d.title,
@@ -36,16 +49,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function DesignPage({ params }: Props) {
-  const design = designs.find((d) => d.slug === params.slug);
+  const design = allDesigns.find((d) => d.slug === params.slug);
   if (!design) notFound();
 
   // Related: same category, different design
-  const related = designs
+  const related = allDesigns
     .filter((d) => d.category === design.category && d.id !== design.id)
     .slice(0, 4);
 
   // More from same tags
-  const moreLike = designs
+  const moreLike = allDesigns
     .filter((d) => d.id !== design.id && d.tags.some((t) => design.tags.includes(t)))
     .slice(0, 4);
 
