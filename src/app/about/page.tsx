@@ -3,6 +3,25 @@
 export const metadata: Metadata = {
   title: "About MehndiGlow — Your Mehndi Inspiration Hub",
   description: "Learn about MehndiGlow — your go-to destination for beautiful mehndi designs, tutorials and trends.",
+  keywords: [
+    "about mehndidesignpics","mehndi design website","henna design website",
+    "mehndi inspiration site","mehndi design platform","free mehndi designs",
+    "mehndi design collection","who made mehndidesignpics","mehndi website 2026",
+    "best mehndi website","top mehndi designs","mehndi design hub",
+    "henna design hub","mehndi art website","mehndi photo gallery",
+    "bridal mehndi website","arabic mehndi site","mehndi community",
+    "mehndi design resource","mehndi design source","mehndi art platform",
+    "mehndi design blog","about henna website","free henna designs online",
+    "mehndi design download free","mehndi design inspiration","mehndi designers",
+    "mehndi enthusiasts","henna enthusiasts","mehndi trends 2026",
+    "best henna designs 2026","beautiful mehndi designs","mehndi wallpaper",
+    "mehndi design images free","mehndi design pictures","mehndi photo download",
+    "mehndi design info","mehndi history","henna history",
+    "mehndi design guide","mehndi artist resources","professional mehndi",
+    "mehndi for wedding","mehndi for eid","mehndi for bridal",
+    "mehndi for girls","mehndi for women","mehndi for kids",
+    "mehndi design portal","mehndidesignpics about",
+  ],
 };
 
 export default function AboutPage() {

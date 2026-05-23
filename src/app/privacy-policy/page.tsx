@@ -3,6 +3,33 @@
 export const metadata: Metadata = {
   title: "Privacy Policy — MehndiGlow",
   description: "Read MehndiGlow privacy policy to understand how we collect and use your data.",
+  keywords: [
+    "mehndidesignpics privacy policy","mehndi website privacy",
+    "henna website privacy policy","user data privacy mehndi",
+    "mehndi site privacy","data protection mehndi website",
+    "mehndidesignpics data policy","privacy mehndi design site",
+    "mehndi website terms","user privacy henna site",
+    "mehndi design privacy","henna design website privacy",
+    "online privacy mehndi","mehndi site data use",
+    "mehndi website cookies","cookie policy mehndi",
+    "mehndi design platform privacy","henna art site privacy",
+    "mehndi gallery privacy","mehndidesignpics legal",
+    "mehndi site legal info","henna website legal",
+    "mehndi design user rights","data rights mehndi site",
+    "mehndi website gdpr","mehndi privacy 2026",
+    "henna design website gdpr","mehndi site analytics",
+    "mehndi website ad policy","mehndi platform privacy",
+    "mehndi photos privacy","mehndi images policy",
+    "mehndi user info policy","mehndi contact privacy",
+    "henna site contact privacy","mehndi design security",
+    "mehndi website security","mehndi safe browsing",
+    "mehndi website trust","mehndi site transparency",
+    "henna site transparency","mehndi privacy rights",
+    "mehndi data security","henna data policy",
+    "mehndi third party privacy","mehndi affiliate privacy",
+    "mehndi website policy 2026","mehndi legal notice",
+    "henna legal notice","mehndi copyright policy",
+  ],
 };
 
 export default function PrivacyPolicyPage() {

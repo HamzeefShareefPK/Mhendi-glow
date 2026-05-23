@@ -6,6 +6,24 @@ import { categories } from "@/data";
 export const metadata: Metadata = {
   title: "All Mehndi Design Categories — MehndiGlow",
   description: "Browse all mehndi categories — bridal, arabic, pakistani, eid, finger, feet, minimal and more.",
+  keywords: [
+    "mehndi design categories","bridal mehndi","arabic mehndi",
+    "pakistani mehndi","eid mehndi","finger mehndi","feet mehndi",
+    "minimal mehndi","kids mehndi","back hand mehndi","indian mehndi",
+    "stylish mehndi","front hand mehndi","all mehndi designs",
+    "mehndi types","henna categories","mehndi collection",
+    "mehndi designs list","types of mehndi","mehndi styles",
+    "bridal henna category","arabic henna styles","traditional mehndi types",
+    "modern mehndi styles","mehndi design gallery","mehndi photo gallery",
+    "free mehndi designs","mehndi design images","mehndi wallpapers",
+    "mehndi design download","henna design gallery","mehndi art styles",
+    "henna art types","mehndi patterns collection","best mehndi categories",
+    "mehndi 2026 categories","new mehndi styles","mehndi design finder",
+    "mehndi design search","mehndi for wedding","mehndi for eid",
+    "mehndi for kids","simple mehndi types","heavy mehndi styles",
+    "light mehndi designs","cute mehndi designs","mehndi design variety",
+    "mehndi for beginners","easy henna styles","mehndidesignpics categories",
+  ],
 };
 
 export default function CategoriesPage() {

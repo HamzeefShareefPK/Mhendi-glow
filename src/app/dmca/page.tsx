@@ -3,6 +3,32 @@
 export const metadata: Metadata = {
   title: "DMCA Policy — MehndiGlow",
   description: "MehndiGlow DMCA copyright policy and image removal request process.",
+  keywords: [
+    "mehndidesignpics dmca","mehndi website dmca","henna website dmca",
+    "mehndi design copyright","mehndi image copyright removal",
+    "mehndi dmca policy","henna dmca notice","mehndi copyright notice",
+    "mehndi photo removal request","henna photo removal",
+    "mehndi design removal","mehndi copyright claim",
+    "mehndi intellectual property","henna intellectual property",
+    "mehndi copyright infringement","henna copyright infringement",
+    "mehndi dmca takedown","henna dmca takedown",
+    "mehndi image takedown","mehndi photo copyright",
+    "mehndi content removal","henna content removal",
+    "mehndi copyright 2026","mehndi design ownership",
+    "mehndi photo ownership","henna photo ownership",
+    "report mehndi copyright","report henna copyright",
+    "mehndi copyright contact","mehndi dmca contact",
+    "mehndi site copyright","henna site copyright",
+    "mehndi design attribution","henna design attribution",
+    "mehndi unsplash copyright","mehndi stock photo rights",
+    "henna stock photo rights","mehndi photography rights",
+    "mehndi photographer rights","henna photographer rights",
+    "mehndi image credit","henna image credit",
+    "mehndi website copyright policy","mehndi legal copyright",
+    "henna legal copyright","mehndi art copyright",
+    "mehndi design rights","henna design rights",
+    "mehndidesignpics copyright","mehndi dmca 2026",
+  ],
 };
 
 export default function DMCAPage() {

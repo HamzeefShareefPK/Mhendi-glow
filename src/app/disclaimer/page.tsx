@@ -2,6 +2,34 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Disclaimer — MehndiGlow",
+  description: "MehndiDesignPics disclaimer — important information about mehndi design content, copyright, and accuracy of information on our website.",
+  keywords: [
+    "mehndidesignpics disclaimer","mehndi website disclaimer",
+    "henna website disclaimer","mehndi design site disclaimer",
+    "mehndi content disclaimer","mehndi images disclaimer",
+    "mehndi design accuracy","henna design accuracy",
+    "mehndi website liability","mehndi design liability",
+    "mehndi information accuracy","henna information disclaimer",
+    "mehndi health disclaimer","henna health disclaimer",
+    "mehndi allergy disclaimer","henna allergy warning",
+    "mehndi skin disclaimer","henna skin safety",
+    "mehndi design copyright disclaimer","mehndi image copyright",
+    "mehndi free images disclaimer","henna free images",
+    "mehndi unsplash photos","mehndi stock photos disclaimer",
+    "mehndi website content","henna website content",
+    "mehndi professional advice disclaimer","mehndi medical disclaimer",
+    "henna medical advice","mehndi not medical advice",
+    "mehndi design results disclaimer","henna stain disclaimer",
+    "mehndi color results","mehndi quality disclaimer",
+    "mehndi advice disclaimer","henna care disclaimer",
+    "mehndi external links","henna external links disclaimer",
+    "mehndi third party content","mehndi affiliate disclaimer",
+    "mehndi design site accuracy","henna site accuracy",
+    "mehndi no guarantee","henna no guarantee",
+    "mehndi website no warranty","mehndi limitation liability",
+    "henna limitation liability","mehndi design no warranty",
+    "mehndidesignpics legal disclaimer","mehndi disclaimer 2026",
+  ],
 };
 
 export default function DisclaimerPage() {
