@@ -74,6 +74,11 @@ const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
     { question: "What mehndi designs are best for Eid?", answer: "For Eid, simple to medium-complexity Arabic and Pakistani designs are most popular. Finger mehndi, half-hand designs, and minimal floral patterns are trending. The key is designs that look beautiful but don't take too long to apply." },
     { question: "How do I do mehndi quickly for Eid?", answer: "For quick Eid mehndi, stick to finger mehndi, simple arabic flowers on the back hand, or ready-made mehndi stencils. A simple 5-minute mehndi design can look stunning when done neatly." },
   ],
+  "mehndi-tattoo": [
+    { question: "What is mehndi tattoo?", answer: "Mehndi tattoo (also called henna tattoo) is a temporary body art made from natural henna paste. It stains the skin dark brown or black and lasts 1–3 weeks. Unlike permanent tattoos, mehndi tattoos are completely safe, painless, and fade naturally over time." },
+    { question: "How long does a mehndi tattoo last?", answer: "A mehndi tattoo typically lasts 1 to 3 weeks depending on skin type, placement, and aftercare. Areas with thicker skin like palms and soles last longest. Keeping the design moisturized with oil daily extends its life significantly." },
+    { question: "Is mehndi tattoo safe for skin?", answer: "Yes — natural henna mehndi tattoos are completely safe for all skin types including children. Always use 100% natural henna. Avoid black henna which contains PPD (paraphenylenediamine), a chemical dye that can cause severe allergic reactions and skin damage." },
+  ],
 };
 
 export default function CategoryPage({ params }: Props) {

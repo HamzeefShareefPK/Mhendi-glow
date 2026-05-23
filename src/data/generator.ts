@@ -74,6 +74,7 @@ const CATEGORY_START: Record<string, number> = {
   "indian-mehndi":    20,
   "stylish-mehndi":   12,
   "front-hand-mehndi":16,
+  "mehndi-tattoo":     4,
 };
 
 // ── Titles per category (20 unique titles) ───────────────────────────────────
@@ -186,6 +187,15 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Front Hand Lotus","Front Hand Geometric","Front Hand Rose",
     "Front Hand Jaal Design","Front Hand Party",
   ],
+  "mehndi-tattoo": [
+    "Black Mehndi Tattoo","Temporary Henna Tattoo","Bold Mehndi Tattoo",
+    "Finger Tattoo Mehndi","Arabic Tattoo Mehndi","Dark Henna Tattoo",
+    "Minimalist Mehndi Tattoo","Floral Henna Tattoo","Geometric Mehndi Tattoo",
+    "Wrist Mehndi Tattoo","Hand Mehndi Tattoo","Back Hand Tattoo Mehndi",
+    "Tribal Henna Tattoo","Modern Mehndi Tattoo","Sleeve Mehndi Tattoo",
+    "Ankle Mehndi Tattoo","Shoulder Mehndi Tattoo","Neck Mehndi Tattoo",
+    "Mandala Mehndi Tattoo","Dotwork Henna Tattoo",
+  ],
 };
 
 const TAGS: Record<string, string[]> = {
@@ -201,6 +211,7 @@ const TAGS: Record<string, string[]> = {
   "indian-mehndi":    ["indian","traditional","bridal","paisley"],
   "stylish-mehndi":   ["stylish","modern","trendy","party"],
   "front-hand-mehndi":["front hand","full","floral","simple"],
+  "mehndi-tattoo":    ["tattoo","black","bold","temporary","henna tattoo"],
 };
 
 // ── All category slugs ───────────────────────────────────────────────────────

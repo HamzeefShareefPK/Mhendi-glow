@@ -95,6 +95,10 @@ const KEYWORDS = [
   { label: "Mehndi Design for Girls",     href: "/categories",         color: "bg-henna-100 text-henna-700 border-henna-200 hover:bg-henna-200",   group: "General" },
   { label: "Mehndi Ka Design",            href: "/categories",         color: "bg-henna-100 text-henna-700 border-henna-200 hover:bg-henna-200",   group: "General" },
   { label: "Mehndi Design for Bride",     href: "/bridal-mehndi",      color: "bg-rose-100 text-rose-700 border-rose-200 hover:bg-rose-200",      group: "Bridal" },
+  // Tattoo
+  { label: "Mehndi Tattoo Designs",       href: "/mehndi-tattoo",      color: "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200",         group: "Tattoo" },
+  { label: "Black Mehndi Tattoo",         href: "/mehndi-tattoo",      color: "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200",         group: "Tattoo" },
+  { label: "Temporary Henna Tattoo",      href: "/mehndi-tattoo",      color: "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200",         group: "Tattoo" },
   // AI
   { label: "AI Mehndi Generator",         href: "/ai-generator",       color: "bg-violet-100 text-violet-700 border-violet-200 hover:bg-violet-200", group: "Tools" },
   { label: "Mehndi Design Generator",     href: "/ai-generator",       color: "bg-violet-100 text-violet-700 border-violet-200 hover:bg-violet-200", group: "Tools" },
@@ -115,6 +119,7 @@ const GROUP_BADGE: Record<string, string> = {
   Kids:        "bg-lime-600",
   Stylish:     "bg-fuchsia-500",
   General:     "bg-henna-500",
+  Tattoo:      "bg-gray-600",
   Tools:       "bg-violet-500",
 };
 
