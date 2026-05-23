@@ -19,6 +19,8 @@ const breakpoints = {
   1280:    4,
   1024:    3,
   640:     2,
+  480:     2,
+  0:       1,
 };
 
 export default function MasonryGallery({ designs, title, showFilter = false }: Props) {

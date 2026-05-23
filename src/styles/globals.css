@@ -113,15 +113,30 @@ html.dark {
 
   .masonry-grid {
     display: flex;
-    margin-left: -14px;
+    margin-left: -8px;
     width: auto;
   }
   .masonry-col {
-    padding-left: 14px;
+    padding-left: 8px;
     background-clip: padding-box;
   }
   .masonry-col > div {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
+  }
+  @media (min-width: 480px) {
+    .masonry-grid { margin-left: -10px; }
+    .masonry-col  { padding-left: 10px; }
+    .masonry-col > div { margin-bottom: 10px; }
+  }
+  @media (min-width: 640px) {
+    .masonry-grid { margin-left: -12px; }
+    .masonry-col  { padding-left: 12px; }
+    .masonry-col > div { margin-bottom: 12px; }
+  }
+  @media (min-width: 1024px) {
+    .masonry-grid { margin-left: -14px; }
+    .masonry-col  { padding-left: 14px; }
+    .masonry-col > div { margin-bottom: 14px; }
   }
 
   /* ══ DESIGN CARD ══════════════════════ */
@@ -152,7 +167,7 @@ html.dark {
     transition: all var(--transition);
   }
   .overlay-btn {
-    @apply w-9 h-9 rounded-full flex items-center justify-center text-white text-sm;
+    @apply w-10 h-10 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white text-sm;
     background: rgba(255,255,255,0.18);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);

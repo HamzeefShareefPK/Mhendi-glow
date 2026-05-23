@@ -32,7 +32,7 @@ export default function CategoryGrid() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-3 md:gap-4 lg:gap-4">
         {categories.map((cat) => (
           <Link key={cat.slug} href={`/${cat.slug}`} className="group block">
             <div className="relative aspect-square rounded-2xl overflow-hidden border border-henna-200/50 dark:border-henna-800/50 shadow-sm group-hover:shadow-lg group-hover:shadow-henna-400/12 transition-all duration-300 group-hover:-translate-y-1.5 bg-henna-100 dark:bg-henna-800">

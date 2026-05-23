@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { Instagram, Mail, Heart, ArrowRight } from "lucide-react";
@@ -17,7 +17,7 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-henna-950 dark:bg-[#0E0704] text-henna-300 mt-16 sm:mt-24 border-t border-henna-900/60">
+    <footer className="bg-henna-950 dark:bg-[#0E0704] text-henna-300 mt-12 sm:mt-16 lg:mt-24 border-t border-henna-900/60">
 
       {/* Top accent line */}
       <div className="h-px w-full" style={{ background: "linear-gradient(90deg, transparent, #C8946A40, #C8946A60, #C8946A40, transparent)" }} />
@@ -25,26 +25,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Main grid */}
-        <div className="pt-14 pb-10 grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-14">
+        <div className="pt-10 sm:pt-14 pb-8 sm:pb-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-14">
 
           {/* Brand column */}
-          <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center text-base shadow-lg shadow-henna-400/20 transition-transform duration-300 group-hover:scale-105"
+          <div className="col-span-2 sm:col-span-2 md:col-span-1">
+            <Link href="/" className="inline-flex items-center gap-3 mb-4 sm:mb-5 group">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-base shadow-lg shadow-henna-400/20 transition-transform duration-300 group-hover:scale-105 shrink-0"
                 style={{ background: "linear-gradient(135deg, #C8946A, #7A4020)" }}>
                 🌸
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-serif text-xl font-semibold text-white group-hover:text-henna-400 transition-colors tracking-tight">
-                  MehndiGlow
+                <span className="font-serif text-lg sm:text-xl font-semibold text-white group-hover:text-henna-400 transition-colors tracking-tight">
+                  MehndiDesignPics
                 </span>
                 <span className="text-[9px] font-semibold tracking-[0.12em] uppercase text-henna-600 mt-0.5">
-                  Design Gallery
+                  Art of Henna & Beauty
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-henna-500 mb-6 leading-relaxed max-w-[220px]">
+            <p className="text-xs sm:text-sm text-henna-500 mb-4 sm:mb-6 leading-relaxed max-w-[240px]">
               Your daily dose of mehndi inspiration. 1000+ beautiful designs for every occasion — completely free.
             </p>
 
@@ -60,8 +60,8 @@ export default function Footer() {
                     </svg>
                   ),
                 },
-                { href: "https://instagram.com",           label: "Instagram", icon: <Instagram size={13} /> },
-                { href: "mailto:hello@mehndidesignpics.com",     label: "Email",     icon: <Mail size={13} /> },
+                { href: "https://instagram.com",                   label: "Instagram", icon: <Instagram size={13} /> },
+                { href: "mailto:hello@mehndidesignpics.com",        label: "Email",     icon: <Mail size={13} /> },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -69,7 +69,7 @@ export default function Footer() {
                   target={s.href.startsWith("mailto") ? undefined : "_blank"}
                   rel={s.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full border border-henna-800 flex items-center justify-center text-henna-500 hover:text-white hover:border-henna-600 hover:bg-henna-800/80 transition-all duration-200 hover:-translate-y-0.5"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-henna-800 flex items-center justify-center text-henna-500 hover:text-white hover:border-henna-600 hover:bg-henna-800/80 transition-all duration-200 hover:-translate-y-0.5"
                 >
                   {s.icon}
                 </a>
@@ -79,15 +79,15 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.14em] text-henna-600 mb-5">
+            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.14em] text-henna-600 mb-4 sm:mb-5">
               Design Categories
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2 sm:space-y-2.5">
               {categories.slice(0, 8).map((c) => (
                 <li key={c.slug}>
                   <Link
                     href={`/${c.slug}`}
-                    className="text-sm text-henna-500 hover:text-henna-300 transition-colors leading-none flex items-center gap-1 group"
+                    className="text-xs sm:text-sm text-henna-500 hover:text-henna-300 transition-colors leading-none flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-0.5 transition-transform duration-200">{c.name} Mehndi</span>
                   </Link>
@@ -98,15 +98,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.14em] text-henna-600 mb-5">
+            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.14em] text-henna-600 mb-4 sm:mb-5">
               Quick Links
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2 sm:space-y-2.5">
               {QUICK_LINKS.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-henna-500 hover:text-henna-300 transition-colors flex items-center gap-1 group"
+                    className="text-xs sm:text-sm text-henna-500 hover:text-henna-300 transition-colors flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-0.5 transition-transform duration-200">{l.label}</span>
                   </Link>
@@ -116,38 +116,38 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.14em] text-henna-600 mb-5">
+          <div className="col-span-2 sm:col-span-1">
+            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.14em] text-henna-600 mb-4 sm:mb-5">
               Stay Inspired
             </h3>
-            <p className="text-sm text-henna-500/80 mb-4 leading-relaxed">
+            <p className="text-xs sm:text-sm text-henna-500/80 mb-3 sm:mb-4 leading-relaxed">
               Weekly mehndi inspiration — free in your inbox.
             </p>
-            <form className="space-y-2.5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-2 sm:space-y-2.5" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="w-full px-4 py-2.5 rounded-xl text-sm bg-henna-900 border border-henna-800/80 text-henna-200 placeholder:text-henna-700 focus:outline-none focus:border-henna-600/80 focus:bg-henna-900/80 transition-all"
+                className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-henna-900 border border-henna-800/80 text-henna-200 placeholder:text-henna-700 focus:outline-none focus:border-henna-600/80 focus:bg-henna-900/80 transition-all"
               />
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
+                className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 hover:opacity-90 hover:-translate-y-px"
                 style={{ background: "linear-gradient(135deg, #C8946A, #9A6838)", color: "#FDF8F2" }}
               >
                 Subscribe Free
                 <ArrowRight size={13} />
               </button>
             </form>
-            <p className="text-[10px] text-henna-700 mt-2.5">No spam. Unsubscribe anytime.</p>
+            <p className="text-[9px] sm:text-[10px] text-henna-700 mt-2.5">No spam. Unsubscribe anytime.</p>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="py-5 border-t border-henna-900/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-henna-700">
-            © {new Date().getFullYear()} MehndiGlow. All Rights Reserved.
+        <div className="py-4 sm:py-5 border-t border-henna-900/80 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 text-center sm:text-left">
+          <p className="text-[10px] sm:text-xs text-henna-700">
+            © {new Date().getFullYear()} MehndiDesignPics. All Rights Reserved.
           </p>
-          <p className="text-xs text-henna-800 flex items-center gap-1.5">
+          <p className="text-[10px] sm:text-xs text-henna-800 flex items-center gap-1.5">
             Made with <Heart size={9} className="text-henna-700 fill-henna-700" /> for mehndi lovers worldwide
           </p>
         </div>
