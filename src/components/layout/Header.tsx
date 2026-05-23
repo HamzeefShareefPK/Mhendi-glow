@@ -56,17 +56,18 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-[70px] sm:h-[84px] md:h-[92px]">
+          <div className="flex items-center justify-between h-[72px] sm:h-[88px] md:h-[96px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center group shrink-0" onClick={() => setMenuOpen(false)}>
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="MehndiDesignPics — Art of Henna & Beauty"
-                width={320}
-                height={96}
-                className="h-[58px] sm:h-[72px] md:h-[80px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
+                width={480}
+                height={100}
+                className="h-[58px] sm:h-[74px] md:h-[86px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
                 priority
+                unoptimized
               />
             </Link>
 
@@ -245,11 +246,12 @@ export default function Header() {
         <div className="flex items-center justify-between px-5 h-16 border-b border-henna-100 dark:border-henna-800/80">
           <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="MehndiDesignPics — Art of Henna & Beauty"
-              width={220}
-              height={66}
-              className="h-[56px] w-auto object-contain"
+              width={380}
+              height={80}
+              className="h-[58px] w-auto object-contain"
+              unoptimized
             />
           </Link>
           <button
