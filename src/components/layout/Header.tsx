@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Search, Sun, Moon, Menu, X, Sparkles, ChevronDown, Instagram } from "lucide-react";
 import { categories } from "@/data";
@@ -58,19 +59,15 @@ export default function Header() {
           <div className="flex items-center justify-between h-[62px] sm:h-[70px]">
 
             {/* ── Logo ── */}
-            <Link href="/" className="flex items-center gap-2.5 group shrink-0" onClick={() => setMenuOpen(false)}>
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-base shadow-md shadow-henna-400/20 transition-transform duration-300 group-hover:scale-110"
-                style={{ background: "linear-gradient(135deg, #C8946A 0%, #7A4020 100%)" }}>
-                🌸
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-[1.15rem] font-semibold text-henna-900 dark:text-henna-100 group-hover:text-henna-500 dark:group-hover:text-henna-400 transition-colors tracking-tight">
-                  MehndiGlow
-                </span>
-                <span className="text-[9px] font-semibold tracking-[0.12em] uppercase text-henna-400/70 hidden sm:block">
-                  Design Gallery
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group shrink-0" onClick={() => setMenuOpen(false)}>
+              <Image
+                src="/images/logo.png"
+                alt="MehndiDesignPics — Art of Henna & Beauty"
+                width={200}
+                height={60}
+                className="h-[52px] sm:h-[60px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
+                priority
+              />
             </Link>
 
             {/* ── Desktop Nav ── */}
@@ -246,10 +243,14 @@ export default function Header() {
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between px-5 h-16 border-b border-henna-100 dark:border-henna-800/80">
-          <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-full flex items-center justify-center text-sm"
-              style={{ background: "linear-gradient(135deg, #C8946A, #7A4020)" }}>🌸</div>
-            <span className="font-serif text-[1.05rem] font-semibold text-henna-900 dark:text-henna-100">MehndiGlow</span>
+          <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="MehndiDesignPics — Art of Henna & Beauty"
+              width={160}
+              height={48}
+              className="h-[44px] w-auto object-contain"
+            />
           </Link>
           <button
             onClick={() => setMenuOpen(false)}
