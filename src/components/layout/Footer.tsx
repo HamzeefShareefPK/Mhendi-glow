@@ -7,6 +7,7 @@ import { categories } from "@/data";
 const QUICK_LINKS = [
   { href: "/blog",           label: "Blog" },
   { href: "/ai-generator",   label: "AI Generator" },
+  { href: "/keywords",       label: "Mehndi Keywords" },
   { href: "/about",          label: "About Us" },
   { href: "/contact",        label: "Contact" },
   { href: "/privacy-policy", label: "Privacy Policy" },
