@@ -56,16 +56,16 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-[62px] sm:h-[70px]">
+          <div className="flex items-center justify-between h-[70px] sm:h-[84px] md:h-[92px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center group shrink-0" onClick={() => setMenuOpen(false)}>
               <Image
                 src="/images/logo.png"
                 alt="MehndiDesignPics — Art of Henna & Beauty"
-                width={200}
-                height={60}
-                className="h-[52px] sm:h-[60px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
+                width={320}
+                height={96}
+                className="h-[58px] sm:h-[72px] md:h-[80px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
                 priority
               />
             </Link>
@@ -247,9 +247,9 @@ export default function Header() {
             <Image
               src="/images/logo.png"
               alt="MehndiDesignPics — Art of Henna & Beauty"
-              width={160}
-              height={48}
-              className="h-[44px] w-auto object-contain"
+              width={220}
+              height={66}
+              className="h-[56px] w-auto object-contain"
             />
           </Link>
           <button
