@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { designs, categories } from "@/data";
 
 export async function GET() {
-  const base = "https://mehndiglow.com";
+  const base = "https://mehndidesignpics.com";
 
   const designUrls = designs.map((d) => `
   <url>

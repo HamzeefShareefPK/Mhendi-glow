@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import HeroSection     from "@/components/home/HeroSection";
 import SearchBar       from "@/components/home/SearchBar";
 import TrendingSection from "@/components/home/TrendingSection";
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     "eid mehndi designs", "pakistani mehndi", "simple mehndi designs",
     "mehndi designs for hands", "henna designs", "new mehndi designs",
   ],
-  alternates: { canonical: "https://mehndiglow.com" },
+  alternates: { canonical: "https://mehndidesignpics.com" },
   openGraph: {
     title: "MehndiGlow — 1000+ Beautiful Mehndi Designs",
     description: "Discover bridal, arabic, eid, minimal mehndi designs. Free download.",
-    images: [{ url: "https://mehndiglow.com/images/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "https://mehndidesignpics.com/images/og-image.jpg", width: 1200, height: 630 }],
     type: "website",
   },
 };

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
-const BASE_URL = "https://mehndiglow.com";
+const BASE_URL = "https://mehndidesignpics.com";
 const SITE_NAME = "MehndiGlow";
 const DEFAULT_IMAGE = `${BASE_URL}/images/og-image.jpg`;
 
@@ -112,7 +112,7 @@ export function organizationSchema() {
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@mehndiglow.com",
+      email: "hello@mehndidesignpics.com",
       contactType: "customer support",
     },
   };

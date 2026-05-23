@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${cat.name} Mehndi Designs 2024 — ${cat.count}+ Beautiful Patterns | MehndiGlow`,
     description: `Discover ${cat.count}+ beautiful ${cat.name} mehndi designs for 2024. ${cat.description}. Free download available.`,
     keywords: [cat.keyword, `${cat.name.toLowerCase()} mehndi 2024`, `${cat.name.toLowerCase()} henna`, "mehndi designs"],
-    alternates: { canonical: `https://mehndiglow.com/${params.category}` },
+    alternates: { canonical: `https://mehndidesignpics.com/${params.category}` },
     openGraph: {
       title: `${cat.name} Mehndi Designs 2024`,
       description: cat.description,

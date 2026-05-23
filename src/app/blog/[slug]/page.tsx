@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | MehndiGlow`,
     description: post.excerpt,
     keywords: [post.category.toLowerCase(), "mehndi designs", "mehndi tips", "henna designs", "mehndi 2024"],
-    alternates: { canonical: `https://mehndiglow.com/blog/${post.slug}` },
+    alternates: { canonical: `https://mehndidesignpics.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,

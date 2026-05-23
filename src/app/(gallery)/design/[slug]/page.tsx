@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${d.title} — Free Download | MehndiGlow`,
     description: `${d.description} Download this beautiful ${d.category.replace("-", " ")} design for free. Part of our ${d.category.replace("-", " ")} collection 2024.`,
     keywords: [...d.tags, d.category.replace("-", " "), "mehndi design", "free download"],
-    alternates: { canonical: `https://mehndiglow.com/design/${d.slug}` },
+    alternates: { canonical: `https://mehndidesignpics.com/design/${d.slug}` },
     openGraph: {
       title: d.title,
       description: d.description,

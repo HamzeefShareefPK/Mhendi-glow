@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -19,9 +19,9 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      "https://mehndiglow.com/sitemap.xml",
-      "https://mehndiglow.com/sitemap-images.xml",
+      "https://mehndidesignpics.com/sitemap.xml",
+      "https://mehndidesignpics.com/sitemap-images.xml",
     ],
-    host: "https://mehndiglow.com",
+    host: "https://mehndidesignpics.com",
   };
 }

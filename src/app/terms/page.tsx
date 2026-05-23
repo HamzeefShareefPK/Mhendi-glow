@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions — MehndiGlow",
@@ -29,7 +29,7 @@ export default function TermsPage() {
         </section>
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">5. Contact</h2>
-          <p>Questions? Email us at <a href="mailto:hello@mehndiglow.com" className="text-henna-400 hover:underline">hello@mehndiglow.com</a></p>
+          <p>Questions? Email us at <a href="mailto:hello@mehndidesignpics.com" className="text-henna-400 hover:underline">hello@mehndidesignpics.com</a></p>
         </section>
       </div>
     </div>

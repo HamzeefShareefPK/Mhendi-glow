@@ -1,8 +1,8 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 import { designs, blogPosts, categories } from "@/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://mehndiglow.com";
+  const base = "https://mehndidesignpics.com";
   const now  = new Date();
 
   // ── 1. Static pages ────────────────────────────────

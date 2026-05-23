@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
@@ -27,8 +27,8 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-semibold text-henna-900 dark:text-henna-100 mb-1">Email</h3>
-              <a href="mailto:hello@mehndiglow.com" className="text-henna-400 hover:underline text-sm">
-                hello@mehndiglow.com
+              <a href="mailto:hello@mehndidesignpics.com" className="text-henna-400 hover:underline text-sm">
+                hello@mehndidesignpics.com
               </a>
             </div>
           </div>

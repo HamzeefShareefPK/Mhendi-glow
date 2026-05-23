@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "DMCA Policy — MehndiGlow",
@@ -13,7 +13,7 @@ export default function DMCAPage() {
       <div className="space-y-6 text-henna-700 dark:text-henna-300 leading-relaxed text-sm">
         <p>MehndiGlow respects intellectual property rights. If you believe any content on this website infringes your copyright, please contact us immediately.</p>
         <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100">How to Submit a DMCA Notice</h2>
-        <p>Send an email to <a href="mailto:dmca@mehndiglow.com" className="text-henna-400 hover:underline">dmca@mehndiglow.com</a> with the following:</p>
+        <p>Send an email to <a href="mailto:dmca@mehndidesignpics.com" className="text-henna-400 hover:underline">dmca@mehndidesignpics.com</a> with the following:</p>
         <ul className="list-disc pl-5 space-y-2">
           <li>Your full name and contact information</li>
           <li>The URL of the infringing content on our website</li>

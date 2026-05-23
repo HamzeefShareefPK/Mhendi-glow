@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — MehndiGlow",
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100 mb-3">5. Contact Us</h2>
-          <p className="text-sm">If you have questions about this privacy policy, contact us at <a href="mailto:hello@mehndiglow.com" className="text-henna-400 hover:underline">hello@mehndiglow.com</a></p>
+          <p className="text-sm">If you have questions about this privacy policy, contact us at <a href="mailto:hello@mehndidesignpics.com" className="text-henna-400 hover:underline">hello@mehndidesignpics.com</a></p>
         </section>
       </div>
     </div>

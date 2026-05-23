@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
   // ── Image optimization ────────────────────────────────
   images: {
@@ -54,8 +54,8 @@ const nextConfig = {
       // Redirect www → non-www
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.mehndiglow.com" }],
-        destination: "https://mehndiglow.com/:path*",
+        has: [{ type: "host", value: "www.mehndidesignpics.com" }],
+        destination: "https://mehndidesignpics.com/:path*",
         permanent: true,
       },
     ];

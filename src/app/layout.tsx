@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import "@/styles/globals.css";
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   authors:      [{ name: "MehndiGlow" }],
   creator:      "MehndiGlow",
   publisher:    "MehndiGlow",
-  metadataBase: new URL("https://mehndiglow.com"),
+  metadataBase: new URL("https://mehndidesignpics.com"),
 
   // ── Open Graph ───────────────────────────────────────
   openGraph: {
     type:        "website",
     locale:      "en_US",
-    url:         "https://mehndiglow.com",
+    url:         "https://mehndidesignpics.com",
     siteName:    "MehndiGlow",
     title:       "MehndiGlow — Beautiful Mehndi Designs",
     description: "Explore 1000+ mehndi designs for every occasion.",

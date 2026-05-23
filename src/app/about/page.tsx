@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About MehndiGlow — Your Mehndi Inspiration Hub",
@@ -36,8 +36,8 @@ export default function AboutPage() {
         <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100 mt-8">Contact Us</h2>
         <p>
           Have a question or want to collaborate? Reach us at{" "}
-          <a href="mailto:hello@mehndiglow.com" className="text-henna-400 hover:underline">
-            hello@mehndiglow.com
+          <a href="mailto:hello@mehndidesignpics.com" className="text-henna-400 hover:underline">
+            hello@mehndidesignpics.com
           </a>
         </p>
       </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { Instagram, Mail, Heart, ArrowRight } from "lucide-react";
@@ -61,7 +61,7 @@ export default function Footer() {
                   ),
                 },
                 { href: "https://instagram.com",           label: "Instagram", icon: <Instagram size={13} /> },
-                { href: "mailto:hello@mehndiglow.com",     label: "Email",     icon: <Mail size={13} /> },
+                { href: "mailto:hello@mehndidesignpics.com",     label: "Email",     icon: <Mail size={13} /> },
               ].map((s) => (
                 <a
                   key={s.label}
