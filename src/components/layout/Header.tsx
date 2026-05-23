@@ -56,16 +56,16 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-[72px] sm:h-[88px] md:h-[96px]">
+          <div className="flex items-center justify-between h-[90px] sm:h-[110px] md:h-[120px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center group shrink-0" onClick={() => setMenuOpen(false)}>
               <Image
                 src="/images/logo.svg"
                 alt="MehndiDesignPics — Art of Henna & Beauty"
-                width={480}
-                height={100}
-                className="h-[58px] sm:h-[74px] md:h-[86px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+                width={520}
+                height={110}
+                className="h-[76px] sm:h-[96px] md:h-[110px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
                 priority
                 unoptimized
               />
@@ -243,14 +243,14 @@ export default function Header() {
         aria-label="Mobile navigation"
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-5 h-16 border-b border-henna-100 dark:border-henna-800/80">
+        <div className="flex items-center justify-between px-5 h-[88px] border-b border-henna-100 dark:border-henna-800/80">
           <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
             <Image
               src="/images/logo.svg"
               alt="MehndiDesignPics — Art of Henna & Beauty"
-              width={380}
-              height={80}
-              className="h-[58px] w-auto object-contain"
+              width={420}
+              height={90}
+              className="h-[70px] w-auto object-contain"
               unoptimized
             />
           </Link>
