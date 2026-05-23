@@ -1,0 +1,119 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+import { ThemeProvider } from "next-themes";
+import "@/styles/globals.css";
+import Header    from "@/components/layout/Header";
+import Footer    from "@/components/layout/Footer";
+import BackToTop from "@/components/ui/BackToTop";
+import WebVitals from "@/components/seo/WebVitals";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+
+export const metadata: Metadata = {
+  title: {
+    default:  "MehndiGlow — Discover Beautiful Mehndi Designs 2024",
+    template: "%s | MehndiGlow",
+  },
+  description:
+    "Explore 1000+ mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Your daily dose of mehndi inspiration.",
+  keywords: [
+    "mehndi designs", "bridal mehndi", "arabic mehndi", "eid mehndi 2024",
+    "pakistani mehndi", "simple mehndi", "mehndi designs 2024",
+  ],
+  authors:      [{ name: "MehndiGlow" }],
+  creator:      "MehndiGlow",
+  publisher:    "MehndiGlow",
+  metadataBase: new URL("https://mehndiglow.com"),
+
+  // ── Open Graph ───────────────────────────────────────
+  openGraph: {
+    type:        "website",
+    locale:      "en_US",
+    url:         "https://mehndiglow.com",
+    siteName:    "MehndiGlow",
+    title:       "MehndiGlow — Beautiful Mehndi Designs",
+    description: "Explore 1000+ mehndi designs for every occasion.",
+    images:      [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "MehndiGlow — Mehndi Designs" }],
+  },
+
+  // ── Twitter Card ─────────────────────────────────────
+  twitter: {
+    card:        "summary_large_image",
+    site:        "@MehndiGlow",
+    creator:     "@MehndiGlow",
+    title:       "MehndiGlow — Beautiful Mehndi Designs",
+    description: "Explore 1000+ mehndi designs for every occasion.",
+  },
+
+  // ── Robots ───────────────────────────────────────────
+  robots: {
+    index:  true,
+    follow: true,
+    googleBot: {
+      index:               true,
+      follow:              true,
+      "max-image-preview": "large",
+      "max-snippet":       -1,
+    },
+  },
+
+  // ── Verification (add your actual codes) ─────────────
+  verification: {
+    google: "ADD_YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
+    // yandex: "ADD_YANDEX_CODE",
+    // bing: "ADD_BING_CODE",
+  },
+
+  // ── App-specific ─────────────────────────────────────
+  applicationName: "MehndiGlow",
+  category:        "lifestyle",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+
+        {/* Favicon set */}
+        <link rel="icon"             href="/favicon.ico" sizes="any" />
+        <link rel="icon"             href="/icon.svg"    type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest"         href="/manifest.json" />
+      </head>
+      <body>
+        {/* Google Analytics */}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+              `}
+            </Script>
+          </>
+        )}
+
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="min-h-screen flex flex-col bg-henna-50 dark:bg-henna-900">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <BackToTop />
+            <WebVitals />
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
