@@ -132,39 +132,43 @@ export default function AiGeneratorClient() {
     <div className="min-h-screen bg-gradient-to-b from-henna-50 to-white dark:from-henna-950 dark:to-henna-900">
 
       {/* Hero */}
-      <div className="max-w-3xl mx-auto px-4 pt-14 pb-10 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-henna-400/10 border border-henna-400/30 text-henna-500 text-sm font-medium mb-6">
-          <Sparkles size={14} />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-8 sm:pb-10 text-center">
+        <div className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-henna-400/10 border border-henna-400/30 text-henna-500 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+          <Sparkles size={13} />
           AI Powered
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl font-semibold text-henna-900 dark:text-henna-100 mb-4 leading-tight">
+        <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-semibold text-henna-900 dark:text-henna-100 mb-3 sm:mb-4 leading-tight">
           AI Mehndi Design<br />Generator
         </h1>
-        <p className="text-henna-600 dark:text-henna-300 text-base max-w-xl mx-auto mb-10">
+        <p className="text-henna-600 dark:text-henna-300 text-sm sm:text-base max-w-xl mx-auto mb-6 sm:mb-10 leading-relaxed">
           Apni pasand describe karo — bridal, Arabic, Pakistani, minimal — aur instant mehndi design inspiration pao.
         </p>
 
-        {/* Input */}
+        {/* Input box */}
         <div className="relative bg-white dark:bg-henna-900 rounded-2xl border-2 border-henna-200 dark:border-henna-700 shadow-lg focus-within:border-henna-400 transition-colors">
-          <div className="flex items-center gap-3 p-4">
-            <Search size={18} className="text-henna-400 shrink-0" />
+          {/* Top row: icon + input */}
+          <div className="flex items-center gap-2 px-3 sm:px-4 pt-3 sm:pt-4 pb-2 sm:pb-3">
+            <Search size={16} className="text-henna-400 shrink-0" />
             <input
               type="text"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleGenerate()}
               placeholder="e.g. heavy bridal full hand mehndi with flowers..."
-              className="flex-1 bg-transparent text-henna-800 dark:text-henna-100 placeholder:text-henna-400 text-base outline-none"
+              className="flex-1 min-w-0 bg-transparent text-henna-800 dark:text-henna-100 placeholder:text-henna-400 text-sm sm:text-base outline-none"
             />
+          </div>
+          {/* Bottom row: Generate button — full width on mobile */}
+          <div className="px-3 sm:px-4 pb-3 sm:pb-4">
             <button
               onClick={() => handleGenerate()}
               disabled={!prompt.trim() || loading}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-henna-400 hover:bg-henna-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium text-sm transition-all shrink-0"
+              className="w-full sm:w-auto sm:float-right flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-henna-400 hover:bg-henna-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all"
             >
               {loading ? (
-                <RefreshCw size={15} className="animate-spin" />
+                <RefreshCw size={14} className="animate-spin" />
               ) : (
-                <Sparkles size={15} />
+                <Sparkles size={14} />
               )}
               {loading ? "Generating..." : "Generate"}
             </button>
@@ -172,12 +176,12 @@ export default function AiGeneratorClient() {
         </div>
 
         {/* Quick prompts */}
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mt-4">
           {PROMPTS.map((p) => (
             <button
               key={p}
               onClick={() => { setPrompt(p); handleGenerate(p); }}
-              className="text-xs px-3 py-1.5 rounded-full border border-henna-300 dark:border-henna-700 text-henna-600 dark:text-henna-300 hover:bg-henna-100 dark:hover:bg-henna-800 hover:border-henna-400 transition-all"
+              className="text-[11px] sm:text-xs px-2.5 sm:px-3 py-1.5 rounded-full border border-henna-300 dark:border-henna-700 text-henna-600 dark:text-henna-300 hover:bg-henna-100 dark:hover:bg-henna-800 hover:border-henna-400 transition-all"
             >
               {p}
             </button>
