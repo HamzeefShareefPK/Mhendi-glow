@@ -25,7 +25,7 @@ export const categories: Category[] = [
   { slug: "indian-mehndi",    name: "Indian",    description: "Traditional Indian mehndi with intricate patterns",       image: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=400&q=80", count: 33, keyword: "indian mehndi designs" },
   { slug: "stylish-mehndi",   name: "Stylish",   description: "Modern and stylish mehndi for every occasion",           image: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=400&q=80", count: 20, keyword: "stylish mehndi designs" },
   { slug: "front-hand-mehndi",name: "Front Hand",description: "Beautiful front hand mehndi patterns",                   image: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=400&q=80", count: 27, keyword: "front hand mehndi" },
-  { slug: "mehndi-tattoo",    name: "Tattoo",    description: "Stunning mehndi tattoo designs — bold, black and temporary henna tattoo art", image: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=400&q=80", count: 45, keyword: "mehndi tattoo designs" },
+  { slug: "mehndi-tattoo",    name: "Tattoo",    description: "Stunning mehndi tattoo designs — bold, black and temporary henna tattoo art", image: "https://images.unsplash.com/photo-1525135850648-b42365991054?w=400&q=80", count: 45, keyword: "mehndi tattoo designs" },
 ];
 
 export const designs: Design[] = [

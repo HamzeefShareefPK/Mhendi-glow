@@ -1,5 +1,29 @@
 import { Design } from "@/types";
 
+// ── 19 verified Unsplash henna TATTOO photo IDs ───────────────────────────────
+// Fetched directly from unsplash.com/s/photos/henna-tattoo — all confirmed
+const TATTOO_PHOTOS = [
+  "1525135850648-b42365991054", // person's right mehndi tattoo – Vitaliy Lyubezhanin
+  "1563714915375-625ddfce4847", // mehndi tattoo – Mee Nee
+  "1566745266815-87793f60d7a4", // black mendhi tattoo – Mee Nee
+  "1570105566322-0e5bdccc9501", // black mehndi art – Mee Nee
+  "1565368113202-ffa5bffb6feb", // floral hand henna tattoo – Mee Nee
+  "1566878823628-a3a71274b0af", // black leaves finger tattoos – Mee Nee
+  "1564809392273-798ebbb1914a", // henna tattoo close-up
+  "1566745265763-de510bdae868", // henna on hand – Mee Nee
+  "1530785404354-f4ed0206a0d1", // henna design
+  "1566829682463-2aa5f6c8afd8", // henna art
+  "1572969147844-920fff94e326", // henna tattoo detail
+  "1556536088-f010a312a8d3",    // henna pattern
+  "1720798299236-7acaaa2356be", // modern henna
+  "1619734089700-842e56497353", // henna close-up
+  "1591161921527-a9a10bfaf3ea", // henna on skin
+  "1624504761718-be4d634f4624", // henna tattoo design
+  "1566664254600-3412f985e947", // black hand mehndi – Mee Nee
+  "1565368114375-ba1a4db7099f", // black mehndi tattoo – Mee Nee
+  "1563962751094-31bb84e91a4c", // black close-up finger – Priyanka Singh
+];
+
 // ── ALL 33 verified Unsplash mehndi/henna CDN photo IDs ──────────────────────
 // These are confirmed working numeric IDs from images.unsplash.com
 const ALL_PHOTOS = [
@@ -226,14 +250,16 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
   const titles    = CATEGORY_TITLES[category] ?? CATEGORY_TITLES["arabic-mehndi"];
   const tags      = TAGS[category] ?? ["mehndi","henna","design"];
   const startOffset = CATEGORY_START[category] ?? 0;
-  const total     = ALL_PHOTOS.length; // 33
+
+  // Use dedicated tattoo photos for mehndi-tattoo category
+  const photoPool = category === "mehndi-tattoo" ? TATTOO_PHOTOS : ALL_PHOTOS;
+  const total     = photoPool.length;
   const designs: Design[] = [];
 
   for (let i = 0; i < count; i++) {
     // Cycle through all photos, but start at a category-specific offset
-    // so different categories show different photos first
     const photoIndex  = (i + startOffset) % total;
-    const photoId     = ALL_PHOTOS[photoIndex];
+    const photoId     = photoPool[photoIndex];
 
     // Which "cycle" through the photo pool are we on?
     const cycle       = Math.floor(i / total);
