@@ -18,7 +18,11 @@
       "Bash(Get-ChildItem -Path \"D:\\\\mehndiglow\\\\src\" -Recurse -File)",
       "Bash(Select-Object FullName)",
       "Bash(Sort-Object FullName)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

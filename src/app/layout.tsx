@@ -11,14 +11,14 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-QP3L90D7F1";
 
 export const metadata: Metadata = {
   title: {
-    default:  "MehndiGlow — Discover Beautiful Mehndi Designs 2024",
+    default:  "MehndiGlow — Discover Beautiful Mehndi Designs 2026",
     template: "%s | MehndiGlow",
   },
   description:
     "Explore 1000+ mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Your daily dose of mehndi inspiration.",
   keywords: [
-    "mehndi designs", "bridal mehndi", "arabic mehndi", "eid mehndi 2024",
-    "pakistani mehndi", "simple mehndi", "mehndi designs 2024",
+    "mehndi designs", "bridal mehndi", "arabic mehndi", "eid mehndi 2026",
+    "pakistani mehndi", "simple mehndi", "mehndi designs 2026",
   ],
   authors:      [{ name: "MehndiGlow" }],
   creator:      "MehndiGlow",

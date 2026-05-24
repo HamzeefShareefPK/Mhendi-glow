@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = categories.find((c) => c.slug === params.category);
   if (!cat) return {};
   return {
-    title: `${cat.name} Mehndi Designs 2024 — ${cat.count}+ Beautiful Patterns | MehndiGlow`,
-    description: `Discover ${cat.count}+ beautiful ${cat.name} mehndi designs for 2024. ${cat.description}. Free download available.`,
+    title: `${cat.name} Mehndi Designs 2026 — ${cat.count}+ Beautiful Patterns | MehndiGlow`,
+    description: `Discover ${cat.count}+ beautiful ${cat.name} mehndi designs for 2026. ${cat.description}. Free download available.`,
     keywords: [
       cat.keyword,
       `${cat.name.toLowerCase()} mehndi 2026`,
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ],
     alternates: { canonical: `https://mehndidesignpics.com/${params.category}` },
     openGraph: {
-      title: `${cat.name} Mehndi Designs 2024`,
+      title: `${cat.name} Mehndi Designs 2026`,
       description: cat.description,
       images: [{ url: cat.image }],
     },
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Category-specific FAQs for Semantic SEO
 const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
   "bridal-mehndi-design": [
-    { question: "What is the best bridal mehndi design for 2024?", answer: "The best bridal mehndi designs for 2024 include full hand Arabic patterns, minimal geometric designs, and fusion styles combining Pakistani and Arabic elements. Designs with groom's name hidden in the pattern are also very popular." },
+    { question: "What is the best bridal mehndi design for 2026?", answer: "The best bridal mehndi designs for 2026 include full hand Arabic patterns, minimal geometric designs, and fusion styles combining Pakistani and Arabic elements. Designs with groom's name hidden in the pattern are also very popular." },
     { question: "How many days before the wedding should mehndi be applied?", answer: "Mehndi should be applied 1–2 days before the wedding. This gives the color time to develop fully — it peaks in darkness at 24–48 hours after application." },
     { question: "How long should bridal mehndi stay on?", answer: "For bridal mehndi, keep it on for at least 8–12 hours, ideally overnight. The longer you leave it, the darker and longer-lasting the color." },
   ],
@@ -106,7 +106,7 @@ export default function CategoryPage({ params }: Props) {
         <div className="relative h-52 sm:h-72 overflow-hidden">
           <Image
             src={cat.image}
-            alt={`${cat.name} mehndi designs 2024 collection`}
+            alt={`${cat.name} mehndi designs 2026 collection`}
             fill
             className="object-cover"
             priority
@@ -120,7 +120,7 @@ export default function CategoryPage({ params }: Props) {
 
               {/* H1 — Primary keyword */}
               <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-white mb-2">
-                {cat.name} Mehndi Designs 2024
+                {cat.name} Mehndi Designs 2026
               </h1>
 
               {/* Description — secondary keyword */}
@@ -134,7 +134,7 @@ export default function CategoryPage({ params }: Props) {
                   Free download
                 </span>
                 <span className="text-xs px-3 py-1 rounded-full bg-henna-400/20 text-henna-300 border border-henna-400/30">
-                  Updated 2024
+                  Updated 2026
                 </span>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function CategoryPage({ params }: Props) {
             {/* Keyword-rich tags — Semantic SEO */}
             <div className="flex flex-wrap gap-2 mt-4">
               {[
-                `${cat.name} Mehndi 2024`,
+                `${cat.name} Mehndi 2026`,
                 `${cat.name} Henna Designs`,
                 `New ${cat.name} Mehndi`,
                 `Simple ${cat.name} Mehndi`,

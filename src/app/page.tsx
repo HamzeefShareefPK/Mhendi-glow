@@ -14,7 +14,7 @@ import { websiteSchema, organizationSchema } from "@/lib/seo";
 import { generateCategoryDesigns } from "@/data/generator";
 
 export const metadata: Metadata = {
-  title: "MehndiGlow — Discover 1000+ Beautiful Mehndi Designs 2024",
+  title: "MehndiGlow — Discover 1000+ Beautiful Mehndi Designs 2026",
   description:
     "Explore the most beautiful mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Free download. Updated daily. Your #1 mehndi inspiration source.",
   keywords: [
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
 // Homepage FAQs — targets "People Also Ask" on Google
 const HOME_FAQS = [
   {
-    question: "What are the latest mehndi designs for 2024?",
-    answer: "The latest mehndi trends for 2024 include minimal Arabic mehndi, geometric patterns, floral finger mehndi, and fusion bridal designs that combine Pakistani and Arabic styles. Minimal mehndi with negative space is especially popular this year.",
+    question: "What are the latest mehndi designs for 2026?",
+    answer: "The latest mehndi trends for 2026 include minimal Arabic mehndi, geometric patterns, floral finger mehndi, and fusion bridal designs that combine Pakistani and Arabic styles. Minimal mehndi with negative space is especially popular this year.",
   },
   {
     question: "Which mehndi design is best for beginners?",
