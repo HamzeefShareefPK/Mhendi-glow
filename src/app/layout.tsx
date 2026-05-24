@@ -7,7 +7,7 @@ import Footer    from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import WebVitals from "@/components/seo/WebVitals";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-QP3L90D7F1";
 
 export const metadata: Metadata = {
   title: {
