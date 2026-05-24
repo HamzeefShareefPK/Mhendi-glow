@@ -68,14 +68,14 @@ export async function searchUnsplashByCategory(
 ): Promise<UnsplashImage[]> {
   // Map mehndi categories to search queries
   const searchQueries: Record<string, string> = {
-    "bridal-mehndi": "bridal mehndi henna designs",
-    "arabic-mehndi": "arabic mehndi henna patterns",
-    "pakistani-mehndi": "pakistani mehndi henna",
-    "eid-mehndi": "eid mehndi henna festive",
-    "finger-mehndi": "finger mehndi henna simple",
-    "feet-mehndi": "feet ankle mehndi henna",
-    "minimal-mehndi": "minimal mehndi henna simple",
-    "indian-mehndi": "indian mehndi henna traditional",
+    "bridal-mehndi-design": "bridal mehndi henna designs",
+    "arabic-mehndi-design": "arabic mehndi henna patterns",
+    "pakistani-mehndi-design": "pakistani mehndi henna",
+    "eid-mehndi-design": "eid mehndi henna festive",
+    "finger-mehndi-design": "finger mehndi henna simple",
+    "feet-mehndi-design": "feet ankle mehndi henna",
+    "minimal-mehndi-design": "minimal mehndi henna simple",
+    "indian-mehndi-design": "indian mehndi henna traditional",
   };
 
   const query = searchQueries[category] || "mehndi henna designs";

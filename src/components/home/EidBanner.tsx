@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { designs } from "@/data";
 
 export default function EidBanner() {
-  const eidDesigns = designs.filter((d) => d.category === "eid-mehndi").slice(0, 6);
+  const eidDesigns = designs.filter((d) => d.category === "eid-mehndi-design").slice(0, 6);
 
   return (
     <section className="py-8 sm:py-12 lg:py-14 px-4 sm:px-6 max-w-7xl mx-auto">
@@ -46,7 +46,7 @@ export default function EidBanner() {
             </div>
 
             <Link
-              href="/eid-mehndi"
+              href="/eid-mehndi-design"
               className="self-start sm:self-center shrink-0 group inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white transition-all duration-200 hover:scale-105 shadow-lg shadow-henna-700/30"
               style={{ background: "linear-gradient(135deg, #C8946A, #9A6838)" }}
             >

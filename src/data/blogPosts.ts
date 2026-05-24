@@ -4,7 +4,7 @@ export const allBlogPosts: BlogPost[] = [
   // ── EXISTING 6 POSTS ────────────────────────────────────────────────────────
   {
     id: "1",
-    slug: "50-best-bridal-mehndi-designs-2025",
+    slug: "50-best-bridal-mehndi-design-designs-2025",
     title: "50 Most Beautiful Bridal Mehndi Designs 2025",
     excerpt: "From full Arabic patterns to minimal modern styles — discover the most stunning bridal mehndi designs trending in 2025.",
     content: `
@@ -48,7 +48,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Bridal mehndi is the first piece of jewellery a bride wears — and it costs only time and tradition."</p></blockquote>
 
-      <p>Whether you choose heavy traditional or minimal modern, your bridal mehndi should reflect YOU. Browse our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a> for 1000+ design inspirations to find your perfect pattern.</p>
+      <p>Whether you choose heavy traditional or minimal modern, your bridal mehndi should reflect YOU. Browse our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a> for 1000+ design inspirations to find your perfect pattern.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85",
@@ -61,7 +61,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "2",
-    slug: "eid-mehndi-designs-2025-top-ideas",
+    slug: "eid-mehndi-design-designs-2025-top-ideas",
     title: "Eid Mehndi Designs 2025 — 50 Best Ideas",
     excerpt: "Celebrate Eid with the most beautiful and trending mehndi designs. From simple to elaborate — we have it all.",
     content: `
@@ -101,7 +101,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"The best Eid mehndi is the one that makes you smile every time you look at your hands."</p></blockquote>
 
-      <p>Browse our <a href="/eid-mehndi">Eid Mehndi Gallery</a> for hundreds of design inspirations for your next celebration.</p>
+      <p>Browse our <a href="/eid-mehndi-design">Eid Mehndi Gallery</a> for hundreds of design inspirations for your next celebration.</p>
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1571150612716-ff39d1e9ef58?w=800&q=85",
@@ -114,7 +114,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "3",
-    slug: "arabic-mehndi-for-beginners-step-by-step",
+    slug: "arabic-mehndi-design-for-beginners-step-by-step",
     title: "Arabic Mehndi for Beginners: Step by Step Guide",
     excerpt: "Learn how to create beautiful Arabic mehndi designs even if you are a complete beginner. Easy step-by-step instructions inside.",
     content: `
@@ -167,7 +167,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Every mehndi artist was once a beginner. The secret is not talent — it is practice."</p></blockquote>
 
-      <p>Browse our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a> for hundreds of design inspirations from simple to advanced.</p>
+      <p>Browse our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a> for hundreds of design inspirations from simple to advanced.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=800&q=85",
@@ -235,7 +235,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"The best mehndi design is the one you enjoy making. Start simple and let your skills grow naturally."</p></blockquote>
 
-      <p>Browse our <a href="/minimal-mehndi">Minimal Mehndi Gallery</a> for hundreds of simple design inspirations.</p>
+      <p>Browse our <a href="/minimal-mehndi-design">Minimal Mehndi Gallery</a> for hundreds of simple design inspirations.</p>
     `,
     category: "Beginner",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
@@ -248,7 +248,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "5",
-    slug: "pakistani-bridal-mehndi-vs-indian-bridal-mehndi",
+    slug: "pakistani-bridal-mehndi-design-vs-indian-bridal-mehndi-design",
     title: "Pakistani vs Indian Bridal Mehndi: Key Differences",
     excerpt: "Confused between Pakistani and Indian bridal mehndi styles? This detailed comparison will help you choose the right one.",
     content: `
@@ -304,7 +304,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"The right mehndi style is the one that makes you feel most like a bride. Trust your instincts."</p></blockquote>
 
-      <p>Browse both styles in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a> and <a href="/pakistani-mehndi">Pakistani Mehndi Gallery</a>.</p>
+      <p>Browse both styles in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a> and <a href="/pakistani-mehndi-design">Pakistani Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1566664254600-3412f985e947?w=800&q=85",
@@ -317,7 +317,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "6",
-    slug: "minimal-mehndi-designs-modern-brides",
+    slug: "minimal-mehndi-design-designs-modern-brides",
     title: "Minimal Mehndi Designs for Modern Brides",
     excerpt: "The minimal mehndi trend is here to stay. Explore 25 stunning minimal mehndi designs perfect for the modern bride.",
     content: `
@@ -351,7 +351,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Minimal mehndi is not less — it is more intentional. Every motif earns its place."</p></blockquote>
 
-      <p>Browse our <a href="/minimal-mehndi">Minimal Mehndi Gallery</a> for hundreds of clean, modern design inspirations.</p>
+      <p>Browse our <a href="/minimal-mehndi-design">Minimal Mehndi Gallery</a> for hundreds of clean, modern design inspirations.</p>
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=800&q=85",
@@ -426,7 +426,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "8",
-    slug: "finger-mehndi-designs-stunning-patterns",
+    slug: "finger-mehndi-design-designs-stunning-patterns",
     title: "Finger Mehndi Designs — 25 Stunning Patterns for 2025",
     excerpt: "Finger mehndi is the hottest trend in 2025. Discover 25 stunning finger mehndi designs from simple to elaborate.",
     content: `
@@ -476,7 +476,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Sometimes the most beautiful mehndi is found in the smallest spaces — a single perfect finger design can outshine an entire hand."</p></blockquote>
 
-      <p>Browse our <a href="/finger-mehndi">Finger Mehndi Gallery</a> for hundreds of designs.</p>
+      <p>Browse our <a href="/finger-mehndi-design">Finger Mehndi Gallery</a> for hundreds of designs.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
@@ -489,7 +489,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "9",
-    slug: "feet-mehndi-designs-ankle-toe-patterns",
+    slug: "feet-mehndi-design-designs-ankle-toe-patterns",
     title: "Feet Mehndi Designs — Beautiful Ankle & Toe Patterns 2025",
     excerpt: "Feet mehndi is an essential part of bridal and Eid beauty. Discover the most beautiful ankle and toe mehndi designs.",
     content: `
@@ -523,7 +523,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Beautiful feet mehndi is the secret jewelry that only reveals itself when you dance."</p></blockquote>
 
-      <p>Browse our <a href="/feet-mehndi">Feet Mehndi Gallery</a> for design inspiration.</p>
+      <p>Browse our <a href="/feet-mehndi-design">Feet Mehndi Gallery</a> for design inspiration.</p>
     `,
     category: "Feet",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
@@ -655,7 +655,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "12",
-    slug: "back-hand-mehndi-designs-2025",
+    slug: "back-hand-mehndi-design-designs-2025",
     title: "Back Hand Mehndi Designs 2025 — 30+ Stunning Patterns",
     excerpt: "Back hand mehndi is where all the artistry happens. Explore 30+ stunning back hand designs from minimal to elaborate.",
     content: `
@@ -700,7 +700,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"The back hand is the mehndi artist's stage — every design choice is amplified, every detail celebrated."</p></blockquote>
 
-      <p>Browse our <a href="/back-hand-mehndi">Back Hand Mehndi Gallery</a> for 1000+ designs.</p>
+      <p>Browse our <a href="/back-hand-mehndi-design">Back Hand Mehndi Gallery</a> for 1000+ designs.</p>
     `,
     category: "Back Hand",
     coverImage: "https://images.unsplash.com/photo-1676134014048-bcc764ea015d?w=800&q=85",
@@ -713,7 +713,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "13",
-    slug: "kids-mehndi-designs-easy-fun",
+    slug: "kids-mehndi-design-designs-easy-fun",
     title: "Kids Mehndi Designs — 20 Easy & Fun Patterns for Children",
     excerpt: "Kids love mehndi! These 20 easy, safe, and fun mehndi designs are perfect for children of all ages.",
     content: `
@@ -775,7 +775,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"A child's first mehndi experience creates a memory and love for tradition that lasts a lifetime."</p></blockquote>
 
-      <p>Browse our <a href="/kids-mehndi">Kids Mehndi Gallery</a> for more design ideas.</p>
+      <p>Browse our <a href="/kids-mehndi-design">Kids Mehndi Gallery</a> for more design ideas.</p>
     `,
     category: "Kids",
     coverImage: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=800&q=85",
@@ -881,7 +881,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Rajasthani mehndi does not just decorate the hands — it inscribes an entire life, a love story, a prayer, into the skin."</p></blockquote>
 
-      <p>Browse our <a href="/indian-mehndi">Indian Mehndi Gallery</a> for Rajasthani and traditional designs.</p>
+      <p>Browse our <a href="/indian-mehndi-design">Indian Mehndi Gallery</a> for Rajasthani and traditional designs.</p>
     `,
     category: "Indian",
     coverImage: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=800&q=85",
@@ -1099,7 +1099,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Chand Raat without mehndi is like Eid without seviyaan — incomplete. The mehndi is the moon on your hands."</p></blockquote>
 
-      <p>Browse our <a href="/eid-mehndi">Eid Mehndi Gallery</a> for Chand Raat design inspiration.</p>
+      <p>Browse our <a href="/eid-mehndi-design">Eid Mehndi Gallery</a> for Chand Raat design inspiration.</p>
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=800&q=85",
@@ -1152,7 +1152,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"Modern mehndi proves that ancient art never dies — it simply reinvents itself for every generation."</p></blockquote>
 
-      <p>Browse our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a> for the latest modern designs.</p>
+      <p>Browse our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a> for the latest modern designs.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1722172312997-068983715fd1?w=800&q=85",
@@ -1328,7 +1328,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "24",
-    slug: "khaleeji-arabic-mehndi-designs",
+    slug: "khaleeji-arabic-mehndi-design-designs",
     title: "Khaleeji Mehndi Designs — Gulf Arabic Style Guide",
     excerpt: "Khaleeji mehndi from the Gulf region is bold, beautiful, and distinctly modern. Explore this stunning Arabic style.",
     content: `
@@ -1447,7 +1447,7 @@ export const allBlogPosts: BlogPost[] = [
 
   {
     id: "26",
-    slug: "front-hand-mehndi-designs-palm-patterns",
+    slug: "front-hand-mehndi-design-designs-palm-patterns",
     title: "Front Hand Mehndi Designs — Beautiful Palm Patterns 2025",
     excerpt: "Front hand (palm side) mehndi is underrated but incredibly beautiful. Discover the most stunning palm mehndi designs.",
     content: `
@@ -1489,7 +1489,7 @@ export const allBlogPosts: BlogPost[] = [
 
       <blockquote><p>"The front hand holds your future in its lines — mehndi on the palm is art that overlays destiny."</p></blockquote>
 
-      <p>Browse our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a> for palm design inspiration.</p>
+      <p>Browse our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a> for palm design inspiration.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
@@ -1517,7 +1517,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Lemon-sugar seal:</strong> Apply a lemon and sugar mixture over dried henna to keep it moist and intensify the color.</li>
       </ul>
       <blockquote><p>"A hand adorned with florals is a hand that carries the poetry of a garden wherever it goes."</p></blockquote>
-      <p>Whether you are celebrating Eid, an engagement, or simply treating yourself, gorgeous floral henna never goes out of style. Browse our full collection in the <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Whether you are celebrating Eid, an engagement, or simply treating yourself, gorgeous floral henna never goes out of style. Browse our full collection in the <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1571150612716-ff39d1e9ef58?w=800&q=85",
@@ -1545,7 +1545,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Aftercare:</strong> Keep hands warm and avoid water for at least eight hours after paste removal for the darkest color.</li>
       </ul>
       <blockquote><p>"The best jewelry a bride can wear is the art painted by her mehndi artist's skilled hands."</p></blockquote>
-      <p>For more stunning bridal inspirations, visit our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a> and find the perfect design for your special day.</p>
+      <p>For more stunning bridal inspirations, visit our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a> and find the perfect design for your special day.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85",
@@ -1573,7 +1573,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Practice outline first:</strong> Lightly trace the design with a toothpick before applying henna for cleaner results.</li>
       </ul>
       <blockquote><p>"Like the peacock that dances in the rain, a hand painted with its image dances with beauty."</p></blockquote>
-      <p>Explore more traditional motifs in our <a href="/indian-mehndi">Indian Mehndi Gallery</a> and find the design that speaks to your heritage.</p>
+      <p>Explore more traditional motifs in our <a href="/indian-mehndi-design">Indian Mehndi Gallery</a> and find the design that speaks to your heritage.</p>
     `,
     category: "Indian",
     coverImage: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=800&q=85",
@@ -1601,7 +1601,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Photograph in natural light:</strong> Fresh wet henna looks beautiful — take photos before the paste dries for the most vibrant shots.</li>
       </ul>
       <blockquote><p>"Your palm is a canvas, and stylish henna is the artwork that tells the world you celebrate beauty."</p></blockquote>
-      <p>Find hundreds of inspiring compositions in our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a> to spark your next henna session.</p>
+      <p>Find hundreds of inspiring compositions in our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a> to spark your next henna session.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=800&q=85",
@@ -1629,7 +1629,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Symmetry check:</strong> Hold both hands side by side periodically to ensure both sets of fingers match in spacing.</li>
       </ul>
       <blockquote><p>"The fingers are nature's finest jewelry display — henna just helps them shine brighter."</p></blockquote>
-      <p>Discover more intricate designs in our <a href="/finger-mehndi">Finger Mehndi Gallery</a> and find the perfect finger art for your next celebration.</p>
+      <p>Discover more intricate designs in our <a href="/finger-mehndi-design">Finger Mehndi Gallery</a> and find the perfect finger art for your next celebration.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1562508548-69377b81ab9e?w=800&q=85",
@@ -1657,7 +1657,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Contrast sizes:</strong> Alternate large petals with small accent leaves to give the mandala a rhythmic, dynamic feel.</li>
       </ul>
       <blockquote><p>"A mandala drawn in henna is a prayer for harmony written in the language of flowers."</p></blockquote>
-      <p>Explore our full range of geometric and floral fusions in the <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Explore our full range of geometric and floral fusions in the <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1764640848891-9b23d3632ccf?w=800&q=85",
@@ -1685,7 +1685,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Paste quality:</strong> Request organic, chemical-free henna paste to avoid allergic reactions on sensitive bridal skin.</li>
       </ul>
       <blockquote><p>"Pakistani mehndi is not just art — it is a love letter written in henna across the bride's hands."</p></blockquote>
-      <p>Browse more spectacular designs in our <a href="/pakistani-mehndi">Pakistani Mehndi Gallery</a>.</p>
+      <p>Browse more spectacular designs in our <a href="/pakistani-mehndi-design">Pakistani Mehndi Gallery</a>.</p>
     `,
     category: "Pakistani",
     coverImage: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=800&q=85",
@@ -1713,7 +1713,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Avoid soaking:</strong> Keep hands away from prolonged water exposure for at least 48 hours after paste removal.</li>
       </ul>
       <blockquote><p>"Every bride deserves to feel like royalty, and royal finger mehndi ensures her hands tell that story."</p></blockquote>
-      <p>See more luxurious inspiration in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>See more luxurious inspiration in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1676134014048-bcc764ea015d?w=800&q=85",
@@ -1725,7 +1725,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "35",
-    slug: "heavy-arabic-bridal-mehndi",
+    slug: "heavy-arabic-bridal-mehndi-design",
     title: "Heavy Arabic Bridal Mehndi",
     excerpt: "Experience the drama of heavy Arabic bridal mehndi that combines bold florals and dense coverage for an unforgettable look.",
     content: `
@@ -1741,7 +1741,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Scrape do not wash:</strong> Remove dried paste by scraping with a butter knife rather than washing to avoid water lightening the fresh stain.</li>
       </ul>
       <blockquote><p>"Heavy Arabic mehndi is where bold artistry meets bridal dreams — every stroke tells a love story."</p></blockquote>
-      <p>Explore our complete collection in the <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore our complete collection in the <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
@@ -1769,7 +1769,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Leaf accents:</strong> Simple pointed leaves drawn in quick confident strokes give rose designs a natural, garden-fresh feel.</li>
       </ul>
       <blockquote><p>"A rose drawn in henna is a bloom that never wilts — it fades only after leaving its beauty behind."</p></blockquote>
-      <p>Find more romantic designs in our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Find more romantic designs in our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1656702678285-59bde376828f?w=800&q=85",
@@ -1797,7 +1797,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Light touch:</strong> Cute mehndi benefits from slightly lighter paste application that keeps lines crisp and delicate.</li>
       </ul>
       <blockquote><p>"The best wedding mehndi makes guests lean in for a closer look and smile when they find the hidden stories."</p></blockquote>
-      <p>Browse more charming bridal designs in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Browse more charming bridal designs in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1757331446901-8f935a107bc9?w=800&q=85",
@@ -1825,7 +1825,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Bold outlines:</strong> The outer border of the net grid should be thicker than the internal lines for visual definition.</li>
       </ul>
       <blockquote><p>"Net mehndi is the art of weaving elegance — each intersection point a moment of geometric perfection."</p></blockquote>
-      <p>See more geometric and contemporary designs in our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a>.</p>
+      <p>See more geometric and contemporary designs in our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a>.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1623217509141-6f735087b50c?w=800&q=85",
@@ -1853,7 +1853,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Work palm before fingers:</strong> Complete the palm design before extending onto fingers so you can adjust proportions as you go.</li>
       </ul>
       <blockquote><p>"A full palm covered in stylish henna is a masterpiece that walks with you through every moment of your celebration."</p></blockquote>
-      <p>Explore hundreds of full palm designs in our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Explore hundreds of full palm designs in our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1774019410720-3409a533d30b?w=800&q=85",
@@ -1881,7 +1881,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Pre-session prep:</strong> Exfoliate hands a day before the session for the smoothest possible surface for fine floral work.</li>
       </ul>
       <blockquote><p>"A bride's hands adorned with flowers in henna carry a garden that blooms through every photo and every memory."</p></blockquote>
-      <p>Find your dream bridal design in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Find your dream bridal design in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1770346279037-89853a3e8c60?w=800&q=85",
@@ -1909,7 +1909,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Sleep with paste on:</strong> Leaving the paste on overnight under loose wrapping produces the deepest possible bridal stain.</li>
       </ul>
       <blockquote><p>"On the most important day of her life, a bride's hands should be as gorgeous as her heart."</p></blockquote>
-      <p>Explore the full range of bridal inspirations in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore the full range of bridal inspirations in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1755234993813-054bc8c8a698?w=800&q=85",
@@ -1937,7 +1937,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Less filler:</strong> Resist the urge to fill every space — the negative space is what gives Arabic style its signature breathable elegance.</li>
       </ul>
       <blockquote><p>"Arabic palm mehndi is the art of saying everything with just a few perfectly placed lines."</p></blockquote>
-      <p>Browse more Arabic inspirations in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Browse more Arabic inspirations in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1599671229994-bc8fd4df731c?w=800&q=85",
@@ -1949,7 +1949,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "43",
-    slug: "elegant-finger-mehndi-art",
+    slug: "elegant-finger-mehndi-design-art",
     title: "Elegant Finger Mehndi Art",
     excerpt: "Explore elegant finger mehndi art that uses precision and restraint to create designs of refined, timeless beauty.",
     content: `
@@ -1965,7 +1965,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Light-coloured skin advantage:</strong> On lighter skin tones, even delicate fine-line work shows up beautifully, so embrace minimal coverage.</li>
       </ul>
       <blockquote><p>"Elegant finger mehndi is the art of perfection in miniature — each line a quiet statement of mastery."</p></blockquote>
-      <p>Find more refined designs in our <a href="/finger-mehndi">Finger Mehndi Gallery</a>.</p>
+      <p>Find more refined designs in our <a href="/finger-mehndi-design">Finger Mehndi Gallery</a>.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1716672042560-c59ebb0805e6?w=800&q=85",
@@ -1993,7 +1993,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Leaf variety:</strong> Use different leaf shapes — pointed, rounded, serrated — to add botanical realism and texture.</li>
       </ul>
       <blockquote><p>"Wedding florals in henna are a garden that blooms on your wedding day and lives forever in your photographs."</p></blockquote>
-      <p>Explore the full collection of bridal florals in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore the full collection of bridal florals in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1771992230867-6478af331c26?w=800&q=85",
@@ -2021,7 +2021,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Embrace imperfection:</strong> Slight irregularities in hand-drawn henna are what give it organic, handcrafted charm.</li>
       </ul>
       <blockquote><p>"The simplest designs often carry the most grace — easy palm mehndi is proof that beauty needs no complexity."</p></blockquote>
-      <p>Find more accessible and beautiful designs in our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Find more accessible and beautiful designs in our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1759720888181-7b56230250d0?w=800&q=85",
@@ -2033,7 +2033,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "46",
-    slug: "minimal-bridal-mehndi",
+    slug: "minimal-bridal-mehndi-design",
     title: "Minimal Bridal Mehndi",
     excerpt: "Discover minimal bridal mehndi that celebrates the beauty of simplicity without sacrificing the festive spirit of the occasion.",
     content: `
@@ -2049,7 +2049,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Dark paste essential:</strong> Minimal designs rely on rich, dark stain colour for impact — prioritise high-quality organic paste.</li>
       </ul>
       <blockquote><p>"Minimal bridal mehndi is the art of saying everything with barely a whisper — and being heard by all."</p></blockquote>
-      <p>Browse our curated collection in the <a href="/minimal-mehndi">Minimal Mehndi Gallery</a>.</p>
+      <p>Browse our curated collection in the <a href="/minimal-mehndi-design">Minimal Mehndi Gallery</a>.</p>
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1702062779141-d5b4655197c7?w=800&q=85",
@@ -2077,7 +2077,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Ceremony timing:</strong> Schedule the mehndi ceremony for the evening before the wedding to ensure perfect stain development by morning.</li>
       </ul>
       <blockquote><p>"In every stroke of traditional wedding henna lies the wisdom of ancestors blessing a new beginning."</p></blockquote>
-      <p>Discover more heritage designs in our <a href="/indian-mehndi">Indian Mehndi Gallery</a>.</p>
+      <p>Discover more heritage designs in our <a href="/indian-mehndi-design">Indian Mehndi Gallery</a>.</p>
     `,
     category: "Indian",
     coverImage: "https://images.unsplash.com/photo-1708803962954-1893114321f0?w=800&q=85",
@@ -2105,7 +2105,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Fine chains need fine tips:</strong> Chain effects require the finest possible cone tip for convincing, delicate lines.</li>
       </ul>
       <blockquote><p>"Modern hand jewelry mehndi is the fashion accessory you never have to take off — it wears beautifully until the celebration is a memory."</p></blockquote>
-      <p>Explore more trend-forward designs in our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a>.</p>
+      <p>Explore more trend-forward designs in our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a>.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1566139673479-682aa413f947?w=800&q=85",
@@ -2133,7 +2133,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Confidence in strokes:</strong> Gulf henna is drawn with confident, sweeping strokes — hesitation produces weak lines.</li>
       </ul>
       <blockquote><p>"Gulf henna is the art of boldness — where one flower speaks louder than a garden."</p></blockquote>
-      <p>Find more Gulf-inspired and Arabic styles in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Find more Gulf-inspired and Arabic styles in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1563962750292-d3401f66d46b?w=800&q=85",
@@ -2161,7 +2161,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Central dot anchor:</strong> Always place a perfectly rounded dot at the exact centre before beginning — it anchors the entire composition.</li>
       </ul>
       <blockquote><p>"A circle in mehndi has no beginning and no end — much like the love it is drawn to celebrate."</p></blockquote>
-      <p>See more geometric and mandala-inspired designs in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>See more geometric and mandala-inspired designs in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1722172312997-068983715fd1?w=800&q=85",
@@ -2189,7 +2189,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Documentation:</strong> Photograph both the wet paste and the fresh stain after removal — both stages make beautiful images.</li>
       </ul>
       <blockquote><p>"Full hand bridal henna is not just an art form — it is a ceremony in itself, a ritual of transformation and celebration."</p></blockquote>
-      <p>Browse our complete bridal collection in the <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Browse our complete bridal collection in the <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
@@ -2217,7 +2217,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Test your vision:</strong> Sketch the design at actual hand size on paper before the session to gauge its proportions and elegance.</li>
       </ul>
       <blockquote><p>"Elegant bridal palm mehndi is the art of perfect restraint — knowing that sometimes one beautiful thing is enough."</p></blockquote>
-      <p>Explore more refined bridal designs in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore more refined bridal designs in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=800&q=85",
@@ -2245,7 +2245,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Extend onto the wrist:</strong> A floral or vine extension onto the wrist completes the back palm design beautifully.</li>
       </ul>
       <blockquote><p>"A floral back palm mehndi is a garden that blooms on the skin — visible to all, personal to one."</p></blockquote>
-      <p>Discover more beautiful back hand designs in our <a href="/back-hand-mehndi">Back Hand Mehndi Gallery</a>.</p>
+      <p>Discover more beautiful back hand designs in our <a href="/back-hand-mehndi-design">Back Hand Mehndi Gallery</a>.</p>
     `,
     category: "Back Hand",
     coverImage: "https://images.unsplash.com/photo-1566664254600-3412f985e947?w=800&q=85",
@@ -2273,7 +2273,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Gradient effect:</strong> Design heavier, more detailed bands on the lower finger joints and lighter bands higher up for a professional jeweler's look.</li>
       </ul>
       <blockquote><p>"Finger jewelry mehndi is the ultimate accessory — it wears like art and tells the world that beauty is your language."</p></blockquote>
-      <p>Find more finger design inspiration in our <a href="/finger-mehndi">Finger Mehndi Gallery</a>.</p>
+      <p>Find more finger design inspiration in our <a href="/finger-mehndi-design">Finger Mehndi Gallery</a>.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1563962751094-31bb84e91a4c?w=800&q=85",
@@ -2301,7 +2301,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Finishing touches:</strong> Small dot accents added after the main design is complete can elevate a good design to a gorgeous one.</li>
       </ul>
       <blockquote><p>"Gorgeous Arabic palm mehndi is the reason henna has crossed every cultural border — its beauty speaks universally."</p></blockquote>
-      <p>Browse the full collection in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Browse the full collection in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1760163287823-8786a65fd269?w=800&q=85",
@@ -2329,7 +2329,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Avoid the pulse point:</strong> The inner wrist pulse point moves frequently — apply minimal detail there to prevent cracking during application.</li>
       </ul>
       <blockquote><p>"Modern wrist mehndi is the bracelet that needs no clasp — it wraps around your wrist with the warmth of tradition."</p></blockquote>
-      <p>Explore more fashion-forward designs in our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a>.</p>
+      <p>Explore more fashion-forward designs in our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a>.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1763012422430-dec55624bc28?w=800&q=85",
@@ -2357,7 +2357,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Consistent scale:</strong> Keep cute accent elements at a consistent small scale so they read as charming details rather than dominating focal points.</li>
       </ul>
       <blockquote><p>"The most beautiful bridal mehndi is the one that makes the bride laugh and cry at the same time — cute patterns have that power."</p></blockquote>
-      <p>Find your perfect wedding design in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Find your perfect wedding design in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1493728484672-f0bef543e2a1?w=800&q=85",
@@ -2385,7 +2385,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Colour considerations:</strong> On darker skin tones, bold flower shapes with minimal internal detail create the most impact.</li>
       </ul>
       <blockquote><p>"Wedding flower mehndi is the garden that grows on your hands the day you begin your greatest adventure."</p></blockquote>
-      <p>Discover more floral bridal inspirations in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Discover more floral bridal inspirations in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1525135850648-b42365991054?w=800&q=85",
@@ -2397,7 +2397,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "59",
-    slug: "heavy-front-hand-mehndi",
+    slug: "heavy-front-hand-mehndi-design",
     title: "Heavy Front Hand Mehndi",
     excerpt: "Heavy front hand mehndi designs feature bold motifs and dense filling that transform the entire palm into a stunning canvas of tradition and artistry.",
     content: `
@@ -2413,7 +2413,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Allow full drying time:</strong> Leave the paste on for at least six hours, ideally overnight, for the deepest stain.</li>
       </ul>
       <blockquote><p>"A heavily adorned hand speaks louder than any piece of jewelry — it tells the story of culture, celebration, and craft."</p></blockquote>
-      <p>Ready to explore more stunning designs? Visit our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a> for endless inspiration.</p>
+      <p>Ready to explore more stunning designs? Visit our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a> for endless inspiration.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1571150612716-ff39d1e9ef58?w=800&q=85",
@@ -2441,7 +2441,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Moisturize daily:</strong> Apply coconut oil each morning to prolong the life of the design.</li>
       </ul>
       <blockquote><p>"Arabic henna flows like poetry — each line an expression of grace, each curve a testament to elegance."</p></blockquote>
-      <p>Explore our full collection in the <a href="/arabic-mehndi">Arabic Mehndi Gallery</a> for more royal-inspired looks.</p>
+      <p>Explore our full collection in the <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a> for more royal-inspired looks.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85",
@@ -2453,7 +2453,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "61",
-    slug: "beautiful-minimal-mehndi",
+    slug: "beautiful-minimal-mehndi-design",
     title: "Beautiful Minimal Mehndi",
     excerpt: "Beautiful minimal mehndi proves that a few well-placed lines and delicate motifs can create more impact than the most elaborate traditional designs.",
     content: `
@@ -2469,7 +2469,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Palm dot mandala:</strong> A small mandala centered on the palm is simple yet striking in photographs.</li>
       </ul>
       <blockquote><p>"Minimal mehndi whispers where others shout — and sometimes a whisper is the most powerful statement of all."</p></blockquote>
-      <p>Find your perfect understated look in our <a href="/minimal-mehndi">Minimal Mehndi Gallery</a>.</p>
+      <p>Find your perfect understated look in our <a href="/minimal-mehndi-design">Minimal Mehndi Gallery</a>.</p>
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=800&q=85",
@@ -2481,7 +2481,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "62",
-    slug: "stylish-wedding-finger-mehndi",
+    slug: "stylish-wedding-finger-mehndi-design",
     title: "Stylish Wedding Finger Mehndi",
     excerpt: "Stylish wedding finger mehndi wraps each finger in intricate lace-like patterns, turning your hand into a gallery of delicate henna artistry.",
     content: `
@@ -2497,7 +2497,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Wrap overnight:</strong> Loosely wrap decorated fingers in tissue paper before sleeping to protect the paste.</li>
       </ul>
       <blockquote><p>"Every finger tells a different story — together they compose a poem of celebration and beauty."</p></blockquote>
-      <p>Browse our full range of patterns in the <a href="/finger-mehndi">Finger Mehndi Gallery</a>.</p>
+      <p>Browse our full range of patterns in the <a href="/finger-mehndi-design">Finger Mehndi Gallery</a>.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=800&q=85",
@@ -2525,7 +2525,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Have a drying station:</strong> Set up a fan or hairdryer area so guests can sit and dry while you work on the next person.</li>
       </ul>
       <blockquote><p>"Eid mehndi is not just decoration — it is the fragrance of celebration worn on the hands of those you love."</p></blockquote>
-      <p>Get more festival ideas from our <a href="/eid-mehndi">Eid Mehndi Gallery</a>.</p>
+      <p>Get more festival ideas from our <a href="/eid-mehndi-design">Eid Mehndi Gallery</a>.</p>
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1562508548-69377b81ab9e?w=800&q=85",
@@ -2553,7 +2553,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Add dimension with shading:</strong> Fill the inner half of large petals for a three-dimensional effect.</li>
       </ul>
       <blockquote><p>"Flowers painted in henna do not wilt — they bloom deeper with every passing day."</p></blockquote>
-      <p>Discover more botanical inspiration in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Discover more botanical inspiration in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1764640848891-9b23d3632ccf?w=800&q=85",
@@ -2581,7 +2581,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Warm the skin:</strong> Applying mehndi to slightly warm hands improves dye absorption and color intensity.</li>
       </ul>
       <blockquote><p>"Pakistani mehndi is an heirloom drawn on skin — intricate, timeless, and impossible to replicate carelessly."</p></blockquote>
-      <p>See more stunning examples in our <a href="/pakistani-mehndi">Pakistani Mehndi Gallery</a>.</p>
+      <p>See more stunning examples in our <a href="/pakistani-mehndi-design">Pakistani Mehndi Gallery</a>.</p>
     `,
     category: "Pakistani",
     coverImage: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=800&q=85",
@@ -2609,7 +2609,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Finish with dots:</strong> Scatter fine dots around each flower as a finishing touch that adds sparkle and professional polish.</li>
       </ul>
       <blockquote><p>"A fancy flower drawn in henna is more than decoration — it is a small miracle of patience, precision, and passion."</p></blockquote>
-      <p>Explore more floral inspiration in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Explore more floral inspiration in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1676134014048-bcc764ea015d?w=800&q=85",
@@ -2621,7 +2621,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "67",
-    slug: "gorgeous-front-hand-mehndi",
+    slug: "gorgeous-front-hand-mehndi-design",
     title: "Gorgeous Front Hand Mehndi",
     excerpt: "Gorgeous front hand mehndi designs combine the best of floral, geometric, and paisley traditions into show-stopping compositions that command attention at every celebration.",
     content: `
@@ -2637,7 +2637,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Hydrate your skin:</strong> Well-moisturized skin holds henna paste better and produces a deeper stain.</li>
       </ul>
       <blockquote><p>"The front of the hand is a stage — and a gorgeous mehndi design is the performance everyone remembers."</p></blockquote>
-      <p>Find more breathtaking compositions in our <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Find more breathtaking compositions in our <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
@@ -2665,7 +2665,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Mirror both hands:</strong> While exact duplication is not required, maintaining a visual theme across both hands creates a cohesive bridal look.</li>
       </ul>
       <blockquote><p>"The back of a bride's hand tells the story of her wedding day — read it in every intricate line of henna."</p></blockquote>
-      <p>Explore more beautiful back hand styles in our <a href="/back-hand-mehndi">Back Hand Mehndi Gallery</a>.</p>
+      <p>Explore more beautiful back hand styles in our <a href="/back-hand-mehndi-design">Back Hand Mehndi Gallery</a>.</p>
     `,
     category: "Back Hand",
     coverImage: "https://images.unsplash.com/photo-1656702678285-59bde376828f?w=800&q=85",
@@ -2677,7 +2677,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "69",
-    slug: "modern-stylish-mehndi",
+    slug: "modern-stylish-mehndi-design",
     title: "Modern Stylish Mehndi",
     excerpt: "Modern stylish mehndi fuses contemporary geometric shapes with traditional henna motifs to create fresh, fashion-forward designs for today's celebration.",
     content: `
@@ -2693,7 +2693,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Minimalist with one bold element:</strong> A single large arrow or feather on the forearm makes a bold fashion statement.</li>
       </ul>
       <blockquote><p>"Modern mehndi proves that tradition and innovation are not opposites — they are partners in art's evolution."</p></blockquote>
-      <p>Explore more contemporary henna at our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a>.</p>
+      <p>Explore more contemporary henna at our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a>.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1757331446901-8f935a107bc9?w=800&q=85",
@@ -2721,7 +2721,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Add glitter accents:</strong> Gold glitter dusted over dried henna jewelry designs creates a stunning metallic shimmer in photographs.</li>
       </ul>
       <blockquote><p>"When henna becomes jewelry, every bride carries her treasure not in a box, but blooming on her own skin."</p></blockquote>
-      <p>Find more exquisite bridal henna at our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Find more exquisite bridal henna at our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1623217509141-6f735087b50c?w=800&q=85",
@@ -2749,7 +2749,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Extend to the forearm:</strong> Full bridal coverage up the arm creates a stunning, cohesive look for the ceremony.</li>
       </ul>
       <blockquote><p>"Bridal mehndi is the oldest love letter — written on skin, witnessed by family, and carried into forever."</p></blockquote>
-      <p>Browse our curated collection at the <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Browse our curated collection at the <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1774019410720-3409a533d30b?w=800&q=85",
@@ -2777,7 +2777,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Add a forearm extension:</strong> A simple vine or geometric border extending up the inner forearm elevates the overall look.</li>
       </ul>
       <blockquote><p>"A stylish wedding palm is where the bride's personality blooms in henna — unique, confident, and beautiful."</p></blockquote>
-      <p>Explore more bridal inspiration at our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore more bridal inspiration at our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1770346279037-89853a3e8c60?w=800&q=85",
@@ -2789,7 +2789,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "73",
-    slug: "easy-arabic-bridal-mehndi",
+    slug: "easy-arabic-bridal-mehndi-design",
     title: "Easy Arabic Bridal Mehndi",
     excerpt: "Easy Arabic bridal mehndi proves you do not need years of training to achieve breathtaking results — bold florals and flowing vines create a striking bridal look with confidence.",
     content: `
@@ -2805,7 +2805,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Fill gaps with leaves:</strong> Simple leaf shapes are quick to draw and instantly fill awkward empty spaces between flowers.</li>
       </ul>
       <blockquote><p>"Arabic bridal mehndi is beautiful proof that nature's forms — flowers, leaves, and vines — never go out of style."</p></blockquote>
-      <p>See more Arabic bridal designs in our <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>See more Arabic bridal designs in our <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1755234993813-054bc8c8a698?w=800&q=85",
@@ -2833,7 +2833,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Use fine borders:</strong> A thin dot border or fine scallop outline framing the design adds polish without adding visual weight.</li>
       </ul>
       <blockquote><p>"True elegance in mehndi, as in all art, lies not in what was added but in what was wisely left out."</p></blockquote>
-      <p>Explore our curated designs in the <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Explore our curated designs in the <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1599671229994-bc8fd4df731c?w=800&q=85",
@@ -2861,7 +2861,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Allow extra time:</strong> Royal designs require three or more hours; do not rush a design built for eternity.</li>
       </ul>
       <blockquote><p>"A royal mehndi design does not just adorn — it declares, with every intricate line, that this is a day of extraordinary significance."</p></blockquote>
-      <p>Browse our bridal masterpieces in the <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Browse our bridal masterpieces in the <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1716672042560-c59ebb0805e6?w=800&q=85",
@@ -2889,7 +2889,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Seal with balm after removal:</strong> A tiny dab of Vaseline or shea butter over the fresh stain deepens the color significantly.</li>
       </ul>
       <blockquote><p>"Sometimes the smallest marks of beauty leave the most lasting impressions — minimal finger henna is proof."</p></blockquote>
-      <p>Get more ideas from our <a href="/finger-mehndi">Finger Mehndi Gallery</a>.</p>
+      <p>Get more ideas from our <a href="/finger-mehndi-design">Finger Mehndi Gallery</a>.</p>
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1771992230867-6478af331c26?w=800&q=85",
@@ -2917,7 +2917,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Photograph in natural light:</strong> Floral jewelry mehndi looks most spectacular in soft natural light that highlights both the design and the stain depth.</li>
       </ul>
       <blockquote><p>"Floral jewelry mehndi is the union of nature and craft — flowers that never wilt, jewelry that never tarnishes."</p></blockquote>
-      <p>See more exquisite designs in our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>See more exquisite designs in our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1759720888181-7b56230250d0?w=800&q=85",
@@ -2945,7 +2945,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Use muted backgrounds:</strong> Photograph finished designs against neutral backgrounds — dark or light solid fabrics — to let the henna be the star.</li>
       </ul>
       <blockquote><p>"A stylish back palm design turns every handshake into an introduction and every wave into a work of art."</p></blockquote>
-      <p>Find more stunning back hand inspiration at our <a href="/back-hand-mehndi">Back Hand Mehndi Gallery</a>.</p>
+      <p>Find more stunning back hand inspiration at our <a href="/back-hand-mehndi-design">Back Hand Mehndi Gallery</a>.</p>
     `,
     category: "Back Hand",
     coverImage: "https://images.unsplash.com/photo-1702062779141-d5b4655197c7?w=800&q=85",
@@ -2973,7 +2973,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Document with a photoshoot:</strong> Book a dedicated mehndi photography session to capture the design at its peak beauty.</li>
       </ul>
       <blockquote><p>"A bride's mehndi blooms with her joy — the darker it grows, the more deeply she is loved."</p></blockquote>
-      <p>Explore our full collection at the <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore our full collection at the <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1708803962954-1893114321f0?w=800&q=85",
@@ -3001,7 +3001,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Photograph before removal:</strong> The paste itself is beautiful — take photos with the dried green paste intact before scraping.</li>
       </ul>
       <blockquote><p>"Heavy mehndi is not just a design — it is a declaration, worn boldly on skin, that some traditions are worth carrying forward."</p></blockquote>
-      <p>See more designs at the <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>See more designs at the <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1566139673479-682aa413f947?w=800&q=85",
@@ -3029,7 +3029,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Keep borders simple:</strong> A repeating row of dots or small scallops is easy to draw and frames the design neatly.</li>
       </ul>
       <blockquote><p>"Traditional mehndi does not have to be serious to be beautiful — sometimes the most joyful designs carry the deepest cultural love."</p></blockquote>
-      <p>Explore more culturally rich designs at our <a href="/indian-mehndi">Indian Mehndi Gallery</a>.</p>
+      <p>Explore more culturally rich designs at our <a href="/indian-mehndi-design">Indian Mehndi Gallery</a>.</p>
     `,
     category: "Indian",
     coverImage: "https://images.unsplash.com/photo-1563962750292-d3401f66d46b?w=800&q=85",
@@ -3057,7 +3057,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Add thorns sparingly:</strong> Tiny thorn details on stems are a realistic touch that adds drama without overwhelming the romantic mood.</li>
       </ul>
       <blockquote><p>"A rose drawn in henna carries the scent of every love story ever told — timeless, fragrant, and blooming eternally."</p></blockquote>
-      <p>Find more romantic designs at our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Find more romantic designs at our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1722172312997-068983715fd1?w=800&q=85",
@@ -3085,7 +3085,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Extend simply:</strong> Use single vine or geometric extensions beyond the jaal zone rather than more complex fills to maintain the modern sensibility.</li>
       </ul>
       <blockquote><p>"Modern Pakistani mehndi respects its roots while growing toward new light — tradition made vital for the world it lives in today."</p></blockquote>
-      <p>Explore the full tradition at our <a href="/pakistani-mehndi">Pakistani Mehndi Gallery</a>.</p>
+      <p>Explore the full tradition at our <a href="/pakistani-mehndi-design">Pakistani Mehndi Gallery</a>.</p>
     `,
     category: "Pakistani",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
@@ -3113,7 +3113,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Coordinate with bracelets:</strong> Apply wrist mehndi below or above where you normally wear bangles rather than in the same zone.</li>
       </ul>
       <blockquote><p>"A wrist cuff of henna flowers is the most intimate form of self-decoration — worn close to the pulse, felt deep in the heart."</p></blockquote>
-      <p>Get more wrist design ideas at our <a href="/stylish-mehndi">Stylish Mehndi Gallery</a>.</p>
+      <p>Get more wrist design ideas at our <a href="/stylish-mehndi-design">Stylish Mehndi Gallery</a>.</p>
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=800&q=85",
@@ -3141,7 +3141,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Add gems last:</strong> Apply adhesive gems as the final step, pressing them gently into still-moist henna so they adhere without chemical adhesives.</li>
       </ul>
       <blockquote><p>"Eid mehndi is the fragrance of celebration worn on the hands — elegant, joyful, and thoroughly worthy of the day."</p></blockquote>
-      <p>Browse our Eid collection at the <a href="/eid-mehndi">Eid Mehndi Gallery</a>.</p>
+      <p>Browse our Eid collection at the <a href="/eid-mehndi-design">Eid Mehndi Gallery</a>.</p>
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1566664254600-3412f985e947?w=800&q=85",
@@ -3169,7 +3169,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Frame with florals:</strong> Surround the peacock with roses or lotus flowers to integrate it into the broader bridal composition.</li>
       </ul>
       <blockquote><p>"The bride who wears a peacock in her mehndi carries the symbol of every beauty and every blessing on her wedding day."</p></blockquote>
-      <p>Explore more symbolic bridal designs at our <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Explore more symbolic bridal designs at our <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1563962751094-31bb84e91a4c?w=800&q=85",
@@ -3181,7 +3181,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "87",
-    slug: "full-palm-arabic-mehndi",
+    slug: "full-palm-arabic-mehndi-design",
     title: "Full Palm Arabic Mehndi",
     excerpt: "Full palm Arabic mehndi brings the signature bold florals and sweeping vines of the Arabic tradition to total hand coverage for a magnificently striking result.",
     content: `
@@ -3197,7 +3197,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Bold at wrist, delicate at tips:</strong> Progressively reducing detail density from wrist to fingertip creates natural visual flow.</li>
       </ul>
       <blockquote><p>"Full Arabic mehndi is a garden in full bloom — generous, bold, and overflowing with the joy of creation."</p></blockquote>
-      <p>Browse our extensive collection at the <a href="/arabic-mehndi">Arabic Mehndi Gallery</a>.</p>
+      <p>Browse our extensive collection at the <a href="/arabic-mehndi-design">Arabic Mehndi Gallery</a>.</p>
     `,
     category: "Arabic",
     coverImage: "https://images.unsplash.com/photo-1760163287823-8786a65fd269?w=800&q=85",
@@ -3209,7 +3209,7 @@ export const allBlogPosts: BlogPost[] = [
   },
   {
     id: "88",
-    slug: "fancy-pakistani-mehndi",
+    slug: "fancy-pakistani-mehndi-design",
     title: "Fancy Pakistani Mehndi",
     excerpt: "Fancy Pakistani mehndi elevates the already extraordinary tradition of Pakistani henna with extra layers of detail, premium motifs, and the expert application of a master artist.",
     content: `
@@ -3225,7 +3225,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Have a steady hand assistant:</strong> For extremely fine jaal work, having someone gently support the artist's wrist helps maintain line consistency.</li>
       </ul>
       <blockquote><p>"Fancy Pakistani mehndi is the art world's best-kept secret — a masterpiece created fresh each time, never to be displayed twice."</p></blockquote>
-      <p>See more exceptional work at our <a href="/pakistani-mehndi">Pakistani Mehndi Gallery</a>.</p>
+      <p>See more exceptional work at our <a href="/pakistani-mehndi-design">Pakistani Mehndi Gallery</a>.</p>
     `,
     category: "Pakistani",
     coverImage: "https://images.unsplash.com/photo-1763012422430-dec55624bc28?w=800&q=85",
@@ -3253,7 +3253,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Wear loose clothing:</strong> Avoid tight sleeves or cuffs that might smear fresh henna during the celebratory evening.</li>
       </ul>
       <blockquote><p>"On Chand Raat, the scent of fresh henna mingles with the joy of Eid — a fragrance of celebration that lingers in memory long after the stain has faded."</p></blockquote>
-      <p>Find more festive designs at our <a href="/eid-mehndi">Eid Mehndi Gallery</a>.</p>
+      <p>Find more festive designs at our <a href="/eid-mehndi-design">Eid Mehndi Gallery</a>.</p>
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1493728484672-f0bef543e2a1?w=800&q=85",
@@ -3281,7 +3281,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Finish with borders last:</strong> Adding the outer frame last allows you to adjust size and density to best contain whatever composition emerged.</li>
       </ul>
       <blockquote><p>"A beautiful front palm mehndi is like a window into a garden — every glance reveals new details, new beauty, new reasons to love the art."</p></blockquote>
-      <p>Explore our full range at the <a href="/front-hand-mehndi">Front Hand Mehndi Gallery</a>.</p>
+      <p>Explore our full range at the <a href="/front-hand-mehndi-design">Front Hand Mehndi Gallery</a>.</p>
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1525135850648-b42365991054?w=800&q=85",
@@ -3309,7 +3309,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Browse completed work:</strong> Look for gallery images that show the finished stain on skin rather than just the fresh paste, for an accurate impression of the final result.</li>
       </ul>
       <blockquote><p>"A great mehndi gallery is a love letter to the art — every image a testament to what skilled hands and devoted hearts can create."</p></blockquote>
-      <p>Start your own journey through our comprehensive <a href="/bridal-mehndi">Bridal Mehndi Gallery</a>.</p>
+      <p>Start your own journey through our comprehensive <a href="/bridal-mehndi-design">Bridal Mehndi Gallery</a>.</p>
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85",

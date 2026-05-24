@@ -109,7 +109,7 @@ export default function HeroSection() {
               className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-12"
             >
               <Link
-                href="/bridal-mehndi"
+                href="/bridal-mehndi-design"
                 className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-full text-sm sm:text-[15px] font-bold text-white transition-all duration-300 hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, #C8946A 0%, #9A6838 100%)",

@@ -75,9 +75,9 @@ const HOME_FAQS = [
 
 // Generate 200 mixed mehndi designs from all 12 categories (≈17 per category)
 const CATEGORIES = [
-  "bridal-mehndi","arabic-mehndi","pakistani-mehndi","eid-mehndi",
-  "finger-mehndi","feet-mehndi","minimal-mehndi","kids-mehndi",
-  "back-hand-mehndi","indian-mehndi","stylish-mehndi","front-hand-mehndi",
+  "bridal-mehndi-design","arabic-mehndi-design","pakistani-mehndi-design","eid-mehndi-design",
+  "finger-mehndi-design","feet-mehndi-design","minimal-mehndi-design","kids-mehndi-design",
+  "back-hand-mehndi-design","indian-mehndi-design","stylish-mehndi-design","front-hand-mehndi-design",
 ];
 
 function getMixedDesigns(total: number) {

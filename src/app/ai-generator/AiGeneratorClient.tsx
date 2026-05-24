@@ -259,7 +259,7 @@ export default function AiGeneratorClient() {
           <div className="text-center mt-10">
             <p className="text-henna-500 text-sm mb-4">Aur zyada designs ke liye categories browse karo</p>
             <div className="flex flex-wrap justify-center gap-2">
-              {["bridal-mehndi","arabic-mehndi","pakistani-mehndi","eid-mehndi","minimal-mehndi"].map((slug) => (
+              {["bridal-mehndi-design","arabic-mehndi-design","pakistani-mehndi-design","eid-mehndi-design","minimal-mehndi-design"].map((slug) => (
                 <Link
                   key={slug}
                   href={`/${slug}`}

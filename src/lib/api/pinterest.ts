@@ -62,14 +62,14 @@ export async function searchPinterestImages(
 ): Promise<PinterestImage[]> {
   // Map mehndi categories to search queries
   const searchQueries: Record<string, string> = {
-    "bridal-mehndi": "bridal mehndi designs",
-    "arabic-mehndi": "arabic mehndi patterns",
-    "pakistani-mehndi": "pakistani mehndi",
-    "eid-mehndi": "eid mehndi designs",
-    "finger-mehndi": "finger mehndi",
-    "feet-mehndi": "feet mehndi ankle",
-    "minimal-mehndi": "minimal simple mehndi",
-    "indian-mehndi": "indian mehndi designs",
+    "bridal-mehndi-design": "bridal mehndi designs",
+    "arabic-mehndi-design": "arabic mehndi patterns",
+    "pakistani-mehndi-design": "pakistani mehndi",
+    "eid-mehndi-design": "eid mehndi designs",
+    "finger-mehndi-design": "finger mehndi",
+    "feet-mehndi-design": "feet mehndi ankle",
+    "minimal-mehndi-design": "minimal simple mehndi",
+    "indian-mehndi-design": "indian mehndi designs",
   };
 
   const query = searchQueries[category] || "mehndi designs";

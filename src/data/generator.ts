@@ -86,24 +86,24 @@ const URL_VARIANTS = [
 // ── Per-category photo ORDER (which index in ALL_PHOTOS to start from) ───────
 // Each category starts at a different offset so its grid looks unique
 const CATEGORY_START: Record<string, number> = {
-  "bridal-mehndi":    0,
-  "arabic-mehndi":    5,
-  "pakistani-mehndi": 10,
-  "eid-mehndi":       14,
-  "finger-mehndi":    18,
-  "feet-mehndi":      22,   // feet photos (IDs 28-30) are at index 28-30
-  "minimal-mehndi":   7,
-  "kids-mehndi":      3,
-  "back-hand-mehndi": 9,
-  "indian-mehndi":    20,
-  "stylish-mehndi":   12,
-  "front-hand-mehndi":16,
-  "mehndi-tattoo":     4,
+  "bridal-mehndi-design":    0,
+  "arabic-mehndi-design":    5,
+  "pakistani-mehndi-design": 10,
+  "eid-mehndi-design":       14,
+  "finger-mehndi-design":    18,
+  "feet-mehndi-design":      22,   // feet photos (IDs 28-30) are at index 28-30
+  "minimal-mehndi-design":   7,
+  "kids-mehndi-design":      3,
+  "back-hand-mehndi-design": 9,
+  "indian-mehndi-design":    20,
+  "stylish-mehndi-design":   12,
+  "front-hand-mehndi-design":16,
+  "mehndi-tattoo-design":     4,
 };
 
 // ── Titles per category (20 unique titles) ───────────────────────────────────
 const CATEGORY_TITLES: Record<string, string[]> = {
-  "bridal-mehndi": [
+  "bridal-mehndi-design": [
     "Bridal Full Hand Mehndi","Bridal Arabic Mehndi","Bridal Back Hand Pattern",
     "Wedding Mehndi Design","Dulhan Full Hand Mehndi","Bridal Floral Mehndi",
     "Heavy Bridal Mehndi","Bridal Finger Mehndi","Bridal Front Hand Design",
@@ -112,7 +112,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Bridal Wrist Mehndi","Bridal Vine Pattern","Karwa Chauth Mehndi",
     "Bridal Lotus Mehndi","Traditional Bridal Henna",
   ],
-  "arabic-mehndi": [
+  "arabic-mehndi-design": [
     "Arabic Floral Mehndi","Arabic Half Hand Design","Arabic Front Hand Pattern",
     "Gulf Style Arabic Mehndi","Arabic Finger Mehndi","Arabic Rose Mehndi",
     "Bold Arabic Design","Arabic Vine Mehndi","Flowing Arabic Pattern",
@@ -121,7 +121,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Arabic Peacock Mehndi","Arabic Dotwork Design","Arabic Party Mehndi",
     "Simple Arabic Mehndi","Arabic Back Hand Design",
   ],
-  "pakistani-mehndi": [
+  "pakistani-mehndi-design": [
     "Pakistani Bridal Mehndi","Pakistani Full Hand Design","Pakistani Back Hand",
     "Traditional Pakistani Mehndi","Pakistani Floral Pattern","Pakistani Finger Design",
     "Pakistani Heavy Mehndi","Pakistani Mandala Mehndi","Pakistani Wrist Design",
@@ -130,7 +130,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Pakistani Cone Mehndi","Pakistani Engagement Mehndi","Pakistani Nikkah Design",
     "Pakistani Simple Mehndi","Pakistani Peacock Pattern",
   ],
-  "eid-mehndi": [
+  "eid-mehndi-design": [
     "Eid Special Mehndi","Eid Front Hand Design","Eid Back Hand Mehndi",
     "Simple Eid Mehndi","Eid Arabic Mehndi","Eid Finger Design",
     "Eid Floral Mehndi","Quick Eid Mehndi","Eid Ul Fitr Design",
@@ -139,7 +139,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Eid Party Mehndi","Eid Traditional Design","Eid Rose Mehndi",
     "Eid Leafy Pattern","Eid Dotwork Mehndi",
   ],
-  "finger-mehndi": [
+  "finger-mehndi-design": [
     "Single Finger Mehndi","All Fingers Mehndi","Finger Tip Design",
     "Knuckle Mehndi Design","Finger Arabic Mehndi","Finger Floral Pattern",
     "Minimal Finger Mehndi","Finger Band Design","Finger Ring Mehndi",
@@ -148,7 +148,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Modern Finger Henna","Finger Leaf Pattern","Finger Rose Design",
     "Simple Finger Mehndi","Party Finger Mehndi",
   ],
-  "feet-mehndi": [
+  "feet-mehndi-design": [
     "Feet Ankle Mehndi","Bridal Feet Mehndi","Back Feet Design",
     "Toe Mehndi Pattern","Feet Arabic Mehndi","Anklet Mehndi Design",
     "Full Feet Mehndi","Simple Feet Mehndi","Feet Floral Design",
@@ -157,7 +157,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Ankle Bracelet Mehndi","Feet Dotwork Design","Feet Paisley Pattern",
     "Delicate Feet Henna","Feet Lotus Design",
   ],
-  "minimal-mehndi": [
+  "minimal-mehndi-design": [
     "Simple Minimal Mehndi","Minimalist Henna Design","Clean Mehndi Pattern",
     "Office Mehndi Design","Tiny Mehndi Art","Line Work Mehndi",
     "Geometric Minimal Mehndi","Minimal Bridal Mehndi","Dainty Mehndi Design",
@@ -166,7 +166,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Clean Line Mehndi","Minimal Floral Design","Simple Wrist Mehndi",
     "Modern Minimal Henna","Casual Mehndi Design",
   ],
-  "kids-mehndi": [
+  "kids-mehndi-design": [
     "Simple Kids Mehndi","Easy Children Mehndi","Fun Kids Henna",
     "Kids Finger Mehndi","Simple Star Mehndi","Kids Floral Mehndi",
     "Easy Kids Pattern","Quick Kids Mehndi","Kids Peacock Design",
@@ -175,7 +175,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Kids Dotwork Design","Easy Flower Mehndi","Kids Minimal Henna",
     "Basic Kids Mehndi","Fun Henna For Kids",
   ],
-  "back-hand-mehndi": [
+  "back-hand-mehndi-design": [
     "Back Hand Full Mehndi","Back Hand Arabic Design","Back Hand Bridal",
     "Back Hand Floral Mehndi","Back Hand Mandala","Back Hand Peacock",
     "Back Hand Minimal Mehndi","Back Hand Tikki Design","Back Hand Net Pattern",
@@ -184,7 +184,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Back Hand Paisley","Back Hand Rose Design","Back Hand Geometric",
     "Back Hand Party Mehndi","Back Hand Dotwork",
   ],
-  "indian-mehndi": [
+  "indian-mehndi-design": [
     "Indian Bridal Mehndi","Traditional Indian Mehndi","Rajasthani Mehndi",
     "Indian Peacock Design","Indian Paisley Mehndi","Indian Full Hand",
     "Indian Tikki Design","Indian Jaal Mehndi","Indian Lotus Pattern",
@@ -193,7 +193,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Indian Navratri Design","Indian Engagement Mehndi","Indian Feet Mehndi",
     "Indian Back Hand Design","Indian Finger Pattern",
   ],
-  "stylish-mehndi": [
+  "stylish-mehndi-design": [
     "Trendy Mehndi Design","Stylish Arabic Mehndi","Modern Henna Art",
     "Party Mehndi Design","Fashion Mehndi Style","Contemporary Mehndi",
     "Fusion Mehndi Design","Stylish Eid Mehndi","Chic Henna Design",
@@ -202,7 +202,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Stylish Finger Mehndi","Modern Floral Henna","Trendy Party Mehndi",
     "Glam Mehndi Design","Vogue Henna Style",
   ],
-  "front-hand-mehndi": [
+  "front-hand-mehndi-design": [
     "Front Hand Full Mehndi","Front Hand Arabic","Front Hand Bridal",
     "Front Hand Floral","Front Hand Simple","Front Hand Minimal",
     "Front Hand Mandala","Front Hand Vine","Front Hand Modern",
@@ -211,7 +211,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Front Hand Lotus","Front Hand Geometric","Front Hand Rose",
     "Front Hand Jaal Design","Front Hand Party",
   ],
-  "mehndi-tattoo": [
+  "mehndi-tattoo-design": [
     "Black Mehndi Tattoo","Temporary Henna Tattoo","Bold Mehndi Tattoo",
     "Finger Tattoo Mehndi","Arabic Tattoo Mehndi","Dark Henna Tattoo",
     "Minimalist Mehndi Tattoo","Floral Henna Tattoo","Geometric Mehndi Tattoo",
@@ -223,19 +223,19 @@ const CATEGORY_TITLES: Record<string, string[]> = {
 };
 
 const TAGS: Record<string, string[]> = {
-  "bridal-mehndi":    ["bridal","wedding","dulhan","full hand"],
-  "arabic-mehndi":    ["arabic","floral","half hand","modern"],
-  "pakistani-mehndi": ["pakistani","traditional","heavy","bridal"],
-  "eid-mehndi":       ["eid","festive","simple","arabic"],
-  "finger-mehndi":    ["finger","minimal","simple","dotwork"],
-  "feet-mehndi":      ["feet","ankle","floral","bridal"],
-  "minimal-mehndi":   ["minimal","simple","modern","clean"],
-  "kids-mehndi":      ["kids","simple","easy","fun"],
-  "back-hand-mehndi": ["back hand","full","floral","arabic"],
-  "indian-mehndi":    ["indian","traditional","bridal","paisley"],
-  "stylish-mehndi":   ["stylish","modern","trendy","party"],
-  "front-hand-mehndi":["front hand","full","floral","simple"],
-  "mehndi-tattoo":    ["tattoo","black","bold","temporary","henna tattoo"],
+  "bridal-mehndi-design":    ["bridal","wedding","dulhan","full hand"],
+  "arabic-mehndi-design":    ["arabic","floral","half hand","modern"],
+  "pakistani-mehndi-design": ["pakistani","traditional","heavy","bridal"],
+  "eid-mehndi-design":       ["eid","festive","simple","arabic"],
+  "finger-mehndi-design":    ["finger","minimal","simple","dotwork"],
+  "feet-mehndi-design":      ["feet","ankle","floral","bridal"],
+  "minimal-mehndi-design":   ["minimal","simple","modern","clean"],
+  "kids-mehndi-design":      ["kids","simple","easy","fun"],
+  "back-hand-mehndi-design": ["back hand","full","floral","arabic"],
+  "indian-mehndi-design":    ["indian","traditional","bridal","paisley"],
+  "stylish-mehndi-design":   ["stylish","modern","trendy","party"],
+  "front-hand-mehndi-design":["front hand","full","floral","simple"],
+  "mehndi-tattoo-design":    ["tattoo","black","bold","temporary","henna tattoo"],
 };
 
 // ── All category slugs ───────────────────────────────────────────────────────
@@ -247,12 +247,12 @@ export const ALL_CATEGORY_SLUGS = Object.keys(CATEGORY_START);
 // Result: first 33 items are all different photos, next 33 are same photos
 // but with completely different crop/zoom — 500 total unique image URLs.
 export function generateCategoryDesigns(category: string, count = 500): Design[] {
-  const titles    = CATEGORY_TITLES[category] ?? CATEGORY_TITLES["arabic-mehndi"];
+  const titles    = CATEGORY_TITLES[category] ?? CATEGORY_TITLES["arabic-mehndi-design"];
   const tags      = TAGS[category] ?? ["mehndi","henna","design"];
   const startOffset = CATEGORY_START[category] ?? 0;
 
-  // Use dedicated tattoo photos for mehndi-tattoo category
-  const photoPool = category === "mehndi-tattoo" ? TATTOO_PHOTOS : ALL_PHOTOS;
+  // Use dedicated tattoo photos for mehndi-tattoo-design category
+  const photoPool = category === "mehndi-tattoo-design" ? TATTOO_PHOTOS : ALL_PHOTOS;
   const total     = photoPool.length;
   const designs: Design[] = [];
 

@@ -61,20 +61,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Category-specific FAQs for Semantic SEO
 const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
-  "bridal-mehndi": [
+  "bridal-mehndi-design": [
     { question: "What is the best bridal mehndi design for 2024?", answer: "The best bridal mehndi designs for 2024 include full hand Arabic patterns, minimal geometric designs, and fusion styles combining Pakistani and Arabic elements. Designs with groom's name hidden in the pattern are also very popular." },
     { question: "How many days before the wedding should mehndi be applied?", answer: "Mehndi should be applied 1–2 days before the wedding. This gives the color time to develop fully — it peaks in darkness at 24–48 hours after application." },
     { question: "How long should bridal mehndi stay on?", answer: "For bridal mehndi, keep it on for at least 8–12 hours, ideally overnight. The longer you leave it, the darker and longer-lasting the color." },
   ],
-  "arabic-mehndi": [
+  "arabic-mehndi-design": [
     { question: "What makes Arabic mehndi different from other styles?", answer: "Arabic mehndi is characterized by bold, flowing floral designs with lots of negative space. Unlike Indian mehndi which covers the entire hand densely, Arabic mehndi uses elegant isolated motifs that look modern and stylish." },
     { question: "Is Arabic mehndi easy for beginners?", answer: "Yes! Arabic mehndi is actually one of the easiest styles for beginners because the patterns are less dense and more forgiving. Simple Arabic flower and leaf designs are perfect to start with." },
   ],
-  "eid-mehndi": [
+  "eid-mehndi-design": [
     { question: "What mehndi designs are best for Eid?", answer: "For Eid, simple to medium-complexity Arabic and Pakistani designs are most popular. Finger mehndi, half-hand designs, and minimal floral patterns are trending. The key is designs that look beautiful but don't take too long to apply." },
     { question: "How do I do mehndi quickly for Eid?", answer: "For quick Eid mehndi, stick to finger mehndi, simple arabic flowers on the back hand, or ready-made mehndi stencils. A simple 5-minute mehndi design can look stunning when done neatly." },
   ],
-  "mehndi-tattoo": [
+  "mehndi-tattoo-design": [
     { question: "What is mehndi tattoo?", answer: "Mehndi tattoo (also called henna tattoo) is a temporary body art made from natural henna paste. It stains the skin dark brown or black and lasts 1–3 weeks. Unlike permanent tattoos, mehndi tattoos are completely safe, painless, and fade naturally over time." },
     { question: "How long does a mehndi tattoo last?", answer: "A mehndi tattoo typically lasts 1 to 3 weeks depending on skin type, placement, and aftercare. Areas with thicker skin like palms and soles last longest. Keeping the design moisturized with oil daily extends its life significantly." },
     { question: "Is mehndi tattoo safe for skin?", answer: "Yes — natural henna mehndi tattoos are completely safe for all skin types including children. Always use 100% natural henna. Avoid black henna which contains PPD (paraphenylenediamine), a chemical dye that can cause severe allergic reactions and skin damage." },

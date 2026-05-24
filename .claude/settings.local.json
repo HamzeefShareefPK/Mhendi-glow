@@ -17,7 +17,8 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(Get-ChildItem -Path \"D:\\\\mehndiglow\\\\src\" -Recurse -File)",
       "Bash(Select-Object FullName)",
-      "Bash(Sort-Object FullName)"
+      "Bash(Sort-Object FullName)",
+      "Bash(node -e ' *)"
     ]
   }
 }

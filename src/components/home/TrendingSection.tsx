@@ -31,7 +31,7 @@ export default function TrendingSection() {
           </div>
         </div>
         <Link
-          href="/bridal-mehndi"
+          href="/bridal-mehndi-design"
           className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-henna-500 hover:text-henna-600 transition-colors group"
         >
           View All
@@ -95,7 +95,7 @@ export default function TrendingSection() {
 
       {/* Mobile view all */}
       <div className="sm:hidden mt-5 text-center">
-        <Link href="/bridal-mehndi"
+        <Link href="/bridal-mehndi-design"
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-henna-500 hover:text-henna-600 transition-colors">
           View all trending <ArrowRight size={13} />
         </Link>

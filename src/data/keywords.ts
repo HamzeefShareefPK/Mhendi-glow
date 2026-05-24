@@ -26,18 +26,18 @@ export const primaryKeywords: Keyword[] = [
 
 // ── CATEGORY KEYWORDS ────────────────────────────────────────────────────────
 export const categoryKeywords: Keyword[] = [
-  { keyword: "bridal mehndi designs 2024",        volume: "90K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/bridal-mehndi H1, Title" },
-  { keyword: "arabic mehndi design new style",    volume: "60K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/arabic-mehndi" },
-  { keyword: "eid mehndi 2024",                   volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/eid-mehndi" },
-  { keyword: "finger mehndi designs",             volume: "40K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/finger-mehndi" },
-  { keyword: "feet mehndi designs",               volume: "30K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/feet-mehndi" },
-  { keyword: "minimal mehndi designs",            volume: "35K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/minimal-mehndi" },
-  { keyword: "back hand mehndi designs",          volume: "45K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/back-hand-mehndi" },
-  { keyword: "front hand mehndi designs",         volume: "25K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/front-hand-mehndi" },
-  { keyword: "kids mehndi designs",               volume: "20K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/kids-mehndi" },
-  { keyword: "indian mehndi designs",             volume: "70K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/indian-mehndi" },
-  { keyword: "stylish mehndi designs",            volume: "25K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/stylish-mehndi" },
-  { keyword: "pakistani mehndi",                  volume: "55K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/pakistani-mehndi" },
+  { keyword: "bridal mehndi designs 2024",        volume: "90K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/bridal-mehndi-design H1, Title" },
+  { keyword: "arabic mehndi design new style",    volume: "60K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/arabic-mehndi-design" },
+  { keyword: "eid mehndi 2024",                   volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/eid-mehndi-design" },
+  { keyword: "finger mehndi designs",             volume: "40K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/finger-mehndi-design" },
+  { keyword: "feet mehndi designs",               volume: "30K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/feet-mehndi-design" },
+  { keyword: "minimal mehndi designs",            volume: "35K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/minimal-mehndi-design" },
+  { keyword: "back hand mehndi designs",          volume: "45K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/back-hand-mehndi-design" },
+  { keyword: "front hand mehndi designs",         volume: "25K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/front-hand-mehndi-design" },
+  { keyword: "kids mehndi designs",               volume: "20K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/kids-mehndi-design" },
+  { keyword: "indian mehndi designs",             volume: "70K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/indian-mehndi-design" },
+  { keyword: "stylish mehndi designs",            volume: "25K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "/stylish-mehndi-design" },
+  { keyword: "pakistani mehndi",                  volume: "55K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/pakistani-mehndi-design" },
 ];
 
 // ── LONG-TAIL KEYWORDS (Easy to rank) ───────────────────────────────────────

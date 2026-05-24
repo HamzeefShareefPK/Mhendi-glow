@@ -220,7 +220,7 @@ export default function DesignPage({ params }: Props) {
             <div className="mt-6 pt-5 border-t border-henna-200 dark:border-henna-800">
               <p className="text-xs text-henna-500 mb-2">More collections:</p>
               <div className="flex flex-wrap gap-2">
-                {["bridal-mehndi", "arabic-mehndi", "eid-mehndi"].map((cat) => (
+                {["bridal-mehndi-design", "arabic-mehndi-design", "eid-mehndi-design"].map((cat) => (
                   <Link
                     key={cat}
                     href={`/${cat}`}

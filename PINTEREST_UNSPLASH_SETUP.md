@@ -54,7 +54,7 @@ import ExternalGallery from '@/components/gallery/ExternalGallery';
 <ExternalGallery query="mehndi designs" onlyUnsplash />
 
 // Show by category
-<ExternalGallery category="bridal-mehndi" />
+<ExternalGallery category="bridal-mehndi-design" />
 ```
 
 #### Using the useExternalImages Hook
@@ -87,7 +87,7 @@ export default function MyComponent() {
 #### Fetch from Unsplash
 ```bash
 GET /api/images/unsplash?query=mehndi&limit=12
-GET /api/images/unsplash?category=bridal-mehndi&limit=20
+GET /api/images/unsplash?category=bridal-mehndi-design&limit=20
 ```
 
 Response:
@@ -113,21 +113,21 @@ Response:
 #### Fetch from Pinterest
 ```bash
 GET /api/images/pinterest?query=mehndi&limit=12
-GET /api/images/pinterest?category=arabic-mehndi&limit=20
+GET /api/images/pinterest?category=arabic-mehndi-design&limit=20
 ```
 
 ## Supported Categories
 
 The system automatically maps your mehndi categories to relevant search queries:
 
-- `bridal-mehndi` → "bridal mehndi designs"
-- `arabic-mehndi` → "arabic mehndi patterns"
-- `pakistani-mehndi` → "pakistani mehndi"
-- `eid-mehndi` → "eid mehndi designs"
-- `finger-mehndi` → "finger mehndi"
-- `feet-mehndi` → "feet mehndi ankle"
-- `minimal-mehndi` → "minimal simple mehndi"
-- `indian-mehndi` → "indian mehndi designs"
+- `bridal-mehndi-design` → "bridal mehndi designs"
+- `arabic-mehndi-design` → "arabic mehndi patterns"
+- `pakistani-mehndi-design` → "pakistani mehndi"
+- `eid-mehndi-design` → "eid mehndi designs"
+- `finger-mehndi-design` → "finger mehndi"
+- `feet-mehndi-design` → "feet mehndi ankle"
+- `minimal-mehndi-design` → "minimal simple mehndi"
+- `indian-mehndi-design` → "indian mehndi designs"
 
 ## Caching
 
@@ -154,14 +154,14 @@ Both APIs implement 1-hour caching using Next.js `revalidate` option to:
 1. **Add to existing gallery:**
    ```tsx
    // In your category page
-   <ExternalGallery category="bridal-mehndi" />
+   <ExternalGallery category="bridal-mehndi-design" />
    ```
 
 2. **Mix with local designs:**
    ```tsx
    <div className="space-y-8">
      <MasonryGallery designs={localDesigns} />
-     <ExternalGallery category="bridal-mehndi" />
+     <ExternalGallery category="bridal-mehndi-design" />
    </div>
    ```
 

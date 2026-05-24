@@ -130,37 +130,37 @@ export default function HomeContent() {
             {
               photo: "1674884060571-96a46a9a7a72",
               name: "Bridal Mehndi",
-              slug: "bridal-mehndi",
+              slug: "bridal-mehndi-design",
               desc: "The most elaborate and detailed style, covering the full hand and arms. Bridal mehndi often includes the groom's name hidden within the pattern, peacock motifs, and intricate paisley designs. It is applied 1–2 days before the wedding and can take 4–8 hours to complete.",
             },
             {
               photo: "1568566240146-a5e26db3b29b",
               name: "Arabic Mehndi",
-              slug: "arabic-mehndi",
+              slug: "arabic-mehndi-design",
               desc: "Characterized by bold, flowing floral patterns with generous negative space. Arabic mehndi looks modern and elegant, making it perfect for Eid, parties, and everyday wear. Its loose, free-flowing style is also great for beginners who are learning to apply mehndi at home.",
             },
             {
               photo: "1566664254600-3412f985e947",
               name: "Pakistani Mehndi",
-              slug: "pakistani-mehndi",
+              slug: "pakistani-mehndi-design",
               desc: "Known for its fine, dense patterns and intricate detailing. Pakistani mehndi covers more of the hand than Arabic style and features complex jaal (net) patterns, tikki motifs, and elaborate geometric arrangements that can take hours of skilled work to complete.",
             },
             {
               photo: "1571150612716-ff39d1e9ef58",
               name: "Eid Mehndi",
-              slug: "eid-mehndi",
+              slug: "eid-mehndi-design",
               desc: "Designed for festive celebrations, Eid mehndi ranges from simple finger designs to elaborate half-hand patterns. These designs are usually quicker to apply and dry faster — perfect for the busy Eid celebrations when you want to look beautiful without spending hours.",
             },
             {
               photo: "1565368114375-ba1a4db7099f",
               name: "Minimal Mehndi",
-              slug: "minimal-mehndi",
+              slug: "minimal-mehndi-design",
               desc: "Clean, simple mehndi designs with fine lines, single motifs, and elegant placement. Minimal mehndi is perfect for office wear, casual events, and anyone who prefers subtle beauty. Small finger mehndi, wrist bands, and single-flower thumb designs fall under this category.",
             },
             {
               photo: "1777749752246-f7e4f5151217",
               name: "Feet Mehndi",
-              slug: "feet-mehndi",
+              slug: "feet-mehndi-design",
               desc: "Beautiful henna applied on the feet and ankles, often for bridal occasions and festivals. Feet mehndi includes toe designs, ankle bracelet patterns, and full foot coverage that complements bridal hand mehndi. It lasts longer on feet due to thicker skin.",
             },
           ].map((style, i) => (
@@ -241,7 +241,7 @@ export default function HomeContent() {
                 After removing the dried mehndi, avoid washing with water for at least 6 hours. Apply a thin layer of mustard oil or clove oil over the design — the heat from cloves reacts with the henna to produce a significantly darker color. You can also hold your hands briefly over warm steam to boost color intensity.
               </p>
             </div>
-            <Link href="/bridal-mehndi" className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full text-sm font-bold text-white shadow-md hover:scale-105 transition-transform"
+            <Link href="/bridal-mehndi-design" className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full text-sm font-bold text-white shadow-md hover:scale-105 transition-transform"
               style={{ background: "linear-gradient(135deg, #C8946A, #9A6838)" }}>
               Browse Bridal Designs <ArrowRight size={14} />
             </Link>
@@ -306,7 +306,7 @@ export default function HomeContent() {
           </div>
         </div>
         <div className="mt-6">
-          <Link href="/arabic-mehndi" className="inline-flex items-center gap-1.5 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
+          <Link href="/arabic-mehndi-design" className="inline-flex items-center gap-1.5 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
             View All Arabic Mehndi Designs <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -340,7 +340,7 @@ export default function HomeContent() {
                 <strong className="text-henna-800 dark:text-henna-200">How long does Pakistani mehndi take?</strong> Due to its complexity, Pakistani full-hand bridal mehndi typically takes 4–8 hours to apply. Some highly detailed designs require two sessions spread across two days. Professional mehndi artists in Pakistan train for years to develop the speed and precision needed for this style.
               </p>
             </div>
-            <Link href="/pakistani-mehndi" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
+            <Link href="/pakistani-mehndi-design" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
               Explore Pakistani Mehndi Designs <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -571,7 +571,7 @@ export default function HomeContent() {
                 <strong className="text-henna-800 dark:text-henna-200">Mehndi parlours on Chand Raat:</strong> Professional mehndi artists set up stalls and parlours on Chand Raat in bazaars, parks, and shopping areas across Pakistan. They offer a wide range of designs at affordable prices. If you plan to visit a parlour, go early to avoid long queues — popular artists can have waiting lists of 2–3 hours on Chand Raat evening.
               </p>
             </div>
-            <Link href="/eid-mehndi" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
+            <Link href="/eid-mehndi-design" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
               View All Eid Mehndi Designs <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -592,42 +592,42 @@ export default function HomeContent() {
           {[
             {
               occasion: "Wedding & Bridal",
-              slug: "bridal-mehndi",
+              slug: "bridal-mehndi-design",
               photo: "1674884060571-96a46a9a7a72",
               text: "The most important mehndi of a woman's life. Bridal mehndi covers both hands completely and often extends to the elbows and feet. It is the centrepiece of the Mehndi ceremony and takes 3–6 hours to complete. The bride's design should complement her bridal outfit color and embroidery style.",
               tags: ["Full Hand","Both Hands","Wedding Night"],
             },
             {
               occasion: "Eid ul-Fitr & Eid ul-Adha",
-              slug: "eid-mehndi",
+              slug: "eid-mehndi-design",
               photo: "1571150612716-ff39d1e9ef58",
               text: "Eid mehndi is a beloved tradition across Pakistan, India, and the Middle East. Simple to medium complexity designs are applied on Eid eve to celebrate the festival. Quick Arabic designs, finger mehndi, and back hand patterns are most popular for their elegant look and quick application.",
               tags: ["Simple","Quick Apply","Back Hand"],
             },
             {
               occasion: "Parties & Mehfils",
-              slug: "stylish-mehndi",
+              slug: "stylish-mehndi-design",
               photo: "1759720888181-7b56230250d0",
               text: "For parties and social events, stylish and trendy designs make a statement. Half-hand Arabic patterns, wrist bands, and statement back hand designs are perfect for mehndi parties and family gatherings where you want to look polished without a full bridal commitment.",
               tags: ["Trendy","Half Hand","Statement"],
             },
             {
               occasion: "Everyday & Office Wear",
-              slug: "minimal-mehndi",
+              slug: "minimal-mehndi-design",
               photo: "1525135927526-a01d9e5e9484",
               text: "Minimal mehndi has become mainstream for everyday wear. Single finger designs, delicate wrist patterns, and small motifs on the thumb or index finger look professional and sophisticated without being too elaborate. Many working women now wear subtle mehndi year-round.",
               tags: ["Minimal","Office Friendly","Small Designs"],
             },
             {
               occasion: "Kids & Children",
-              slug: "kids-mehndi",
+              slug: "kids-mehndi-design",
               photo: "1676134138844-9a52b5210cf9",
               text: "Safe, fun, and simple designs for children. Stars, hearts, flowers, butterflies, and cartoon-inspired patterns make mehndi exciting for kids at Eid and weddings. Always use natural, chemical-free henna for children's sensitive skin and keep designs small with a shorter application time.",
               tags: ["Safe for Kids","Simple","Fun Designs"],
             },
             {
               occasion: "Dholki & Pre-Wedding",
-              slug: "arabic-mehndi",
+              slug: "arabic-mehndi-design",
               photo: "1505932794465-147d1f1b2c97",
               text: "Dholki functions and pre-wedding celebrations call for cheerful, medium-complexity designs. Arabic florals, Pakistani patterns, and coordinated matching mehndi for multiple family members are popular at these joyful events where mehndi application becomes a group activity.",
               tags: ["Group Mehndi","Festive","Medium Complexity"],
@@ -762,7 +762,7 @@ export default function HomeContent() {
                 <strong className="text-henna-800 dark:text-henna-200">Fun designs kids love:</strong> Children enjoy themed mehndi designs featuring their favourite things — cartoon characters, animals, stars, hearts, butterflies, their name written in Arabic calligraphy, small crowns, or flower arrangements. Letting children choose their design makes it a fun, memorable experience.
               </p>
             </div>
-            <Link href="/kids-mehndi" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
+            <Link href="/kids-mehndi-design" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-henna-500 hover:text-henna-400 transition-colors group">
               Browse Kids Mehndi Designs <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
