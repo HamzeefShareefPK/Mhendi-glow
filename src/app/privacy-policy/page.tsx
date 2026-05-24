@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
       <h1 className="font-serif text-3xl font-semibold text-henna-900 dark:text-henna-100 mb-2">Privacy Policy</h1>
-      <p className="text-sm text-henna-500 mb-8">Last updated: January 1, 2024</p>
+      <p className="text-sm text-henna-500 mb-8">Last updated: January 1, 2026</p>
       <div className="w-12 h-1 bg-henna-400 rounded mb-8" />
 
       <div className="space-y-8 text-henna-700 dark:text-henna-300 leading-relaxed">

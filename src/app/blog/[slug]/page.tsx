@@ -172,7 +172,7 @@ export default function BlogPostPage({ params }: Props) {
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mt-8 pt-6 border-t border-henna-200 dark:border-henna-800">
-          {["mehndi", "henna", post.category.toLowerCase(), "mehndi designs 2024", "mehndi tips"].map((tag) => (
+          {["mehndi", "henna", post.category.toLowerCase(), "mehndi designs 2026", "mehndi tips"].map((tag) => (
             <Link
               key={tag}
               href={`/search?q=${encodeURIComponent(tag)}`}

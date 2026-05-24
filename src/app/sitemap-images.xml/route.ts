@@ -21,7 +21,7 @@ export async function GET() {
     <loc>${base}/${c.slug}</loc>
     <image:image>
       <image:loc>${c.image}</image:loc>
-      <image:title>${c.name} Mehndi Designs 2024</image:title>
+      <image:title>${c.name} Mehndi Designs 2026</image:title>
       <image:caption>${c.description}</image:caption>
     </image:image>
   </url>`).join("\n");

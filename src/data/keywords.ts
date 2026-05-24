@@ -13,10 +13,10 @@ export interface Keyword {
 // ── PRIMARY KEYWORDS (Target first) ─────────────────────────────────────────
 export const primaryKeywords: Keyword[] = [
   { keyword: "mehndi designs",                    volume: "1M+",  difficulty: "HIGH",   intent: "INFO",   priority: "HIGH",   usedIn: "Homepage H1, Title, Meta" },
-  { keyword: "mehndi designs 2024",               volume: "500K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, Category pages" },
+  { keyword: "mehndi designs 2026",               volume: "500K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, Category pages" },
   { keyword: "bridal mehndi designs",             volume: "300K", difficulty: "HIGH",   intent: "INFO",   priority: "HIGH",   usedIn: "Bridal category H1, Blog titles" },
   { keyword: "arabic mehndi designs",             volume: "250K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Arabic category, Blog" },
-  { keyword: "eid mehndi designs 2024",           volume: "200K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Eid category, Seasonal blog" },
+  { keyword: "eid mehndi designs 2026",           volume: "200K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Eid category, Seasonal blog" },
   { keyword: "simple mehndi designs",             volume: "150K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Blog, Beginner section" },
   { keyword: "new mehndi designs",                volume: "120K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, Trending section" },
   { keyword: "mehndi designs for hands",          volume: "100K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Category pages, Design alt text" },
@@ -26,9 +26,9 @@ export const primaryKeywords: Keyword[] = [
 
 // ── CATEGORY KEYWORDS ────────────────────────────────────────────────────────
 export const categoryKeywords: Keyword[] = [
-  { keyword: "bridal mehndi designs 2024",        volume: "90K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/bridal-mehndi-design H1, Title" },
+  { keyword: "bridal mehndi designs 2026",        volume: "90K",  difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "/bridal-mehndi-design H1, Title" },
   { keyword: "arabic mehndi design new style",    volume: "60K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/arabic-mehndi-design" },
-  { keyword: "eid mehndi 2024",                   volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/eid-mehndi-design" },
+  { keyword: "eid mehndi 2026",                   volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/eid-mehndi-design" },
   { keyword: "finger mehndi designs",             volume: "40K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/finger-mehndi-design" },
   { keyword: "feet mehndi designs",               volume: "30K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/feet-mehndi-design" },
   { keyword: "minimal mehndi designs",            volume: "35K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "/minimal-mehndi-design" },
@@ -44,10 +44,10 @@ export const categoryKeywords: Keyword[] = [
 export const longTailKeywords: Keyword[] = [
   { keyword: "simple mehndi designs for beginners",         volume: "22K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Blog post, Beginner category" },
   { keyword: "easy mehndi design step by step",             volume: "18K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "How-to blog posts" },
-  { keyword: "arabic mehndi design 2024 new style",         volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Arabic category, Blog" },
+  { keyword: "arabic mehndi design 2026 new style",         volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Arabic category, Blog" },
   { keyword: "bridal mehndi front hand design",             volume: "12K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Design pages, Blog" },
   { keyword: "simple mehndi design for kids easy",          volume: "10K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Kids category, Blog" },
-  { keyword: "feet mehndi design easy 2024",                volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Feet category" },
+  { keyword: "feet mehndi design easy 2026",                volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Feet category" },
   { keyword: "arabic mehndi back hand full design",         volume: "9K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Design page titles" },
   { keyword: "minimal mehndi for office",                   volume: "5K",  difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "Design tags, Blog" },
   { keyword: "bridal mehndi design for small hands",        volume: "7K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Blog post" },
@@ -55,26 +55,26 @@ export const longTailKeywords: Keyword[] = [
   { keyword: "how long to leave mehndi on",                 volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Blog, FAQ" },
   { keyword: "eid mehndi designs for kids",                 volume: "6K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Eid + Kids category" },
   { keyword: "dulhan mehndi design full hand",              volume: "11K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Bridal design pages" },
-  { keyword: "mehndi design for eid ul adha 2024",          volume: "10K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Eid seasonal blog" },
+  { keyword: "mehndi design for eid ul adha 2026",          volume: "10K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Eid seasonal blog" },
   { keyword: "simple arabic mehndi for beginners",          volume: "7K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Arabic blog post" },
-  { keyword: "bridal mehndi back hand 2024",                volume: "9K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Design slug, title" },
-  { keyword: "new style mehndi design 2024",                volume: "14K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, New designs section" },
+  { keyword: "bridal mehndi back hand 2026",                volume: "9K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Design slug, title" },
+  { keyword: "new style mehndi design 2026",                volume: "14K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, New designs section" },
   { keyword: "mehndi design for marriage",                  volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "Bridal category, Blog" },
   { keyword: "latest mehndi designs for hands",             volume: "13K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Homepage title variant" },
-  { keyword: "pakistani bridal mehndi designs 2024",        volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani + Bridal category" },
+  { keyword: "pakistani bridal mehndi designs 2026",        volume: "8K",  difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani + Bridal category" },
 ];
 
 // ── SEASONAL / TRENDING KEYWORDS ─────────────────────────────────────────────
 export const seasonalKeywords: Keyword[] = [
-  { keyword: "eid mehndi designs 2024",                     volume: "80K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Publish 2 weeks before Eid" },
-  { keyword: "eid ul adha mehndi 2024",                     volume: "40K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Eid ul Adha blog + category" },
+  { keyword: "eid mehndi designs 2026",                     volume: "80K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Publish 2 weeks before Eid" },
+  { keyword: "eid ul adha mehndi 2026",                     volume: "40K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Eid ul Adha blog + category" },
   { keyword: "chand raat mehndi designs",                   volume: "25K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Chand raat blog post" },
-  { keyword: "wedding season mehndi 2024",                  volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Wedding season blog" },
-  { keyword: "karwa chauth mehndi 2024",                    volume: "20K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
-  { keyword: "diwali mehndi designs 2024",                  volume: "18K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
-  { keyword: "navratri mehndi 2024",                        volume: "12K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
+  { keyword: "wedding season mehndi 2026",                  volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Wedding season blog" },
+  { keyword: "karwa chauth mehndi 2026",                    volume: "20K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
+  { keyword: "diwali mehndi designs 2026",                  volume: "18K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
+  { keyword: "navratri mehndi 2026",                        volume: "12K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "October seasonal post" },
   { keyword: "teej mehndi designs",                         volume: "10K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "July–August seasonal post" },
-  { keyword: "rakshabandhan mehndi 2024",                   volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "August seasonal post" },
+  { keyword: "rakshabandhan mehndi 2026",                   volume: "15K", difficulty: "LOW",  intent: "INFO",   priority: "MEDIUM", usedIn: "August seasonal post" },
   { keyword: "mehndi designs for shadi",                    volume: "12K", difficulty: "LOW",  intent: "INFO",   priority: "HIGH",   usedIn: "Wedding season blog" },
 ];
 
@@ -94,7 +94,7 @@ export const questionKeywords: Keyword[] = [
 
 // ── IMAGE SEO KEYWORDS (For alt text and file names) ─────────────────────────
 export const imageSeoKeywords: string[] = [
-  "bridal mehndi design 2024",
+  "bridal mehndi design 2026",
   "arabic mehndi back hand",
   "simple mehndi front hand",
   "eid mehndi design",
@@ -103,7 +103,7 @@ export const imageSeoKeywords: string[] = [
   "finger mehndi simple",
   "feet mehndi beautiful",
   "kids easy mehndi",
-  "latest mehndi 2024",
+  "latest mehndi 2026",
   "arabic floral mehndi",
   "dulhan mehndi design",
   "indian traditional mehndi",
@@ -114,19 +114,19 @@ export const imageSeoKeywords: string[] = [
 // ── CONTENT CALENDAR based on keywords ──────────────────────────────────────
 export const contentCalendar = [
   // Month 1 — Foundation posts
-  { month: "Month 1", title: "50 Most Beautiful Bridal Mehndi Designs 2024",         keyword: "bridal mehndi designs 2024",     priority: "HIGH"   },
-  { month: "Month 1", title: "40 Stunning Arabic Mehndi Designs for 2024",           keyword: "arabic mehndi designs",          priority: "HIGH"   },
+  { month: "Month 1", title: "50 Most Beautiful Bridal Mehndi Designs 2026",         keyword: "bridal mehndi designs 2026",     priority: "HIGH"   },
+  { month: "Month 1", title: "40 Stunning Arabic Mehndi Designs for 2026",           keyword: "arabic mehndi designs",          priority: "HIGH"   },
   { month: "Month 1", title: "Simple Mehndi Designs for Beginners (Step by Step)",   keyword: "simple mehndi for beginners",    priority: "HIGH"   },
   { month: "Month 1", title: "How to Apply Mehndi Cone — Complete Guide",            keyword: "how to apply mehndi",            priority: "HIGH"   },
-  { month: "Month 1", title: "New Style Mehndi Designs 2024 — Latest Trends",        keyword: "new style mehndi 2024",          priority: "HIGH"   },
+  { month: "Month 1", title: "New Style Mehndi Designs 2026 — Latest Trends",        keyword: "new style mehndi 2026",          priority: "HIGH"   },
   { month: "Month 1", title: "Easy Mehndi Designs That Look Hard",                   keyword: "easy mehndi designs",            priority: "MEDIUM" },
   { month: "Month 1", title: "Mehndi Design for Small Hands — 20 Best Ideas",       keyword: "mehndi for small hands",         priority: "MEDIUM" },
   { month: "Month 1", title: "How to Make Mehndi Darker Naturally (6 Tips)",         keyword: "how to make mehndi darker",      priority: "HIGH"   },
 
   // Month 2 — Eid focus (publish 3–4 weeks early)
-  { month: "Month 2", title: "Eid Mehndi Designs 2024 — 50 Best Ideas",             keyword: "eid mehndi 2024",                priority: "HIGH"   },
+  { month: "Month 2", title: "Eid Mehndi Designs 2026 — 50 Best Ideas",             keyword: "eid mehndi 2026",                priority: "HIGH"   },
   { month: "Month 2", title: "Simple Eid Mehndi in 5 Minutes",                       keyword: "simple eid mehndi",              priority: "HIGH"   },
-  { month: "Month 2", title: "Eid ul Adha Mehndi Designs 2024",                      keyword: "eid ul adha mehndi 2024",        priority: "HIGH"   },
+  { month: "Month 2", title: "Eid ul Adha Mehndi Designs 2026",                      keyword: "eid ul adha mehndi 2026",        priority: "HIGH"   },
   { month: "Month 2", title: "Chand Raat Mehndi Ideas — Traditional & Modern",      keyword: "chand raat mehndi",              priority: "HIGH"   },
   { month: "Month 2", title: "Eid Mehndi for Kids — 25 Cute Designs",               keyword: "eid mehndi for kids",            priority: "HIGH"   },
   { month: "Month 2", title: "Minimal Mehndi for Eid — Modern & Stylish",            keyword: "minimal eid mehndi",             priority: "MEDIUM" },
@@ -139,11 +139,11 @@ export const contentCalendar = [
   { month: "Month 3", title: "How Long Should Bridal Mehndi Stay On?",              keyword: "bridal mehndi how long",         priority: "MEDIUM" },
 
   // Month 4 — SEO + Beginner focus
-  { month: "Month 4", title: "Mehndi Design Trends 2024 — Complete Guide",          keyword: "mehndi trends 2024",             priority: "HIGH"   },
+  { month: "Month 4", title: "Mehndi Design Trends 2026 — Complete Guide",          keyword: "mehndi trends 2026",             priority: "HIGH"   },
   { month: "Month 4", title: "10 Common Mehndi Mistakes to Avoid",                   keyword: "mehndi mistakes",                priority: "MEDIUM" },
   { month: "Month 4", title: "Natural Henna vs Chemical Henna — Which Is Safer?",   keyword: "natural vs chemical henna",      priority: "HIGH"   },
-  { month: "Month 4", title: "Best Mehndi Cones Available in Pakistan 2024",        keyword: "best mehndi cones pakistan",     priority: "HIGH"   },
-  { month: "Month 4", title: "Mehndi Business: How to Start and Earn in 2024",      keyword: "mehndi business",                priority: "HIGH"   },
+  { month: "Month 4", title: "Best Mehndi Cones Available in Pakistan 2026",        keyword: "best mehndi cones pakistan",     priority: "HIGH"   },
+  { month: "Month 4", title: "Mehndi Business: How to Start and Earn in 2026",      keyword: "mehndi business",                priority: "HIGH"   },
 ];
 
 // ── 2025 / 2026 UPDATED KEYWORDS ────────────────────────────────────────────
@@ -287,7 +287,7 @@ export const extraLongTailKeywords: Keyword[] = [
 // ── KEYWORD GROUPS for internal linking ─────────────────────────────────────
 export const keywordClusters = {
   "Bridal Hub": [
-    "bridal mehndi designs 2024",
+    "bridal mehndi designs 2026",
     "dulhan mehndi design",
     "full hand bridal mehndi",
     "bridal back hand mehndi",
@@ -302,7 +302,7 @@ export const keywordClusters = {
     "simple arabic mehndi",
   ],
   "Eid Hub": [
-    "eid mehndi 2024",
+    "eid mehndi 2026",
     "eid ul adha mehndi",
     "chand raat mehndi",
     "simple eid mehndi",

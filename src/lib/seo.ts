@@ -37,7 +37,7 @@ export function buildMetadata({
   return {
     title: fullTitle,
     description,
-    keywords: [...keywords, "mehndi designs", "henna designs", "mehndi 2024"],
+    keywords: [...keywords, "mehndi designs", "henna designs", "mehndi 2026"],
     authors: [{ name: author }],
     creator: SITE_NAME,
     publisher: SITE_NAME,

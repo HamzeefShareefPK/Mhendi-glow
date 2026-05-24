@@ -19,7 +19,7 @@ export function slugify(str: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
-// Format date: 2024-03-15 → March 15, 2024
+// Format date: 2026-03-15 → March 15, 2026
 export function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric",
