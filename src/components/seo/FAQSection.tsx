@@ -22,10 +22,8 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
     <section
       className="py-10 max-w-3xl mx-auto px-4 sm:px-6"
       aria-labelledby="faq-heading"
-      itemScope
-      itemType="https://schema.org/FAQPage"
     >
-      {/* JSON-LD */}
+      {/* JSON-LD only — no microdata to avoid duplicate FAQPage schema */}
       <JsonLd data={faqSchema(faqs)} />
 
       <h2
@@ -40,19 +38,13 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
           <div
             key={faq.question}
             className="border border-henna-200 dark:border-henna-800 rounded-xl overflow-hidden"
-            itemScope
-            itemProp="mainEntity"
-            itemType="https://schema.org/Question"
           >
             <button
               onClick={() => setOpen(open === i ? null : i)}
               className="w-full flex items-center justify-between px-5 py-4 text-left bg-white dark:bg-henna-900 hover:bg-henna-50 dark:hover:bg-henna-800 transition-colors"
               aria-expanded={open === i}
             >
-              <span
-                className="font-medium text-sm text-henna-900 dark:text-henna-100"
-                itemProp="name"
-              >
+              <span className="font-medium text-sm text-henna-900 dark:text-henna-100">
                 {faq.question}
               </span>
               <ChevronDown
@@ -64,16 +56,8 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
             </button>
 
             {open === i && (
-              <div
-                className="px-5 py-4 bg-henna-50 dark:bg-henna-800 border-t border-henna-200 dark:border-henna-700"
-                itemScope
-                itemProp="acceptedAnswer"
-                itemType="https://schema.org/Answer"
-              >
-                <p
-                  className="text-sm text-henna-700 dark:text-henna-300 leading-relaxed"
-                  itemProp="text"
-                >
+              <div className="px-5 py-4 bg-henna-50 dark:bg-henna-800 border-t border-henna-200 dark:border-henna-700">
+                <p className="text-sm text-henna-700 dark:text-henna-300 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
