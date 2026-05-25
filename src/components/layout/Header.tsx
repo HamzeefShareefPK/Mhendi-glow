@@ -71,7 +71,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
           <div
-            className="flex items-center justify-between"
+            className="relative flex items-center justify-between"
             style={{ height: `${H_MOBILE}px` }}
           >
             {/* ── Logo ── */}
@@ -180,40 +180,67 @@ export default function Header() {
 
               {/* Search */}
               {searchOpen ? (
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <div className="relative">
-                    <Search
-                      size={13}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 text-henna-400 pointer-events-none"
-                    />
+                <>
+                  {/* Mobile: full-width overlay over the entire navbar row */}
+                  <div className="md:hidden absolute inset-0 z-20 flex items-center gap-2 px-3 bg-white dark:bg-henna-950 border-b border-henna-200/60 dark:border-henna-800/60">
+                    <Search size={15} className="text-henna-400 shrink-0" />
                     <input
                       ref={searchRef}
                       type="text"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
-                      placeholder="Search…"
-                      className="w-32 sm:w-44 md:w-52 text-xs sm:text-sm pl-8 pr-3 py-2 sm:py-2.5 rounded-full border border-henna-200 dark:border-henna-700 bg-white dark:bg-henna-900 text-henna-800 dark:text-henna-100 outline-none focus:border-henna-400 focus:ring-2 focus:ring-henna-400/15 transition-all"
+                      placeholder="Search mehndi designs…"
+                      className="flex-1 min-w-0 text-sm bg-transparent text-henna-800 dark:text-henna-100 outline-none placeholder:text-henna-400 dark:placeholder:text-henna-600"
                       onKeyDown={(e) => {
                         if (e.key === "Enter")  goSearch();
                         if (e.key === "Escape") setSearchOpen(false);
                       }}
                     />
+                    <button
+                      onClick={() => setSearchOpen(false)}
+                      className="p-2 rounded-full text-henna-500 hover:bg-henna-100 dark:hover:bg-henna-800 transition-colors shrink-0"
+                      aria-label="Close search"
+                    >
+                      <X size={17} />
+                    </button>
                   </div>
-                  <button
-                    onClick={() => setSearchOpen(false)}
-                    className="p-2 rounded-full text-henna-500 hover:bg-henna-100 dark:hover:bg-henna-800 transition-colors"
-                    aria-label="Close search"
-                  >
-                    <X size={15} />
-                  </button>
-                </div>
+
+                  {/* Desktop: inline search bar */}
+                  <div className="hidden md:flex items-center gap-2">
+                    <div className="relative">
+                      <Search
+                        size={13}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-henna-400 pointer-events-none"
+                      />
+                      <input
+                        ref={searchRef}
+                        type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search designs…"
+                        className="w-44 lg:w-56 text-sm pl-8 pr-3 py-2 rounded-full border border-henna-200 dark:border-henna-700 bg-white dark:bg-henna-900 text-henna-800 dark:text-henna-100 outline-none focus:border-henna-400 focus:ring-2 focus:ring-henna-400/15 transition-all"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter")  goSearch();
+                          if (e.key === "Escape") setSearchOpen(false);
+                        }}
+                      />
+                    </div>
+                    <button
+                      onClick={() => setSearchOpen(false)}
+                      className="p-2 rounded-full text-henna-500 hover:bg-henna-100 dark:hover:bg-henna-800 transition-colors"
+                      aria-label="Close search"
+                    >
+                      <X size={15} />
+                    </button>
+                  </div>
+                </>
               ) : (
                 <button
                   onClick={() => setSearchOpen(true)}
                   className="p-2 sm:p-2.5 rounded-full text-henna-600 dark:text-henna-400 hover:bg-henna-100 dark:hover:bg-henna-800 transition-all duration-200"
                   aria-label="Search"
                 >
-                  <Search size={16} />
+                  <Search size={17} />
                 </button>
               )}
 
