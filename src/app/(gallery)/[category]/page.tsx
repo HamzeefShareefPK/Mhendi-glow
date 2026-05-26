@@ -79,13 +79,40 @@ const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
     { question: "How long does a mehndi tattoo last?", answer: "A mehndi tattoo typically lasts 1 to 3 weeks depending on skin type, placement, and aftercare. Areas with thicker skin like palms and soles last longest. Keeping the design moisturized with oil daily extends its life significantly." },
     { question: "Is mehndi tattoo safe for skin?", answer: "Yes — natural henna mehndi tattoos are completely safe for all skin types including children. Always use 100% natural henna. Avoid black henna which contains PPD (paraphenylenediamine), a chemical dye that can cause severe allergic reactions and skin damage." },
   ],
+  "floral-mehndi-design": [
+    { question: "What are floral mehndi designs?", answer: "Floral mehndi designs feature flowers, roses, lotus blossoms, jasmine, and botanical vine patterns. They are the most romantic and feminine style of henna, perfect for weddings, Eid, and everyday wear. Roses and lotus flowers are the most popular motifs in 2026." },
+    { question: "Which flowers are most popular in floral mehndi?", answer: "Roses, lotus flowers, jasmine vines, daisy clusters, and peony patterns are the most popular floral mehndi motifs. Arabic-style roses with bold outlines and Indian-style lotus patterns are particularly trending in 2026 for bridal and Eid mehndi." },
+    { question: "Is floral mehndi suitable for beginners?", answer: "Yes! Simple single-flower designs — like a rose on the thumb or a daisy on the back hand — are perfect for beginners. Start with one large flower and add leaf details around it. Floral patterns are forgiving because they naturally look hand-drawn and organic." },
+  ],
+  "circle-mehndi-design": [
+    { question: "What is circle mehndi design?", answer: "Circle mehndi features round mandala patterns, concentric circles, and geometric ring designs. The circular motif is placed in the center of the palm or back hand with detailed patterns radiating outward. It is one of the most striking and symmetric mehndi styles." },
+    { question: "How to draw a mandala circle mehndi?", answer: "Start with a small circle in the center of your hand. Draw petals outward from this center, then add a ring of dots, then larger petal shapes, and continue adding layers outward. Work in rings and keep spacing even. Practice on paper first to maintain symmetry." },
+    { question: "Is circle mehndi good for the back hand?", answer: "Yes — circle and mandala mehndi looks especially stunning on the back hand where there is more flat space for the pattern to expand. A large central mandala on the back hand with vine extensions to the fingers is one of the most sought-after designs in 2026." },
+  ],
+  "gol-tikki-mehndi-design": [
+    { question: "What is gol tikki mehndi?", answer: "Gol tikki mehndi features round filled-circle medallions (tikkis) as the main motif. The gol (round) tikki is placed in the center of the palm, surrounded by intricate jaal (net) patterns, vines, and fine detail work. It is a traditional Pakistani and Indian mehndi style." },
+    { question: "What is the difference between gol tikki and mandala mehndi?", answer: "Gol tikki typically refers to a solid filled round dot or medallion, while mandala mehndi is an elaborate circular pattern with many concentric rings and petal details. Tikki designs are generally simpler and bolder, while mandalas are more intricate and symmetrical." },
+    { question: "Which occasions suit gol tikki mehndi?", answer: "Gol tikki mehndi is perfect for weddings, Eid, engagements, and festive occasions. Its traditional appearance makes it especially popular for Pakistani and Indian bridal mehndi. It pairs beautifully with heavy embroidered outfits and traditional jewellery." },
+  ],
+  "easy-mehndi-design": [
+    { question: "What are the easiest mehndi designs for beginners?", answer: "The easiest mehndi designs for beginners include single Arabic flowers on the back hand, simple vine patterns along the fingers, small leaf clusters on the wrist, and basic dotwork patterns. These require minimal cone control and look beautiful even when done by a first-timer." },
+    { question: "How long does easy mehndi take to apply?", answer: "Simple mehndi designs take just 5–15 minutes to apply, making them perfect for Eid morning or last-minute occasions. A single Arabic flower back hand design can be done in under 10 minutes. Quick finger mehndi takes just 3–5 minutes per hand." },
+    { question: "How can I learn mehndi at home easily?", answer: "Start with simple single-line patterns and basic flower shapes. Use a ready-made mehndi cone for easier control. Practice on paper first, then on your own hand. MehndiGlow has 1000+ easy mehndi designs with step-by-step reference images to help you practice." },
+  ],
 };
 
 export default function CategoryPage({ params }: Props) {
   const cat = categories.find((c) => c.slug === params.category);
   if (!cat) notFound();
 
-  const catDesigns = generateCategoryDesigns(params.category, 500);
+  const NEW_CATEGORY_COUNT: Record<string, number> = {
+    "floral-mehndi-design":    1000,
+    "circle-mehndi-design":    1000,
+    "gol-tikki-mehndi-design": 1000,
+    "easy-mehndi-design":      1000,
+  };
+  const designCount = NEW_CATEGORY_COUNT[params.category] ?? 500;
+  const catDesigns = generateCategoryDesigns(params.category, designCount);
   const faqs = CATEGORY_FAQS[params.category] || [];
 
   return (

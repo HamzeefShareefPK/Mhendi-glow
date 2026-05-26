@@ -24,6 +24,124 @@ const TATTOO_PHOTOS = [
   "1563962751094-31bb84e91a4c", // black close-up finger – Priyanka Singh
 ];
 
+// ── Dedicated photo pools for new categories (25 photos × 40 URL variants = 1000 unique) ──
+
+// FLORAL — flower, vine, botanical henna photos
+const FLORAL_PHOTOS = [
+  "1571150612716-ff39d1e9ef58", // floral henna on arm – Mee Nee
+  "1764640848891-9b23d3632ccf", // floral intricate – Ainur Iman
+  "1599671229994-bc8fd4df731c", // white floral henna – Hassan OUAJBIR
+  "1755234993813-054bc8c8a698", // hand with flower – Laraib Mumtaz
+  "1565368113202-ffa5bffb6feb", // floral hand henna tattoo – Mee Nee
+  "1619734089700-842e56497353", // henna close-up floral
+  "1708803962954-1893114321f0", // elegant hand – Sabiha Sana
+  "1676134138844-9a52b5210cf9", // bride holding henna – manish_jadhav
+  "1674884060571-96a46a9a7a72", // bridal full hand – Manvendra Singh
+  "1623217509141-6f735087b50c", // decorated hands – Eddy Lee
+  "1757331446901-8f935a107bc9", // hands with henna designs
+  "1770346279037-89853a3e8c60", // mehendi ritual – Sandy Millar
+  "1716672042560-c59ebb0805e6", // close-up henna – Areej Amin
+  "1774019410720-3409a533d30b", // wedding ceremony – Sushanta Rokka
+  "1771992230867-6478af331c26", // bride yellow saree – Rejaul Karim
+  "1568566240146-a5e26db3b29b", // arabic floral hand – Mee Nee
+  "1676134014048-bcc764ea015d", // woman with henna – manish_jadhav
+  "1493728484672-f0bef543e2a1", // groom's hands – Pablo Heimplatz
+  "1525135927526-a01d9e5e9484", // mehndi with bangles – Fas Khan
+  "1702062779141-d5b4655197c7", // henna application – Naeem Ad
+  "1759720888181-7b56230250d0", // bridal mehndi design
+  "1656702678285-59bde376828f", // intricate henna design
+  "1562508548-69377b81ab9e",    // mehendi artwork – Priyanka Singh
+  "1566829682463-2aa5f6c8afd8", // henna art
+  "1505932794465-147d1f1b2c97", // group hands henna – Vitaliy
+];
+
+// CIRCLE — circular, mandala, geometric round patterns
+const CIRCLE_PHOTOS = [
+  "1722172312997-068983715fd1", // modern mehndi art – Yubraj Khatri
+  "1656702678285-59bde376828f", // intricate mandala henna
+  "1566139673479-682aa413f947", // left human hand round – Mee Nee
+  "1564809392273-798ebbb1914a", // henna tattoo circular close-up
+  "1566745265763-de510bdae868", // henna on hand circular – Mee Nee
+  "1572969147844-920fff94e326", // henna tattoo detail circular
+  "1624504761718-be4d634f4624", // henna tattoo design round
+  "1566745266815-87793f60d7a4", // black mendhi geometric – Mee Nee
+  "1570105566322-0e5bdccc9501", // black mehndi art circular – Mee Nee
+  "1563962750292-d3401f66d46b", // hand mehndi simple – Mee Nee
+  "1566664254600-3412f985e947", // black hand round patterns – Mee Nee
+  "1525135850648-b42365991054", // right mehndi tattoo – Vitaliy
+  "1563714915375-625ddfce4847", // mehndi tattoo – Mee Nee
+  "1530785404354-f4ed0206a0d1", // henna design
+  "1563962751094-31bb84e91a4c", // black close-up – Priyanka Singh
+  "1777749752246-f7e4f5151217", // hand with mehndi
+  "1759720888181-7b56230250d0", // bridal mehndi design
+  "1505932794465-147d1f1b2c97", // group hands henna
+  "1562508548-69377b81ab9e",    // mehendi artwork
+  "1566878823628-a3a71274b0af", // black leaves finger – Mee Nee
+  "1525135927526-a01d9e5e9484", // mehndi with bangles
+  "1568566240146-a5e26db3b29b", // arabic mehndi
+  "1676134014048-bcc764ea015d", // woman with henna
+  "1623217509141-6f735087b50c", // decorated hands
+  "1716672042560-c59ebb0805e6", // close-up henna
+];
+
+// GOL TIKKI — round medallion, tikki patterns
+const GOL_TIKKI_PHOTOS = [
+  "1556536088-f010a312a8d3",    // henna tikki pattern
+  "1566829682463-2aa5f6c8afd8", // henna art round
+  "1591161921527-a9a10bfaf3ea", // henna on skin tikki
+  "1505932794465-147d1f1b2c97", // group hands henna
+  "1656702678285-59bde376828f", // intricate henna tikki
+  "1757331446901-8f935a107bc9", // hands with henna designs
+  "1623217509141-6f735087b50c", // decorated hands
+  "1674884060571-96a46a9a7a72", // bridal full hand tikki
+  "1676134138844-9a52b5210cf9", // bride holding henna
+  "1525135927526-a01d9e5e9484", // mehndi with bangles
+  "1568566240146-a5e26db3b29b", // arabic tikki
+  "1702062779141-d5b4655197c7", // henna application
+  "1676134014048-bcc764ea015d", // woman with henna
+  "1771992230867-6478af331c26", // bride yellow saree
+  "1774019410720-3409a533d30b", // wedding ceremony
+  "1566664254600-3412f985e947", // black hand tikki
+  "1525135850648-b42365991054", // right mehndi tattoo
+  "1563714915375-625ddfce4847", // mehndi tattoo
+  "1759720888181-7b56230250d0", // bridal mehndi design
+  "1764640848891-9b23d3632ccf", // floral intricate tikki center
+  "1770346279037-89853a3e8c60", // mehendi ritual
+  "1708803962954-1893114321f0", // elegant hand
+  "1562508548-69377b81ab9e",    // mehendi artwork
+  "1716672042560-c59ebb0805e6", // close-up henna
+  "1722172312997-068983715fd1", // modern mehndi art
+];
+
+// EASY — simple, minimal, beginner-friendly henna
+const EASY_PHOTOS = [
+  "1562508548-69377b81ab9e",    // mehendi artwork simple – Priyanka Singh
+  "1563962750292-d3401f66d46b", // hand mehndi simple – Mee Nee
+  "1566878823628-a3a71274b0af", // black leaves finger simple – Mee Nee
+  "1530785404354-f4ed0206a0d1", // henna design simple
+  "1720798299236-7acaaa2356be", // modern henna simple
+  "1565368114375-ba1a4db7099f", // black mehndi minimal – Mee Nee
+  "1570105566322-0e5bdccc9501", // black mehndi art simple – Mee Nee
+  "1563962751094-31bb84e91a4c", // black close-up simple – Priyanka Singh
+  "1777749752246-f7e4f5151217", // hand with mehndi
+  "1566745266815-87793f60d7a4", // black mendhi simple – Mee Nee
+  "1566745265763-de510bdae868", // henna on hand simple – Mee Nee
+  "1564809392273-798ebbb1914a", // henna tattoo simple close-up
+  "1716672042560-c59ebb0805e6", // close-up henna
+  "1708803962954-1893114321f0", // elegant hand
+  "1525135927526-a01d9e5e9484", // mehndi with bangles
+  "1566139673479-682aa413f947", // left human hand
+  "1566829682463-2aa5f6c8afd8", // henna art
+  "1572969147844-920fff94e326", // henna tattoo detail
+  "1556536088-f010a312a8d3",    // henna pattern
+  "1591161921527-a9a10bfaf3ea", // henna on skin
+  "1566664254600-3412f985e947", // black hand
+  "1525135850648-b42365991054", // right mehndi tattoo
+  "1563714915375-625ddfce4847", // mehndi tattoo
+  "1568566240146-a5e26db3b29b", // arabic simple
+  "1676134014048-bcc764ea015d", // woman with henna
+];
+
 // ── ALL 33 verified Unsplash mehndi/henna CDN photo IDs ──────────────────────
 // These are confirmed working numeric IDs from images.unsplash.com
 const ALL_PHOTOS = [
@@ -62,10 +180,11 @@ const ALL_PHOTOS = [
   "1722172312997-068983715fd1", // modern mehndi art – Yubraj Khatri
 ];
 
-// ── 15 visually distinct Unsplash URL parameter sets ─────────────────────────
-// Varying width + quality + crop mode + focal point creates genuinely different
-// zoom levels and framing of the same photo — no two cycles look the same.
+// ── 40 visually distinct Unsplash URL parameter sets ─────────────────────────
+// 25 dedicated photos × 40 variants = 1000 unique image URLs per new category.
+// Each variant differs in width, quality, crop mode, and focal point.
 const URL_VARIANTS = [
+  // Cycle 1-15 (original)
   "w=600&q=85&fit=crop&crop=entropy",
   "w=500&q=80&fit=crop&crop=center",
   "w=700&q=85&fit=crop&crop=faces",
@@ -81,6 +200,32 @@ const URL_VARIANTS = [
   "w=680&q=80&fit=crop&crop=focalpoint&fp-x=0.2&fp-y=0.4",
   "w=460&q=85&fit=crop&crop=edges",
   "w=760&q=85&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.6",
+  // Cycle 16-40 (new — for new category 1000-image pools)
+  "w=620&q=88&fit=crop&crop=focalpoint&fp-x=0.35&fp-y=0.45",
+  "w=580&q=82&fit=crop&crop=focalpoint&fp-x=0.65&fp-y=0.35",
+  "w=740&q=78&fit=crop&crop=entropy",
+  "w=420&q=92&fit=crop&crop=center",
+  "w=820&q=72&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5",
+  "w=560&q=87&fit=crop&crop=focalpoint&fp-x=0.25&fp-y=0.6",
+  "w=690&q=83&fit=crop&crop=focalpoint&fp-x=0.75&fp-y=0.4",
+  "w=500&q=88&fit=crop&crop=focalpoint&fp-x=0.45&fp-y=0.55",
+  "w=780&q=76&fit=crop&crop=entropy",
+  "w=440&q=91&fit=crop&crop=edges",
+  "w=660&q=86&fit=crop&crop=focalpoint&fp-x=0.55&fp-y=0.3",
+  "w=520&q=84&fit=crop&crop=focalpoint&fp-x=0.3&fp-y=0.7",
+  "w=700&q=79&fit=crop&crop=center",
+  "w=480&q=93&fit=crop&crop=focalpoint&fp-x=0.7&fp-y=0.5",
+  "w=640&q=81&fit=crop&crop=focalpoint&fp-x=0.4&fp-y=0.3",
+  "w=860&q=74&fit=crop&crop=entropy",
+  "w=380&q=94&fit=crop&crop=center",
+  "w=590&q=89&fit=crop&crop=focalpoint&fp-x=0.6&fp-y=0.6",
+  "w=710&q=77&fit=crop&crop=focalpoint&fp-x=0.3&fp-y=0.3",
+  "w=450&q=90&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.7",
+  "w=770&q=73&fit=crop&crop=entropy",
+  "w=530&q=86&fit=crop&crop=focalpoint&fp-x=0.8&fp-y=0.4",
+  "w=630&q=83&fit=crop&crop=focalpoint&fp-x=0.2&fp-y=0.6",
+  "w=900&q=70&fit=crop&crop=center",
+  "w=470&q=87&fit=crop&crop=focalpoint&fp-x=0.55&fp-y=0.55",
 ];
 
 // ── Per-category photo ORDER (which index in ALL_PHOTOS to start from) ───────
@@ -99,10 +244,10 @@ const CATEGORY_START: Record<string, number> = {
   "stylish-mehndi-design":   12,
   "front-hand-mehndi-design":16,
   "mehndi-tattoo-design":     4,
-  "floral-mehndi-design":     1,
-  "circle-mehndi-design":    13,
-  "gol-tikki-mehndi-design": 19,
-  "easy-mehndi-design":      26,
+  "floral-mehndi-design":     0,  // uses own dedicated FLORAL_PHOTOS pool
+  "circle-mehndi-design":     0,  // uses own dedicated CIRCLE_PHOTOS pool
+  "gol-tikki-mehndi-design":  0,  // uses own dedicated GOL_TIKKI_PHOTOS pool
+  "easy-mehndi-design":       0,  // uses own dedicated EASY_PHOTOS pool
 };
 
 // ── Titles per category (20 unique titles) ───────────────────────────────────
@@ -285,18 +430,25 @@ const TAGS: Record<string, string[]> = {
 // ── All category slugs ───────────────────────────────────────────────────────
 export const ALL_CATEGORY_SLUGS = Object.keys(CATEGORY_START);
 
+// ── Dedicated photo pools per category ───────────────────────────────────────
+const DEDICATED_POOLS: Record<string, string[]> = {
+  "mehndi-tattoo-design":    TATTOO_PHOTOS,
+  "floral-mehndi-design":    FLORAL_PHOTOS,
+  "circle-mehndi-design":    CIRCLE_PHOTOS,
+  "gol-tikki-mehndi-design": GOL_TIKKI_PHOTOS,
+  "easy-mehndi-design":      EASY_PHOTOS,
+};
+
 // ── Main generator ────────────────────────────────────────────────────────────
-// Strategy: cycle through ALL 33 photos before repeating any.
-// On each new cycle, apply a different URL variant for genuinely different framing.
-// Result: first 33 items are all different photos, next 33 are same photos
-// but with completely different crop/zoom — 500 total unique image URLs.
+// For new categories: 25 dedicated photos × 40 URL variants = 1000 unique URLs.
+// For other categories: 33 shared photos with category-specific start offset.
 export function generateCategoryDesigns(category: string, count = 500): Design[] {
   const titles    = CATEGORY_TITLES[category] ?? CATEGORY_TITLES["arabic-mehndi-design"];
   const tags      = TAGS[category] ?? ["mehndi","henna","design"];
   const startOffset = CATEGORY_START[category] ?? 0;
 
-  // Use dedicated tattoo photos for mehndi-tattoo-design category
-  const photoPool = category === "mehndi-tattoo-design" ? TATTOO_PHOTOS : ALL_PHOTOS;
+  // Use dedicated pool per category if available, else shared pool
+  const photoPool = DEDICATED_POOLS[category] ?? ALL_PHOTOS;
   const total     = photoPool.length;
   const designs: Design[] = [];
 
