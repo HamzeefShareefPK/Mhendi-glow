@@ -145,34 +145,28 @@ export default function AiGeneratorClient() {
         </p>
 
         {/* Input box */}
-        <div className="relative bg-white dark:bg-henna-900 rounded-2xl border-2 border-henna-200 dark:border-henna-700 shadow-lg focus-within:border-henna-400 transition-colors">
-          {/* Top row: icon + input */}
-          <div className="flex items-center gap-2 px-3 sm:px-4 pt-3 sm:pt-4 pb-2 sm:pb-3">
-            <Search size={16} className="text-henna-400 shrink-0" />
-            <input
-              type="text"
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleGenerate()}
-              placeholder="e.g. heavy bridal full hand mehndi with flowers..."
-              className="flex-1 min-w-0 bg-transparent text-henna-800 dark:text-henna-100 placeholder:text-henna-400 text-sm sm:text-base outline-none"
-            />
-          </div>
-          {/* Bottom row: Generate button — full width on mobile */}
-          <div className="px-3 sm:px-4 pb-3 sm:pb-4">
-            <button
-              onClick={() => handleGenerate()}
-              disabled={!prompt.trim() || loading}
-              className="w-full sm:w-auto sm:float-right flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-henna-400 hover:bg-henna-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all"
-            >
-              {loading ? (
-                <RefreshCw size={14} className="animate-spin" />
-              ) : (
-                <Sparkles size={14} />
-              )}
-              {loading ? "Generating..." : "Generate"}
-            </button>
-          </div>
+        <div className="flex items-center gap-2 px-3 sm:px-4 py-3 sm:py-4 bg-white dark:bg-henna-900 rounded-2xl border-2 border-henna-200 dark:border-henna-700 shadow-lg focus-within:border-henna-400 transition-colors">
+          <Search size={16} className="text-henna-400 shrink-0" />
+          <input
+            type="text"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleGenerate()}
+            placeholder="e.g. heavy bridal full hand mehndi with flowers..."
+            className="flex-1 min-w-0 bg-transparent text-henna-800 dark:text-henna-100 placeholder:text-henna-400 text-sm sm:text-base outline-none"
+          />
+          <button
+            onClick={() => handleGenerate()}
+            disabled={!prompt.trim() || loading}
+            className="shrink-0 flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-henna-400 hover:bg-henna-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all"
+          >
+            {loading ? (
+              <RefreshCw size={14} className="animate-spin" />
+            ) : (
+              <Sparkles size={14} />
+            )}
+            {loading ? "Generating..." : "Generate"}
+          </button>
         </div>
 
         {/* Quick prompts */}
