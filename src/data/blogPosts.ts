@@ -4,19 +4,19 @@ export const allBlogPosts: BlogPost[] = [
   // ── EXISTING 6 POSTS ────────────────────────────────────────────────────────
   {
     id: "1",
-    slug: "50-best-bridal-mehndi-design-designs-2025",
-    title: "50 Most Beautiful Bridal Mehndi Designs 2025",
-    excerpt: "From full Arabic patterns to minimal modern styles — discover the most stunning bridal mehndi designs trending in 2025.",
+    slug: "50-best-bridal-mehndi-design-designs-2026",
+    title: "50 Most Beautiful Bridal Mehndi Designs 2026",
+    excerpt: "From full Arabic patterns to minimal modern styles — discover the most stunning bridal mehndi designs trending in 2026.",
     content: `
-      <p class="lead">Bridal mehndi is the most important beauty ritual for a bride. The designs you choose will be photographed, admired, and remembered forever. In 2025, bridal mehndi has evolved beautifully — combining ancient motifs with modern minimalism.</p>
+      <p class="lead">Bridal mehndi is the most important beauty ritual for a bride. The designs you choose will be photographed, admired, and remembered forever. In 2026, bridal mehndi has evolved beautifully — combining ancient motifs with modern minimalism.</p>
 
       <h2>Why Bridal Mehndi Matters</h2>
       <p>Mehndi is not just decoration — it is tradition, love, and art all woven together. In South Asian culture, the darkness of bridal mehndi is said to represent the depth of love between husband and wife. A well-applied bridal mehndi can elevate the entire bridal look, complementing the outfit, jewellery, and makeup perfectly.</p>
       <p>The bridal mehndi ceremony (Mehndi Raat or Mehndi Night) is one of the most joyful pre-wedding celebrations. Friends and family gather, music plays, and the bride's hands and feet are adorned with the most intricate designs. It is a moment of beauty, blessing, and celebration.</p>
 
-      <h2>Top Bridal Mehndi Styles in 2025</h2>
+      <h2>Top Bridal Mehndi Styles in 2026</h2>
       <h3>1. Full Hand Arabic Bridal Mehndi</h3>
-      <p>Arabic mehndi remains the most popular choice for brides in 2025. It features large floral motifs, flowing vines, and elegant leaf patterns with beautiful negative space. The design covers the full hand from fingertips to the wrist, sometimes extending up the arm. The bold lines and graceful curves make it perfect for close-up bridal photography.</p>
+      <p>Arabic mehndi remains the most popular choice for brides in 2026. It features large floral motifs, flowing vines, and elegant leaf patterns with beautiful negative space. The design covers the full hand from fingertips to the wrist, sometimes extending up the arm. The bold lines and graceful curves make it perfect for close-up bridal photography.</p>
 
       <h3>2. Pakistani Heavy Bridal Mehndi</h3>
       <p>Pakistani bridal mehndi is known for its dense, intricate coverage. Every inch of the hand is filled with jaal (net) patterns, tikki (circle) motifs, and paisley designs. The groom's name is often hidden within the pattern — a fun tradition where the groom must find his name on the wedding night. Pakistani brides often get mehndi applied on both hands and feet for maximum coverage.</p>
@@ -28,7 +28,7 @@ export const allBlogPosts: BlogPost[] = [
       <p>The modern bride often prefers minimal mehndi — clean geometric patterns, simple florals, and delicate wrist bands instead of full coverage. This style is particularly popular among brides who want mehndi that complements rather than dominates their look. Minimal bridal mehndi takes 30–60 minutes and looks equally elegant in photographs.</p>
 
       <h3>5. Fusion Bridal Mehndi</h3>
-      <p>Fusion mehndi combines the best of multiple styles — Arabic boldness with Indian storytelling, or Pakistani jaal with minimal geometric accents. This trend is growing rapidly in 2025 as brides seek unique designs that are truly their own.</p>
+      <p>Fusion mehndi combines the best of multiple styles — Arabic boldness with Indian storytelling, or Pakistani jaal with minimal geometric accents. This trend is growing rapidly in 2026 as brides seek unique designs that are truly their own.</p>
 
       <h2>How to Prepare for Bridal Mehndi</h2>
       <ul>
@@ -43,8 +43,8 @@ export const allBlogPosts: BlogPost[] = [
       <h2>Bridal Mehndi Aftercare Tips</h2>
       <p>After your mehndi has dried (6–8 hours minimum), scrape it off gently — do not wash it. Apply a mixture of mustard oil and clove oil and leave overnight. Avoid water for the first 12 hours. The color will continue to darken for up to 48 hours after removal, reaching its peak darkness.</p>
 
-      <h2>Trending Bridal Mehndi Elements in 2025</h2>
-      <p>In 2025, brides are incorporating personalized elements: couple portraits sketched in mehndi, the wedding venue outline, meaningful quotes in calligraphy, and customized symbols that represent their love story. Glitter mehndi accents and white mehndi overlays are also trending for reception ceremonies.</p>
+      <h2>Trending Bridal Mehndi Elements in 2026</h2>
+      <p>In 2026, brides are incorporating personalized elements: couple portraits sketched in mehndi, the wedding venue outline, meaningful quotes in calligraphy, and customized symbols that represent their love story. Glitter mehndi accents and white mehndi overlays are also trending for reception ceremonies.</p>
 
       <blockquote><p>"Bridal mehndi is the first piece of jewellery a bride wears — and it costs only time and tradition."</p></blockquote>
 
@@ -52,17 +52,17 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85",
-    alt: "Beautiful bridal mehndi designs 2025 collection",
+    alt: "Beautiful bridal mehndi designs 2026 collection",
     author: "MehndiGlow",
     readTime: 8,
     views: 1240,
-    publishedAt: "2025-03-10",
+    publishedAt: "2026-03-10",
   },
 
   {
     id: "2",
-    slug: "eid-mehndi-design-designs-2025-top-ideas",
-    title: "Eid Mehndi Designs 2025 — 50 Best Ideas",
+    slug: "eid-mehndi-design-designs-2026-top-ideas",
+    title: "Eid Mehndi Designs 2026 — 50 Best Ideas",
     excerpt: "Celebrate Eid with the most beautiful and trending mehndi designs. From simple to elaborate — we have it all.",
     content: `
       <p class="lead">Eid without mehndi is like Eid without celebration. Whether it is Eid ul Fitr after the holy month of Ramadan or Eid ul Adha, mehndi is an essential part of the festivities for women and girls across South Asia and the Middle East.</p>
@@ -70,7 +70,7 @@ export const allBlogPosts: BlogPost[] = [
       <h2>Why Mehndi is Essential for Eid</h2>
       <p>The Prophet Muhammad (PBUH) encouraged the use of mehndi, and it has been a beloved tradition for over 1,400 years during Islamic celebrations. On Chand Raat (the night before Eid), women and girls gather to apply mehndi together — a beautiful social tradition that brings communities together. The fragrance of fresh henna in the air is the very scent of Eid.</p>
 
-      <h2>Top Eid Mehndi Styles 2025</h2>
+      <h2>Top Eid Mehndi Styles 2026</h2>
 
       <h3>Simple Arabic Eid Mehndi</h3>
       <p>For most Eid celebrations, simple Arabic mehndi is the most popular choice. Clean floral patterns on the back of the hand, elegant finger designs, and minimal wrist bands look beautiful and take only 15–30 minutes to apply. This is perfect for women who want to apply their own mehndi at home on Chand Raat.</p>
@@ -105,11 +105,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1571150612716-ff39d1e9ef58?w=800&q=85",
-    alt: "Eid mehndi designs 2025 best collection",
+    alt: "Eid mehndi designs 2026 best collection",
     author: "MehndiGlow",
     readTime: 7,
     views: 890,
-    publishedAt: "2025-03-15",
+    publishedAt: "2026-03-15",
   },
 
   {
@@ -175,13 +175,13 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 9,
     views: 670,
-    publishedAt: "2025-03-20",
+    publishedAt: "2026-03-20",
   },
 
   {
     id: "4",
     slug: "simple-mehndi-designs-for-beginners",
-    title: "Simple Mehndi Designs for Beginners 2025",
+    title: "Simple Mehndi Designs for Beginners 2026",
     excerpt: "Just starting out with mehndi? These 30 simple designs are perfect for beginners and look beautiful every time.",
     content: `
       <p class="lead">Starting your mehndi journey can feel overwhelming with so many complex designs online. But the most beautiful mehndi is often the simplest. These beginner-friendly designs look stunning with minimal practice and build the foundation for more complex work later.</p>
@@ -239,11 +239,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Beginner",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
-    alt: "Simple mehndi designs for beginners easy 2025",
+    alt: "Simple mehndi designs for beginners easy 2026",
     author: "MehndiGlow",
     readTime: 8,
     views: 520,
-    publishedAt: "2025-03-25",
+    publishedAt: "2026-03-25",
   },
 
   {
@@ -300,7 +300,7 @@ export const allBlogPosts: BlogPost[] = [
       </ul>
 
       <h2>The Growing Fusion Trend</h2>
-      <p>In 2025, more brides are choosing fusion bridal mehndi — taking the dense coverage of Pakistani style and adding the storytelling elements of Indian tradition. This gives brides the best of both worlds: rich dark coverage with personalized motifs hidden throughout the design.</p>
+      <p>In 2026, more brides are choosing fusion bridal mehndi — taking the dense coverage of Pakistani style and adding the storytelling elements of Indian tradition. This gives brides the best of both worlds: rich dark coverage with personalized motifs hidden throughout the design.</p>
 
       <blockquote><p>"The right mehndi style is the one that makes you feel most like a bride. Trust your instincts."</p></blockquote>
 
@@ -308,11 +308,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1566664254600-3412f985e947?w=800&q=85",
-    alt: "Pakistani vs Indian bridal mehndi comparison 2025",
+    alt: "Pakistani vs Indian bridal mehndi comparison 2026",
     author: "MehndiGlow",
     readTime: 9,
     views: 430,
-    publishedAt: "2025-04-01",
+    publishedAt: "2026-04-01",
   },
 
   {
@@ -355,11 +355,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=800&q=85",
-    alt: "Minimal mehndi designs for modern brides 2025",
+    alt: "Minimal mehndi designs for modern brides 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 380,
-    publishedAt: "2025-04-05",
+    publishedAt: "2026-04-05",
   },
 
   // ── 20 NEW BLOG POSTS ────────────────────────────────────────────────────────
@@ -421,18 +421,18 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 8,
     views: 950,
-    publishedAt: "2025-04-10",
+    publishedAt: "2026-04-10",
   },
 
   {
     id: "8",
     slug: "finger-mehndi-design-designs-stunning-patterns",
-    title: "Finger Mehndi Designs — 25 Stunning Patterns for 2025",
-    excerpt: "Finger mehndi is the hottest trend in 2025. Discover 25 stunning finger mehndi designs from simple to elaborate.",
+    title: "Finger Mehndi Designs — 25 Stunning Patterns for 2026",
+    excerpt: "Finger mehndi is the hottest trend in 2026. Discover 25 stunning finger mehndi designs from simple to elaborate.",
     content: `
       <p class="lead">Finger mehndi has exploded in popularity because it offers the elegance of mehndi in a compact, manageable format. Whether you want a single accent or all-finger coverage, finger mehndi is versatile, quick, and absolutely beautiful.</p>
 
-      <h2>Why Finger Mehndi is Trending in 2025</h2>
+      <h2>Why Finger Mehndi is Trending in 2026</h2>
       <p>Modern lifestyles have made full-hand mehndi impractical for many women. Finger mehndi offers the perfect compromise — you get beautiful mehndi art that is visible, photograph-worthy, and can be applied in 10–20 minutes. It is particularly popular among working professionals, students, and anyone who wants mehndi without the full commitment.</p>
 
       <h2>Types of Finger Mehndi Designs</h2>
@@ -480,20 +480,20 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Finger",
     coverImage: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=800&q=85",
-    alt: "Finger mehndi designs stunning patterns 2025",
+    alt: "Finger mehndi designs stunning patterns 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 620,
-    publishedAt: "2025-04-15",
+    publishedAt: "2026-04-15",
   },
 
   {
     id: "9",
     slug: "feet-mehndi-design-designs-ankle-toe-patterns",
-    title: "Feet Mehndi Designs — Beautiful Ankle & Toe Patterns 2025",
+    title: "Feet Mehndi Designs — Beautiful Ankle & Toe Patterns 2026",
     excerpt: "Feet mehndi is an essential part of bridal and Eid beauty. Discover the most beautiful ankle and toe mehndi designs.",
     content: `
-      <p class="lead">Feet mehndi is often overlooked but can be the most striking element of a bridal or festive look. When a bride lifts her lehenga to reveal intricately decorated feet, the reaction is always one of awe. In 2025, feet mehndi designs have reached new heights of artistry.</p>
+      <p class="lead">Feet mehndi is often overlooked but can be the most striking element of a bridal or festive look. When a bride lifts her lehenga to reveal intricately decorated feet, the reaction is always one of awe. In 2026, feet mehndi designs have reached new heights of artistry.</p>
 
       <h2>Why Feet Mehndi Lasts Longer</h2>
       <p>Feet mehndi typically lasts 2–3 weeks longer than hand mehndi because feet have thicker skin (especially the soles), less frequent washing, and less exposure to the friction that fades color. The darker color on feet is also due to less sebaceous glands in foot skin, allowing deeper lawsone penetration.</p>
@@ -527,11 +527,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Feet",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
-    alt: "Feet mehndi designs ankle toe patterns 2025",
+    alt: "Feet mehndi designs ankle toe patterns 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 480,
-    publishedAt: "2025-04-20",
+    publishedAt: "2026-04-20",
   },
 
   {
@@ -589,7 +589,7 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 8,
     views: 710,
-    publishedAt: "2025-04-25",
+    publishedAt: "2026-04-25",
   },
 
   {
@@ -646,17 +646,17 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1764640848891-9b23d3632ccf?w=800&q=85",
-    alt: "Mandala mehndi designs complete guide 2025",
+    alt: "Mandala mehndi designs complete guide 2026",
     author: "MehndiGlow",
     readTime: 8,
     views: 540,
-    publishedAt: "2025-05-01",
+    publishedAt: "2026-05-01",
   },
 
   {
     id: "12",
-    slug: "back-hand-mehndi-design-designs-2025",
-    title: "Back Hand Mehndi Designs 2025 — 30+ Stunning Patterns",
+    slug: "back-hand-mehndi-design-designs-2026",
+    title: "Back Hand Mehndi Designs 2026 — 30+ Stunning Patterns",
     excerpt: "Back hand mehndi is where all the artistry happens. Explore 30+ stunning back hand designs from minimal to elaborate.",
     content: `
       <p class="lead">The back of the hand is the most visible canvas for mehndi art. It is what people see when you greet them, when you wave, when your photograph is taken. A beautiful back hand design makes an instant, lasting impression.</p>
@@ -678,7 +678,7 @@ export const allBlogPosts: BlogPost[] = [
       <h3>Arabic Diagonal Back Hand</h3>
       <p>A flowing Arabic design running diagonally across the back hand — from one corner to the opposite — is dynamic and modern. The asymmetry creates visual interest and looks particularly stunning in photographs.</p>
 
-      <h2>Popular Back Hand Motifs in 2025</h2>
+      <h2>Popular Back Hand Motifs in 2026</h2>
       <ul>
         <li><strong>Rose:</strong> Classic romantic motif, very popular for Valentine's weddings</li>
         <li><strong>Geometric shapes:</strong> Contemporary trend, especially among younger brides</li>
@@ -704,11 +704,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Back Hand",
     coverImage: "https://images.unsplash.com/photo-1676134014048-bcc764ea015d?w=800&q=85",
-    alt: "Back hand mehndi designs 2025 stunning patterns",
+    alt: "Back hand mehndi designs 2026 stunning patterns",
     author: "MehndiGlow",
     readTime: 7,
     views: 460,
-    publishedAt: "2025-05-05",
+    publishedAt: "2026-05-05",
   },
 
   {
@@ -783,7 +783,7 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 7,
     views: 380,
-    publishedAt: "2025-05-10",
+    publishedAt: "2026-05-10",
   },
 
   {
@@ -838,7 +838,7 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 7,
     views: 890,
-    publishedAt: "2025-05-15",
+    publishedAt: "2026-05-15",
   },
 
   {
@@ -889,13 +889,13 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 9,
     views: 330,
-    publishedAt: "2025-05-20",
+    publishedAt: "2026-05-20",
   },
 
   {
     id: "16",
-    slug: "engagement-mehndi-designs-best-ideas-2025",
-    title: "Engagement Mehndi Designs — 20 Best Ideas for 2025",
+    slug: "engagement-mehndi-designs-best-ideas-2026",
+    title: "Engagement Mehndi Designs — 20 Best Ideas for 2026",
     excerpt: "Your engagement is a milestone. These 20 engagement mehndi designs balance elegance with festivity perfectly.",
     content: `
       <p class="lead">Engagement is the beginning of your forever — a beautiful ceremony that deserves beautiful mehndi. Engagement mehndi sits between the casual and bridal extremes: more elaborate than regular festive mehndi, but slightly lighter than full bridal coverage.</p>
@@ -933,11 +933,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Bridal",
     coverImage: "https://images.unsplash.com/photo-1771992230867-6478af331c26?w=800&q=85",
-    alt: "Engagement mehndi designs best ideas 2025",
+    alt: "Engagement mehndi designs best ideas 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 410,
-    publishedAt: "2025-05-25",
+    publishedAt: "2026-05-25",
   },
 
   {
@@ -1000,7 +1000,7 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 8,
     views: 720,
-    publishedAt: "2025-06-01",
+    publishedAt: "2026-06-01",
   },
 
   {
@@ -1055,13 +1055,13 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 8,
     views: 560,
-    publishedAt: "2025-06-05",
+    publishedAt: "2026-06-05",
   },
 
   {
     id: "19",
-    slug: "chand-raat-mehndi-designs-2025",
-    title: "Chand Raat Mehndi Designs 2025 — Best Ideas for Eid Night",
+    slug: "chand-raat-mehndi-designs-2026",
+    title: "Chand Raat Mehndi Designs 2026 — Best Ideas for Eid Night",
     excerpt: "Chand Raat is the most magical mehndi night. Discover the most beautiful and trending designs for the night before Eid.",
     content: `
       <p class="lead">Chand Raat — the night the new moon is sighted marking the end of Ramadan and the beginning of Eid — is the most magical mehndi night of the year. Streets light up, families come together, and the air is filled with the sweet, earthy scent of fresh henna. This is the night that mehndi magic happens.</p>
@@ -1069,13 +1069,13 @@ export const allBlogPosts: BlogPost[] = [
       <h2>The Magic of Chand Raat</h2>
       <p>There is something uniquely beautiful about Chand Raat mehndi. The urgency and excitement of the occasion — everyone rushing to get mehndi before Eid morning — creates a festive, communal energy unlike any other night. Street mehndi stalls spring up everywhere, women and girls sit together sharing designs, and the glow of mehndi lamps illuminates the night.</p>
 
-      <h2>Best Mehndi Styles for Chand Raat 2025</h2>
+      <h2>Best Mehndi Styles for Chand Raat 2026</h2>
 
       <h3>Quick Arabic Designs (15–30 Minutes)</h3>
       <p>Chand Raat calls for beautiful but quick designs — you do not want to spend hours in a mehndi chair when Eid morning arrives early. Arabic designs are perfect: large, bold, and impactful without requiring extensive detail work. A single large Arabic flower with flowing vines across the back hand takes 20 minutes and looks stunning.</p>
 
-      <h3>Trending Chand Raat 2025 — Finger Mehndi</h3>
-      <p>In 2025, finger mehndi is the most popular Chand Raat choice among younger women. Individual finger designs — each finger with its own pattern — look modern, photograph beautifully on social media, and take only 15–20 minutes total. This style has gone viral on Instagram and TikTok.</p>
+      <h3>Trending Chand Raat 2026 — Finger Mehndi</h3>
+      <p>In 2026, finger mehndi is the most popular Chand Raat choice among younger women. Individual finger designs — each finger with its own pattern — look modern, photograph beautifully on social media, and take only 15–20 minutes total. This style has gone viral on Instagram and TikTok.</p>
 
       <h3>Half-Hand Pakistani Mehndi</h3>
       <p>For women who want more coverage without the full bridal treatment, half-hand Pakistani mehndi covers the back hand and fingers with jaal and tikki patterns. Takes 30–45 minutes and produces the deep, dark color that photography loves.</p>
@@ -1094,7 +1094,7 @@ export const allBlogPosts: BlogPost[] = [
         <li>Apply before midnight so you have 6+ hours before Eid morning</li>
       </ul>
 
-      <h2>Social Media Chand Raat Trends 2025</h2>
+      <h2>Social Media Chand Raat Trends 2026</h2>
       <p>On social media, Chand Raat mehndi content explodes every year. Trending formats: time-lapse videos of mehndi application, "mehndi glow-up" transformation reels, before-and-after color development photos, and group Chand Raat mehndi photos. The most shared designs combine traditional Pakistani elements with modern Arabic aesthetics.</p>
 
       <blockquote><p>"Chand Raat without mehndi is like Eid without seviyaan — incomplete. The mehndi is the moon on your hands."</p></blockquote>
@@ -1103,25 +1103,25 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Eid",
     coverImage: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=800&q=85",
-    alt: "Chand raat mehndi designs 2025 eid night ideas",
+    alt: "Chand raat mehndi designs 2026 eid night ideas",
     author: "MehndiGlow",
     readTime: 7,
     views: 820,
-    publishedAt: "2025-06-10",
+    publishedAt: "2026-06-10",
   },
 
   {
     id: "20",
-    slug: "stylish-modern-mehndi-designs-2025",
-    title: "Stylish Modern Mehndi Designs 2025 — New Trends",
-    excerpt: "Mehndi has gone ultra-modern. Discover the most stylish, contemporary mehndi designs trending in 2025.",
+    slug: "stylish-modern-mehndi-designs-2026",
+    title: "Stylish Modern Mehndi Designs 2026 — New Trends",
+    excerpt: "Mehndi has gone ultra-modern. Discover the most stylish, contemporary mehndi designs trending in 2026.",
     content: `
-      <p class="lead">Mehndi in 2025 is not your grandmother's henna — it is a living, evolving art form that absorbs influences from fashion, tattoo culture, geometry, and social media aesthetics. Modern mehndi is bolder, cleaner, and more personal than ever before.</p>
+      <p class="lead">Mehndi in 2026 is not your grandmother's henna — it is a living, evolving art form that absorbs influences from fashion, tattoo culture, geometry, and social media aesthetics. Modern mehndi is bolder, cleaner, and more personal than ever before.</p>
 
       <h2>What Makes Mehndi "Modern"?</h2>
       <p>Modern mehndi is defined by clean lines, intentional design, geometric precision, and a rejection of "more is more." Where traditional mehndi filled every space, modern mehndi uses negative space as a design element. Where traditional mehndi followed established patterns, modern mehndi borrows freely from fine-line tattoo art, geometric design, and contemporary illustration.</p>
 
-      <h2>Top Modern Mehndi Trends 2025</h2>
+      <h2>Top Modern Mehndi Trends 2026</h2>
 
       <h3>Trend 1 — Geometric Mehndi</h3>
       <p>Sharp geometric patterns — triangles, hexagons, diamonds — arranged in precise formations. This style owes more to architecture and mathematics than to traditional mehndi motifs. Geometric mehndi looks incredible on both hands and feet, and the clean angles photograph beautifully in high-contrast black and white.</p>
@@ -1156,11 +1156,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Stylish",
     coverImage: "https://images.unsplash.com/photo-1722172312997-068983715fd1?w=800&q=85",
-    alt: "Stylish modern mehndi designs 2025 new trends",
+    alt: "Stylish modern mehndi designs 2026 new trends",
     author: "MehndiGlow",
     readTime: 8,
     views: 650,
-    publishedAt: "2025-06-15",
+    publishedAt: "2026-06-15",
   },
 
   {
@@ -1217,12 +1217,12 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 7,
     views: 490,
-    publishedAt: "2025-06-20",
+    publishedAt: "2026-06-20",
   },
 
   {
     id: "22",
-    slug: "wrist-mehndi-bracelet-designs-2025",
+    slug: "wrist-mehndi-bracelet-designs-2026",
     title: "Wrist Mehndi — Bracelet Style Designs for Every Occasion",
     excerpt: "Wrist mehndi is the most versatile style — elegant, quick, and suitable for every occasion from office to weddings.",
     content: `
@@ -1261,11 +1261,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Minimal",
     coverImage: "https://images.unsplash.com/photo-1708803962954-1893114321f0?w=800&q=85",
-    alt: "Wrist mehndi bracelet designs 2025",
+    alt: "Wrist mehndi bracelet designs 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 420,
-    publishedAt: "2025-06-25",
+    publishedAt: "2026-06-25",
   },
 
   {
@@ -1323,7 +1323,7 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 7,
     views: 510,
-    publishedAt: "2025-07-01",
+    publishedAt: "2026-07-01",
   },
 
   {
@@ -1373,14 +1373,14 @@ export const allBlogPosts: BlogPost[] = [
     author: "MehndiGlow",
     readTime: 8,
     views: 380,
-    publishedAt: "2025-07-05",
+    publishedAt: "2026-07-05",
   },
 
   {
     id: "25",
-    slug: "mehndi-business-how-to-start-earn-2025",
-    title: "Mehndi Business — How to Start & Earn in 2025",
-    excerpt: "Turn your mehndi passion into a profitable business. Complete guide to starting your mehndi career in 2025.",
+    slug: "mehndi-business-how-to-start-earn-2026",
+    title: "Mehndi Business — How to Start & Earn in 2026",
+    excerpt: "Turn your mehndi passion into a profitable business. Complete guide to starting your mehndi career in 2026.",
     content: `
       <p class="lead">Mehndi is not just an art — it is a thriving business opportunity. In every South Asian community worldwide, there is constant demand for skilled mehndi artists at weddings, Eid, engagement parties, and special events. If you have the skill and passion, a mehndi business can provide excellent income with minimal startup costs.</p>
 
@@ -1425,7 +1425,7 @@ export const allBlogPosts: BlogPost[] = [
         <li><strong>Referral program:</strong> Offer discounts to clients who refer new customers</li>
       </ul>
 
-      <h2>Mehndi Business Tips for 2025</h2>
+      <h2>Mehndi Business Tips for 2026</h2>
       <ul>
         <li>Specialize: become known for one style (e.g., "the minimal mehndi artist" or "Arabic specialist")</li>
         <li>Create packages: bundle hands + feet + free touch-up for weddings</li>
@@ -1438,17 +1438,17 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Tips",
     coverImage: "https://images.unsplash.com/photo-1493728484672-f0bef543e2a1?w=800&q=85",
-    alt: "Mehndi business how to start earn 2025",
+    alt: "Mehndi business how to start earn 2026",
     author: "MehndiGlow",
     readTime: 9,
     views: 640,
-    publishedAt: "2025-07-10",
+    publishedAt: "2026-07-10",
   },
 
   {
     id: "26",
     slug: "front-hand-mehndi-design-designs-palm-patterns",
-    title: "Front Hand Mehndi Designs — Beautiful Palm Patterns 2025",
+    title: "Front Hand Mehndi Designs — Beautiful Palm Patterns 2026",
     excerpt: "Front hand (palm side) mehndi is underrated but incredibly beautiful. Discover the most stunning palm mehndi designs.",
     content: `
       <p class="lead">While back hand mehndi gets most of the attention, front hand (palm) mehndi holds a special place in traditional mehndi art. The palm offers a wide, relatively flat canvas that accommodates large, bold designs — and the color development on palm skin is particularly deep and dark.</p>
@@ -1493,11 +1493,11 @@ export const allBlogPosts: BlogPost[] = [
     `,
     category: "Front Hand",
     coverImage: "https://images.unsplash.com/photo-1777749752246-f7e4f5151217?w=800&q=85",
-    alt: "Front hand mehndi designs palm patterns 2025",
+    alt: "Front hand mehndi designs palm patterns 2026",
     author: "MehndiGlow",
     readTime: 7,
     views: 350,
-    publishedAt: "2025-07-15",
+    publishedAt: "2026-07-15",
   },
   {
     id: "27",

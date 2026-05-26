@@ -146,18 +146,18 @@ export const contentCalendar = [
   { month: "Month 4", title: "Mehndi Business: How to Start and Earn in 2026",      keyword: "mehndi business",                priority: "HIGH"   },
 ];
 
-// ── 2025 / 2026 UPDATED KEYWORDS ────────────────────────────────────────────
+// ── 2026 / 2026 UPDATED KEYWORDS ────────────────────────────────────────────
 export const updatedYearKeywords: Keyword[] = [
-  { keyword: "mehndi designs 2025",                           volume: "400K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, all category titles" },
-  { keyword: "bridal mehndi designs 2025",                    volume: "200K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Bridal category H1" },
-  { keyword: "arabic mehndi 2025",                            volume: "150K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Arabic category" },
-  { keyword: "eid mehndi designs 2025",                       volume: "180K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Eid category, seasonal blog" },
-  { keyword: "new mehndi designs 2025",                       volume: "100K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage trending section" },
-  { keyword: "latest mehndi designs 2025",                    volume: "90K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, blog" },
-  { keyword: "simple mehndi designs 2025",                    volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Minimal category, blog" },
-  { keyword: "pakistani mehndi designs 2025",                 volume: "70K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani category" },
-  { keyword: "indian mehndi designs 2025",                    volume: "60K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Indian category" },
-  { keyword: "mehndi design 2025 new style",                  volume: "55K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Stylish category, blog" },
+  { keyword: "mehndi designs 2026",                           volume: "400K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, all category titles" },
+  { keyword: "bridal mehndi designs 2026",                    volume: "200K", difficulty: "MEDIUM", intent: "INFO",   priority: "HIGH",   usedIn: "Bridal category H1" },
+  { keyword: "arabic mehndi 2026",                            volume: "150K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Arabic category" },
+  { keyword: "eid mehndi designs 2026",                       volume: "180K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Eid category, seasonal blog" },
+  { keyword: "new mehndi designs 2026",                       volume: "100K", difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage trending section" },
+  { keyword: "latest mehndi designs 2026",                    volume: "90K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, blog" },
+  { keyword: "simple mehndi designs 2026",                    volume: "80K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Minimal category, blog" },
+  { keyword: "pakistani mehndi designs 2026",                 volume: "70K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani category" },
+  { keyword: "indian mehndi designs 2026",                    volume: "60K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Indian category" },
+  { keyword: "mehndi design 2026 new style",                  volume: "55K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Stylish category, blog" },
 ];
 
 // ── AI GENERATOR KEYWORDS ─────────────────────────────────────────────────────
@@ -174,7 +174,7 @@ export const aiGeneratorKeywords: Keyword[] = [
 
 // ── REGIONAL / CULTURAL KEYWORDS ─────────────────────────────────────────────
 export const regionalKeywords: Keyword[] = [
-  { keyword: "mehndi designs for hands pakistani 2025",       volume: "40K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani category" },
+  { keyword: "mehndi designs for hands pakistani 2026",       volume: "40K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Pakistani category" },
   { keyword: "rajasthani mehndi designs",                     volume: "35K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Indian category, blog" },
   { keyword: "marwari mehndi design",                         volume: "20K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "Indian category" },
   { keyword: "gujarati mehndi design",                        volume: "18K",  difficulty: "LOW",    intent: "INFO",   priority: "MEDIUM", usedIn: "Indian category" },
@@ -272,7 +272,7 @@ export const extraLongTailKeywords: Keyword[] = [
   { keyword: "arabic mehndi for fingers only",                volume: "7K",   difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Finger category" },
   { keyword: "indian bridal mehndi full hand both sides",     volume: "9K",   difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Indian + Bridal" },
   { keyword: "mehndi designs for teenage girls",              volume: "10K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Stylish, Minimal category" },
-  { keyword: "beautiful mehndi for hands 2025",               volume: "20K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, blog" },
+  { keyword: "beautiful mehndi for hands 2026",               volume: "20K",  difficulty: "LOW",    intent: "INFO",   priority: "HIGH",   usedIn: "Homepage, blog" },
   { keyword: "mehndi design images download",                 volume: "30K",  difficulty: "LOW",    intent: "TRANSACTIONAL", priority: "HIGH", usedIn: "All gallery pages" },
   { keyword: "free mehndi design images",                     volume: "25K",  difficulty: "LOW",    intent: "TRANSACTIONAL", priority: "HIGH", usedIn: "All gallery pages, meta" },
   { keyword: "mehndi design photos hd",                       volume: "22K",  difficulty: "LOW",    intent: "TRANSACTIONAL", priority: "HIGH", usedIn: "Gallery pages" },
