@@ -26,6 +26,10 @@ export const categories: Category[] = [
   { slug: "stylish-mehndi-design",   name: "Stylish",   description: "Modern and stylish mehndi for every occasion",           image: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=400&q=80", count: 20, keyword: "stylish mehndi designs" },
   { slug: "front-hand-mehndi-design",name: "Front Hand",description: "Beautiful front hand mehndi patterns",                   image: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=400&q=80", count: 27, keyword: "front hand mehndi" },
   { slug: "mehndi-tattoo-design",    name: "Tattoo",    description: "Stunning mehndi tattoo designs — bold, black and temporary henna tattoo art", image: "https://images.unsplash.com/photo-1525135850648-b42365991054?w=400&q=80", count: 45, keyword: "mehndi tattoo designs" },
+  { slug: "floral-mehndi-design",    name: "Floral",    description: "Beautiful floral mehndi designs with roses, lotus and intricate vine patterns",    image: "https://images.unsplash.com/photo-1764640848891-9b23d3632ccf?w=400&q=80", count: 38, keyword: "floral mehndi designs" },
+  { slug: "circle-mehndi-design",    name: "Circle",    description: "Stunning circle and mandala mehndi patterns with geometric round motifs",          image: "https://images.unsplash.com/photo-1599671229994-bc8fd4df731c?w=400&q=80", count: 32, keyword: "circle mehndi designs" },
+  { slug: "gol-tikki-mehndi-design", name: "Gol Tikki", description: "Traditional gol tikki mehndi with classic round medallion patterns",              image: "https://images.unsplash.com/photo-1656702678285-59bde376828f?w=400&q=80", count: 29, keyword: "gol tikki mehndi design" },
+  { slug: "easy-mehndi-design",      name: "Easy",      description: "Simple and easy mehndi designs perfect for beginners and quick home application",  image: "https://images.unsplash.com/photo-1562508548-69377b81ab9e?w=400&q=80", count: 44, keyword: "easy mehndi designs" },
 ];
 
 export const designs: Design[] = [

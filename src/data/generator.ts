@@ -99,6 +99,10 @@ const CATEGORY_START: Record<string, number> = {
   "stylish-mehndi-design":   12,
   "front-hand-mehndi-design":16,
   "mehndi-tattoo-design":     4,
+  "floral-mehndi-design":     1,
+  "circle-mehndi-design":    13,
+  "gol-tikki-mehndi-design": 19,
+  "easy-mehndi-design":      26,
 };
 
 // ── Titles per category (20 unique titles) ───────────────────────────────────
@@ -211,6 +215,42 @@ const CATEGORY_TITLES: Record<string, string[]> = {
     "Front Hand Lotus","Front Hand Geometric","Front Hand Rose",
     "Front Hand Jaal Design","Front Hand Party",
   ],
+  "floral-mehndi-design": [
+    "Floral Rose Mehndi","Lotus Flower Mehndi","Rose Vine Mehndi",
+    "Full Floral Hand Mehndi","Floral Back Hand Design","Delicate Flower Mehndi",
+    "Jasmine Vine Mehndi","Floral Bridal Mehndi","Flower Cluster Mehndi",
+    "Wild Rose Mehndi","Daisy Chain Mehndi","Floral Mandala Mehndi",
+    "Peony Mehndi Design","Floral Finger Mehndi","Blooming Vine Mehndi",
+    "Floral Wrist Mehndi","Poppy Mehndi Design","Floral Eid Mehndi",
+    "Botanical Mehndi Design","Floral Arabic Mehndi",
+  ],
+  "circle-mehndi-design": [
+    "Circle Mandala Mehndi","Round Mehndi Design","Gol Mehndi Pattern",
+    "Mandala Back Hand Mehndi","Circle Wrist Mehndi","Geometric Circle Mehndi",
+    "Circular Floral Mehndi","Round Finger Mehndi","Mandala Full Hand",
+    "Concentric Circle Mehndi","Circle Bridal Mehndi","Round Eid Mehndi",
+    "Mandala Arabic Mehndi","Circle Vine Mehndi","Bold Circle Mehndi",
+    "Circle Dotwork Design","Lotus Mandala Mehndi","Ring Circle Mehndi",
+    "Circle Minimal Mehndi","Circular Band Mehndi",
+  ],
+  "gol-tikki-mehndi-design": [
+    "Gol Tikki Bridal Mehndi","Traditional Tikki Design","Gol Tikki Back Hand",
+    "Round Tikki Mehndi","Gol Tikki Full Hand","Tikki Flower Mehndi",
+    "Gol Tikki Finger Mehndi","Pakistani Gol Tikki","Tikki Jaal Mehndi",
+    "Gol Tikki Eid Design","Tikki Vine Mehndi","Gol Tikki Minimal",
+    "Classic Tikki Mehndi","Tikki Net Pattern","Gol Tikki Arabic",
+    "Tikki Mandala Design","Gol Tikki Simple","Double Tikki Mehndi",
+    "Gol Tikki Front Hand","Bridal Tikki Mehndi",
+  ],
+  "easy-mehndi-design": [
+    "Easy Arabic Mehndi","Simple Flower Mehndi","Quick Mehndi Design",
+    "Easy Finger Mehndi","Simple Back Hand Mehndi","Beginner Mehndi Design",
+    "Easy Wrist Mehndi","5 Minute Mehndi","Simple Eid Mehndi",
+    "Easy Floral Design","Basic Mehndi Pattern","Simple Vine Mehndi",
+    "Easy Bridal Mehndi","Quick Finger Design","Simple Mandala Mehndi",
+    "Easy Rose Mehndi","Simple Dotwork Mehndi","Easy Front Hand",
+    "Simple Geometric Mehndi","Easy Kids Mehndi",
+  ],
   "mehndi-tattoo-design": [
     "Black Mehndi Tattoo","Temporary Henna Tattoo","Bold Mehndi Tattoo",
     "Finger Tattoo Mehndi","Arabic Tattoo Mehndi","Dark Henna Tattoo",
@@ -236,6 +276,10 @@ const TAGS: Record<string, string[]> = {
   "stylish-mehndi-design":   ["stylish","modern","trendy","party"],
   "front-hand-mehndi-design":["front hand","full","floral","simple"],
   "mehndi-tattoo-design":    ["tattoo","black","bold","temporary","henna tattoo"],
+  "floral-mehndi-design":    ["floral","roses","lotus","vines","flowers"],
+  "circle-mehndi-design":    ["circle","mandala","round","geometric"],
+  "gol-tikki-mehndi-design": ["gol tikki","round","traditional","medallion"],
+  "easy-mehndi-design":      ["easy","simple","beginner","quick"],
 };
 
 // ── All category slugs ───────────────────────────────────────────────────────
@@ -284,7 +328,7 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
       description: `Beautiful ${titleBase.toLowerCase()} – perfect for every occasion.`,
       featured:    i < 6,
       trending:    i % 5 === 0,
-      createdAt:   "2025-01-01",
+      createdAt:   "2026-01-01",
     });
   }
 

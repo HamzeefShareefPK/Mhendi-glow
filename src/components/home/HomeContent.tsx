@@ -99,10 +99,17 @@ export default function HomeContent() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 mt-6">
-              {["Bridal Mehndi","Arabic Mehndi","Eid Mehndi","Minimal Mehndi"].map((cat) => (
-                <Link key={cat} href={`/${cat.toLowerCase().replace(/ /g,"-")}`}
+              {[
+                { label: "Bridal Mehndi",    href: "/bridal-mehndi-design" },
+                { label: "Arabic Mehndi",    href: "/arabic-mehndi-design" },
+                { label: "Floral Mehndi",    href: "/floral-mehndi-design" },
+                { label: "Easy Mehndi",      href: "/easy-mehndi-design" },
+                { label: "Front Hand Mehndi",href: "/front-hand-mehndi-design" },
+                { label: "Gol Tikki Mehndi", href: "/gol-tikki-mehndi-design" },
+              ].map((cat) => (
+                <Link key={cat.href} href={cat.href}
                   className="inline-flex items-center gap-1 text-xs font-semibold px-4 py-2 rounded-full border border-henna-300 dark:border-henna-700 text-henna-600 dark:text-henna-300 hover:bg-henna-400 hover:text-white hover:border-henna-400 transition-all">
-                  {cat} <ArrowRight size={11} />
+                  {cat.label} <ArrowRight size={11} />
                 </Link>
               ))}
             </div>
@@ -121,7 +128,7 @@ export default function HomeContent() {
       <Section>
         <SectionHeading
           chip="Design Styles"
-          title="Popular Types of Mehndi Designs in 2025"
+          title="Popular Types of Mehndi Designs in 2026"
           subtitle="From heavy bridal patterns to simple everyday mehndi, there is a design for every occasion and skill level. Here are the most popular styles you will find on MehndiGlow."
         />
 
@@ -163,6 +170,30 @@ export default function HomeContent() {
               slug: "feet-mehndi-design",
               desc: "Beautiful henna applied on the feet and ankles, often for bridal occasions and festivals. Feet mehndi includes toe designs, ankle bracelet patterns, and full foot coverage that complements bridal hand mehndi. It lasts longer on feet due to thicker skin.",
             },
+            {
+              photo: "1764640848891-9b23d3632ccf",
+              name: "Floral Mehndi",
+              slug: "floral-mehndi-design",
+              desc: "Rose vines, lotus blooms, and delicate flower clusters — floral mehndi is the most romantic style in henna art. These designs use botanical motifs to create stunning full-hand and back-hand patterns that suit weddings, Eid, and everyday occasions alike.",
+            },
+            {
+              photo: "1599671229994-bc8fd4df731c",
+              name: "Circle Mehndi",
+              slug: "circle-mehndi-design",
+              desc: "Mandala-inspired round patterns and concentric circle designs create bold, symmetric mehndi art. Circle mehndi is perfect for the back of the hand and wrist, combining geometric precision with beautiful decorative detail for a modern yet traditional look.",
+            },
+            {
+              photo: "1656702678285-59bde376828f",
+              name: "Gol Tikki Mehndi",
+              slug: "gol-tikki-mehndi-design",
+              desc: "A timeless Pakistani and Indian tradition, gol tikki mehndi features filled round medallions surrounded by intricate net (jaal) patterns and fine vines. It is a staple of bridal and festive mehndi culture and remains one of the most searched mehndi styles in 2026.",
+            },
+            {
+              photo: "1562508548-69377b81ab9e",
+              name: "Easy Mehndi",
+              slug: "easy-mehndi-design",
+              desc: "Simple, beginner-friendly mehndi that looks beautiful without hours of effort. Easy designs include single-flower finger mehndi, quick Arabic patterns, and minimal wrist designs — perfect for Eid, parties, or anyone learning mehndi at home for the first time.",
+            },
           ].map((style, i) => (
             <motion.div
               key={style.slug}
@@ -176,7 +207,7 @@ export default function HomeContent() {
                   <div className="relative h-44 overflow-hidden">
                     <Image
                       src={`https://images.unsplash.com/photo-${style.photo}?w=600&q=80&fit=crop&crop=entropy`}
-                      alt={`${style.name} designs 2025`}
+                      alt={`${style.name} designs 2026`}
                       fill className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
@@ -207,13 +238,13 @@ export default function HomeContent() {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <ContentImage
             src="https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=800&q=85&fit=crop&crop=faces"
-            alt="Heavy bridal mehndi full hand 2025 — beautiful wedding henna design"
-            caption="Heavy bridal full hand mehndi — the most requested design for brides in 2025"
+            alt="Heavy bridal mehndi full hand 2026 — beautiful wedding henna design"
+            caption="Heavy bridal full hand mehndi — the most requested design for brides in 2026"
           />
           <div>
             <SectionHeading
               chip="Bridal Guide"
-              title="The Complete Bridal Mehndi Guide for 2025"
+              title="The Complete Bridal Mehndi Guide for 2026"
               subtitle="Your wedding day is the most important occasion, and bridal mehndi deserves careful planning. Here is everything you need to know."
             />
             <div className="space-y-4 text-sm sm:text-base text-henna-600 dark:text-henna-400 leading-relaxed">
@@ -224,7 +255,7 @@ export default function HomeContent() {
                 <strong className="text-henna-800 dark:text-henna-200">How long to keep it on:</strong> For the deepest bridal color, keep the mehndi on for a minimum of 8–12 hours. Many brides sleep with the mehndi on overnight, wrapping their hands lightly in tissue paper to protect clothing and bedding. The longer you leave it, the darker and longer-lasting the color. Removing it after only 2–3 hours will give a pale orange result.
               </p>
               <p>
-                <strong className="text-henna-800 dark:text-henna-200">Choosing the right design:</strong> In 2025, the most popular bridal mehndi styles include full-hand Arabic patterns, fusion Pakistani-Arabic designs, portrait mehndi (groom&apos;s face), and minimal bridal designs for modern brides. The style you choose should complement your bridal outfit — heavy traditional dresses pair beautifully with full Pakistani designs, while lighter outfits suit elegant Arabic patterns.
+                <strong className="text-henna-800 dark:text-henna-200">Choosing the right design:</strong> In 2026, the most popular bridal mehndi styles include full-hand Arabic patterns, fusion Pakistani-Arabic designs, portrait mehndi (groom&apos;s face), and minimal bridal designs for modern brides. The style you choose should complement your bridal outfit — heavy traditional dresses pair beautifully with full Pakistani designs, while lighter outfits suit elegant Arabic patterns.
               </p>
               <p>
                 <strong className="text-henna-800 dark:text-henna-200">Bridal mehndi for both hands:</strong> Traditional mehndi covers both hands fully, often extending up the forearms. Many modern brides opt for a heavy design on one hand and a lighter complementary design on the other. Feet mehndi is also traditionally applied to match the hand designs.
@@ -269,7 +300,7 @@ export default function HomeContent() {
               <div className="relative aspect-[3/4]">
                 <Image
                   src={`https://images.unsplash.com/photo-${img.photo}?w=500&q=85&fit=crop&crop=entropy`}
-                  alt={`${img.label} mehndi design 2025`}
+                  alt={`${img.label} mehndi design 2026`}
                   fill className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 33vw, 25vw"
                 />
@@ -298,7 +329,7 @@ export default function HomeContent() {
               <strong className="text-henna-800 dark:text-henna-200">Gulf vs. Moroccan Arabic styles:</strong> Gulf Arabic mehndi tends to use thicker lines and bold fills, while Moroccan Arabic mehndi features more geometric patterns and fine detail work. Both are beautiful in their own way and are often combined in modern fusion designs.
             </p>
             <p>
-              In 2025, the trending Arabic styles include asymmetric designs (different patterns on different fingers), rose-heavy patterns, Arabic with white henna accents, and Arabic bridal designs that incorporate the groom&apos;s initials subtly within the floral patterns.
+              In 2026, the trending Arabic styles include asymmetric designs (different patterns on different fingers), rose-heavy patterns, Arabic with white henna accents, and Arabic bridal designs that incorporate the groom&apos;s initials subtly within the floral patterns.
             </p>
             <p>
               <strong className="text-henna-800 dark:text-henna-200">Arabic mehndi for Eid:</strong> Arabic style is especially beloved for Eid celebrations because it can be applied quickly and looks instantly polished. A simple Arabic back hand design can be completed in under 30 minutes, making it ideal for applying fresh mehndi on Eid eve or even Eid morning.
@@ -469,24 +500,24 @@ export default function HomeContent() {
       </Section>
 
       {/* ════════════════════════════════════════════
-          SECTION 8 — Mehndi Trends 2025
+          SECTION 8 — Mehndi Trends 2026
       ════════════════════════════════════════════ */}
       <Section>
         <SectionHeading
-          chip="Trends 2025"
-          title="Top Mehndi Design Trends to Watch in 2025"
-          subtitle="Mehndi art evolves every year with new styles, fusion techniques, and innovative motifs. Here are the hottest mehndi trends taking over Instagram and weddings in 2025."
+          chip="Trends 2026"
+          title="Top Mehndi Design Trends to Watch in 2026"
+          subtitle="Mehndi art evolves every year with new styles, fusion techniques, and innovative motifs. Here are the hottest mehndi trends taking over Instagram and weddings in 2026."
         />
 
         <div className="grid sm:grid-cols-2 gap-8 mb-10">
           <div className="space-y-5 text-sm sm:text-base text-henna-600 dark:text-henna-400 leading-relaxed">
             <div>
               <h3 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">1. Minimal Fine-Line Mehndi</h3>
-              <p>The minimalist movement has hit mehndi in a big way. Thin, precise lines, single flower motifs, and barely-there finger designs are dominating 2025. This style appeals to modern brides and working women who want elegant mehndi that does not overwhelm. Fine-line mehndi requires exceptional cone control and a very thin tip — the result looks almost like delicate tattoo art.</p>
+              <p>The minimalist movement has hit mehndi in a big way. Thin, precise lines, single flower motifs, and barely-there finger designs are dominating 2026. This style appeals to modern brides and working women who want elegant mehndi that does not overwhelm. Fine-line mehndi requires exceptional cone control and a very thin tip — the result looks almost like delicate tattoo art.</p>
             </div>
             <div>
               <h3 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">2. Fusion Pakistani-Arabic Designs</h3>
-              <p>Artists are combining the dense detail of Pakistani mehndi with the flowing floral elegance of Arabic style, creating dramatic designs that have the best of both worlds. These fusion designs feature Arabic florals in the center with Pakistani jaal borders — particularly popular for bridal mehndi in 2025 across both Pakistan and India.</p>
+              <p>Artists are combining the dense detail of Pakistani mehndi with the flowing floral elegance of Arabic style, creating dramatic designs that have the best of both worlds. These fusion designs feature Arabic florals in the center with Pakistani jaal borders — particularly popular for bridal mehndi in 2026 across both Pakistan and India.</p>
             </div>
             <div>
               <h3 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">3. Portrait & Personalized Mehndi</h3>
@@ -525,7 +556,7 @@ export default function HomeContent() {
               <div className="relative aspect-square">
                 <Image
                   src={`https://images.unsplash.com/photo-${img.photo}?w=400&q=80&fit=crop&crop=entropy`}
-                  alt={`${img.label} mehndi trend 2025`}
+                  alt={`${img.label} mehndi trend 2026`}
                   fill className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
@@ -545,7 +576,7 @@ export default function HomeContent() {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <ContentImage
             src="https://images.unsplash.com/photo-1571150612716-ff39d1e9ef58?w=800&q=85&fit=crop"
-            alt="Beautiful Eid mehndi design on hands — festive henna for Eid 2025"
+            alt="Beautiful Eid mehndi design on hands — festive henna for Eid 2026"
             caption="Eid mehndi — one of Pakistan's most beloved festive traditions"
           />
           <div>
@@ -559,7 +590,7 @@ export default function HomeContent() {
                 Across Pakistan, India, Bangladesh, and Muslim communities worldwide, applying mehndi before Eid is a beloved tradition. The Prophet (PBUH) encouraged the use of henna, and it has become an integral part of Eid celebrations for women and girls of all ages. The excitement of applying new mehndi the night before Eid adds to the festive anticipation.
               </p>
               <p>
-                <strong className="text-henna-800 dark:text-henna-200">Best Eid mehndi designs for 2025:</strong> Simple Arabic florals remain the top choice for Eid because they look beautiful and apply quickly. Back hand designs with a central flower and extending vine work are very popular. Finger mehndi — covering just the fingers with graduated patterns — is perfect for those short on time. For girls who want more coverage, half-hand designs strike the perfect balance.
+                <strong className="text-henna-800 dark:text-henna-200">Best Eid mehndi designs for 2026:</strong> Simple Arabic florals remain the top choice for Eid because they look beautiful and apply quickly. Back hand designs with a central flower and extending vine work are very popular. Finger mehndi — covering just the fingers with graduated patterns — is perfect for those short on time. For girls who want more coverage, half-hand designs strike the perfect balance.
               </p>
               <p>
                 <strong className="text-henna-800 dark:text-henna-200">When to apply Eid mehndi:</strong> Apply mehndi on Chand Raat (the night before Eid) for the best results. This gives the henna 8–10 hours to develop overnight, and by the time you wake up for Eid prayers, the mehndi will have reached its deepest color. The whole family can apply mehndi together — it is a cherished part of the Chand Raat celebration.
@@ -821,6 +852,58 @@ export default function HomeContent() {
               <li><strong className="text-henna-700 dark:text-henna-300">Digital inspiration:</strong> Platforms like MehndiGlow have democratized access to design inspiration, enabling women everywhere to find and share beautiful designs for free.</li>
             </ul>
           </div>
+        </div>
+      </Section>
+
+      {/* ════════════════════════════════════════════
+          SECTION 13b — New Category Links
+      ════════════════════════════════════════════ */}
+      <Section>
+        <SectionHeading
+          chip="More Styles"
+          title="Also Explore These Mehndi Styles"
+          subtitle="Browse our newest design categories — each with hundreds of unique patterns for every occasion and skill level."
+        />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { slug: "front-hand-mehndi-design", name: "Front Hand Mehndi",  photo: "1568566240146-a5e26db3b29b", desc: "Classic full front hand patterns" },
+            { slug: "floral-mehndi-design",      name: "Floral Mehndi",      photo: "1764640848891-9b23d3632ccf", desc: "Roses, lotus & botanical vines" },
+            { slug: "circle-mehndi-design",      name: "Circle Mehndi",      photo: "1599671229994-bc8fd4df731c", desc: "Mandala & round geometric art" },
+            { slug: "gol-tikki-mehndi-design",   name: "Gol Tikki Mehndi",   photo: "1656702678285-59bde376828f", desc: "Traditional round medallion designs" },
+            { slug: "easy-mehndi-design",         name: "Easy Mehndi",        photo: "1562508548-69377b81ab9e",   desc: "Perfect for beginners at home" },
+            { slug: "back-hand-mehndi-design",   name: "Back Hand Mehndi",   photo: "1676134014048-bcc764ea015d", desc: "Gorgeous back hand patterns" },
+            { slug: "finger-mehndi-design",      name: "Finger Mehndi",      photo: "1565368114375-ba1a4db7099f", desc: "Minimal & stylish finger art" },
+            { slug: "indian-mehndi-design",      name: "Indian Mehndi",      photo: "1525135927526-a01d9e5e9484", desc: "Traditional Indian patterns" },
+          ].map((item, i) => (
+            <motion.div
+              key={item.slug}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
+            >
+              <Link href={`/${item.slug}`} className="group block">
+                <div className="bg-white dark:bg-henna-900 rounded-2xl border border-henna-200/60 dark:border-henna-800 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="relative h-32 overflow-hidden">
+                    <Image
+                      src={`https://images.unsplash.com/photo-${item.photo}?w=400&q=80&fit=crop&crop=entropy`}
+                      alt={`${item.name} designs 2026`}
+                      fill className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-semibold text-xs text-henna-900 dark:text-henna-100 mb-0.5">{item.name}</h3>
+                    <p className="text-[11px] text-henna-500 dark:text-henna-500 line-clamp-1">{item.desc}</p>
+                    <span className="inline-flex items-center gap-0.5 text-[11px] font-semibold text-henna-500 mt-2 group-hover:gap-1 transition-all">
+                      Browse <ArrowRight size={10} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </Section>
 
