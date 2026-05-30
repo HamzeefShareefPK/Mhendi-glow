@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DMCA Policy — MehndiGlow",
+  title: "DMCA Policy",
   description: "MehndiGlow DMCA copyright policy and image removal request process.",
   keywords: [
     "mehndidesignpics dmca","mehndi website dmca","henna website dmca",

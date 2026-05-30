@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — MehndiGlow",
+  title: "Terms & Conditions",
   description: "Read MehndiDesignPics terms and conditions — rules for using our mehndi design website, content policy and user guidelines.",
   keywords: [
     "mehndidesignpics terms","mehndi website terms of service",

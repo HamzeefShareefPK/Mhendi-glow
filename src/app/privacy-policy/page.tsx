@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — MehndiGlow",
+  title: "Privacy Policy",
   description: "Read MehndiGlow privacy policy to understand how we collect and use your data.",
   keywords: [
     "mehndidesignpics privacy policy","mehndi website privacy",

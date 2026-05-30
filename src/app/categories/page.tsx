@@ -4,7 +4,7 @@ import Link from "next/link";
 import { categories } from "@/data";
 
 export const metadata: Metadata = {
-  title: "All Mehndi Design Categories — MehndiGlow",
+  title: "All Mehndi Design Categories",
   description: "Browse all mehndi categories — bridal, arabic, pakistani, eid, finger, feet, minimal and more.",
   keywords: [
     "mehndi design categories","bridal mehndi","arabic mehndi",

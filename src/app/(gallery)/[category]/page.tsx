@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = categories.find((c) => c.slug === params.category);
   if (!cat) return {};
   return {
-    title: `${cat.name} Mehndi Designs 2026 — ${cat.count}+ Beautiful Patterns | MehndiGlow`,
+    title: `${cat.name} Mehndi Designs 2026 — ${cat.count}+ Beautiful Patterns`,
     description: `Discover ${cat.count}+ beautiful ${cat.name} mehndi designs for 2026. ${cat.description}. Free download available.`,
     keywords: [
       cat.keyword,

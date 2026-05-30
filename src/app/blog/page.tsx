@@ -3,7 +3,7 @@ import BlogCard from "@/components/blog/BlogCard";
 import { blogPosts } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Mehndi Design Blog — Tips, Tutorials & Trends | MehndiGlow",
+  title: "Mehndi Design Blog — Tips, Tutorials & Trends",
   description:
     "Read the latest mehndi design articles — bridal tips, arabic tutorials, eid ideas, and expert mehndi advice.",
   keywords: [

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | MehndiGlow`,
+    title: post.title,
     description: post.excerpt,
     keywords: [
       post.category.toLowerCase(), post.title.toLowerCase(),

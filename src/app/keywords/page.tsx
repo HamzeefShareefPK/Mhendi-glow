@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Tag, TrendingUp, Search, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Mehndi Design Keywords — 50 Popular Mehndi Searches | MehndiDesignPics",
+  title: "Mehndi Design Keywords — 50 Popular Mehndi Searches",
   description:
     "Explore 50 most popular mehndi design keywords — bridal mehndi, arabic mehndi, eid mehndi, pakistani mehndi, finger mehndi, feet mehndi and more. Find your perfect henna design.",
   keywords: [

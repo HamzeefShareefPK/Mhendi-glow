@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer — MehndiGlow",
+  title: "Disclaimer",
   description: "MehndiDesignPics disclaimer — important information about mehndi design content, copyright, and accuracy of information on our website.",
   keywords: [
     "mehndidesignpics disclaimer","mehndi website disclaimer",

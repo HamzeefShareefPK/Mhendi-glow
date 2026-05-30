@@ -3,7 +3,7 @@ import Link from "next/link";
 import { categories, blogPosts, designs } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Sitemap — MehndiGlow",
+  title: "Sitemap",
   description: "Browse all pages, categories, designs, and blog posts on MehndiGlow.",
   robots: { index: true, follow: true },
 };

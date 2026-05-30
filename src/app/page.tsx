@@ -14,7 +14,7 @@ import { websiteSchema, organizationSchema } from "@/lib/seo";
 import { generateCategoryDesigns } from "@/data/generator";
 
 export const metadata: Metadata = {
-  title: "MehndiGlow — Discover 1000+ Beautiful Mehndi Designs 2026",
+  title: { absolute: "MehndiGlow — Discover 1000+ Beautiful Mehndi Designs 2026" },
   description:
     "Explore the most beautiful mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Free download. Updated daily. Your #1 mehndi inspiration source.",
   keywords: [

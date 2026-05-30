@@ -11,9 +11,14 @@ import { imageObjectSchema } from "@/lib/seo";
 import { designs } from "@/data";
 import { getAllDesigns } from "@/data/generator";
 
+// Lookup must cover EVERY design a category page can render, otherwise those
+// card links 404. Category pages render up to 1000 designs per category
+// (see NEW_CATEGORY_COUNT in [category]/page.tsx), so the lookup uses 1000.
+const LOOKUP_COUNT = 1000;
+
 // Merge hardcoded designs with all generated designs (deduplicated by slug)
 function getMergedDesigns() {
-  const generated = getAllDesigns(20); // 20 per category × 12 categories = 240
+  const generated = getAllDesigns(LOOKUP_COUNT);
   const existingSlugs = new Set(designs.map((d) => d.slug));
   const newDesigns = generated.filter((d) => !existingSlugs.has(d.slug));
   return [...designs, ...newDesigns];
@@ -26,8 +31,15 @@ interface Props {
   params: { slug: string };
 }
 
+// Pre-render the hardcoded designs + the first 24 designs of every category at
+// build time for instant loads. The remaining designs are resolved on-demand
+// (dynamicParams defaults to true) from the full `allDesigns` lookup above —
+// this keeps build times reasonable while ensuring NO design link 404s.
 export async function generateStaticParams() {
-  return allDesigns.map((d) => ({ slug: d.slug }));
+  const prerender = getAllDesigns(24);
+  const slugs = new Set<string>();
+  [...designs, ...prerender].forEach((d) => slugs.add(d.slug));
+  return Array.from(slugs, (slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -35,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!d) return {};
   const catDisplay = d.category.replace(/-mehndi$/, "").replace(/-/g, " ");
   return {
-    title: `${d.title} — Free Download | MehndiDesignPics`,
+    title: `${d.title} — Free Download`,
     description: `${d.description} Download this beautiful ${catDisplay} mehndi design for free. Part of our ${catDisplay} mehndi collection 2026.`,
     keywords: [
       ...d.tags,

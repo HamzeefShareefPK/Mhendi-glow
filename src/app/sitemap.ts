@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { designs, blogPosts, categories } from "@/data";
-import { getAllDesigns, generateCategoryDesigns } from "@/data/generator";
+import { getAllDesigns } from "@/data/generator";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://mehndidesignpics.com";
@@ -30,24 +30,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.85,
   }));
 
-  // ── 3. Hardcoded design pages ──────────────────────
-  const hardcodedDesignPages: MetadataRoute.Sitemap = designs.map((d) => ({
-    url:             `${base}/design/${d.slug}`,
-    lastModified:    new Date(d.createdAt),
-    changeFrequency: "monthly" as const,
-    priority:        d.featured ? 0.8 : 0.7,
-  }));
+  // ── 3. Design pages (hardcoded + generated, deduplicated by slug) ──
+  // Category pages can link to up to 1000 designs each; we surface a curated
+  // subset (hardcoded featured designs + the first 20 generated per category,
+  // across all categories) in the sitemap to avoid flooding it with thousands
+  // of near-duplicate URLs while still exposing quality pages to crawlers.
+  const seenDesignSlugs = new Set<string>();
+  const designPages: MetadataRoute.Sitemap = [];
 
-  // ── 4. Generated design pages (20 per category × 13 = 260) ───
-  const generatedDesigns = getAllDesigns(20);
-  const generatedDesignPages: MetadataRoute.Sitemap = generatedDesigns.map((d) => ({
-    url:             `${base}/design/${d.slug}`,
-    lastModified:    now,
-    changeFrequency: "monthly" as const,
-    priority:        0.65,
-  }));
+  // 3a. Hardcoded designs first (higher priority, real createdAt dates)
+  for (const d of designs) {
+    if (seenDesignSlugs.has(d.slug)) continue;
+    seenDesignSlugs.add(d.slug);
+    designPages.push({
+      url:             `${base}/design/${d.slug}`,
+      lastModified:    new Date(d.createdAt),
+      changeFrequency: "monthly",
+      priority:        d.featured ? 0.8 : 0.7,
+    });
+  }
 
-  // ── 5. Blog post pages (all 91 posts) ─────────────
+  // 3b. Generated designs (skip any slug already added by the hardcoded set)
+  for (const d of getAllDesigns(20)) {
+    if (seenDesignSlugs.has(d.slug)) continue;
+    seenDesignSlugs.add(d.slug);
+    designPages.push({
+      url:             `${base}/design/${d.slug}`,
+      lastModified:    now,
+      changeFrequency: "monthly",
+      priority:        0.65,
+    });
+  }
+
+  // ── 4. Blog post pages ─────────────────────────────
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
     url:             `${base}/blog/${p.slug}`,
     lastModified:    new Date(p.publishedAt),
@@ -58,8 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...categoryPages,
-    ...hardcodedDesignPages,
-    ...generatedDesignPages,
+    ...designPages,
     ...blogPages,
   ];
 }
