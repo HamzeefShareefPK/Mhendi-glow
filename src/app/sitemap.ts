@@ -31,10 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // ── 3. Design pages (hardcoded + generated, deduplicated by slug) ──
-  // Category pages can link to up to 1000 designs each; we surface a curated
-  // subset (hardcoded featured designs + the first 20 generated per category,
-  // across all categories) in the sitemap to avoid flooding it with thousands
-  // of near-duplicate URLs while still exposing quality pages to crawlers.
+  // Every generated design (60 per category) is unique and prerendered, so we
+  // surface all of them here. Keep this count in sync with DESIGNS_PER_CATEGORY
+  // in [category]/page.tsx and LOOKUP_COUNT in design/[slug]/page.tsx.
   const seenDesignSlugs = new Set<string>();
   const designPages: MetadataRoute.Sitemap = [];
 
@@ -51,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // 3b. Generated designs (skip any slug already added by the hardcoded set)
-  for (const d of getAllDesigns(20)) {
+  for (const d of getAllDesigns(60)) {
     if (seenDesignSlugs.has(d.slug)) continue;
     seenDesignSlugs.add(d.slug);
     designPages.push({

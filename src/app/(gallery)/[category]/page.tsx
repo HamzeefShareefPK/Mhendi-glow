@@ -105,13 +105,13 @@ export default function CategoryPage({ params }: Props) {
   const cat = categories.find((c) => c.slug === params.category);
   if (!cat) notFound();
 
-  const NEW_CATEGORY_COUNT: Record<string, number> = {
-    "floral-mehndi-design":    1000,
-    "circle-mehndi-design":    1000,
-    "gol-tikki-mehndi-design": 1000,
-    "easy-mehndi-design":      1000,
-  };
-  const designCount = NEW_CATEGORY_COUNT[params.category] ?? 500;
+  // Quality over quantity: a focused set of genuinely distinct designs per
+  // category indexes far better than thousands of near-duplicate pages built
+  // from the same handful of stock photos (Google treats those as thin
+  // content and refuses to index them). 60 covers all 20 unique titles three
+  // times over with varied imagery and unique descriptions.
+  const DESIGNS_PER_CATEGORY = 60;
+  const designCount = DESIGNS_PER_CATEGORY;
   const catDesigns = generateCategoryDesigns(params.category, designCount);
   const faqs = CATEGORY_FAQS[params.category] || [];
 

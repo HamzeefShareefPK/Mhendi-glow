@@ -44,7 +44,7 @@ export async function GET() {
   };
 
   designs.forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
-  getAllDesigns(20).forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
+  getAllDesigns(60).forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
 
   const categoryUrls = categories
     .map(

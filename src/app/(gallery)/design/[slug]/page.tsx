@@ -12,9 +12,9 @@ import { designs } from "@/data";
 import { getAllDesigns } from "@/data/generator";
 
 // Lookup must cover EVERY design a category page can render, otherwise those
-// card links 404. Category pages render up to 1000 designs per category
-// (see NEW_CATEGORY_COUNT in [category]/page.tsx), so the lookup uses 1000.
-const LOOKUP_COUNT = 1000;
+// card links 404. Category pages render DESIGNS_PER_CATEGORY designs each
+// (see [category]/page.tsx), so the lookup must match that number.
+const LOOKUP_COUNT = 60;
 
 // Merge hardcoded designs with all generated designs (deduplicated by slug)
 function getMergedDesigns() {
@@ -31,14 +31,12 @@ interface Props {
   params: { slug: string };
 }
 
-// Pre-render the hardcoded designs + the first 24 designs of every category at
-// build time for instant loads. The remaining designs are resolved on-demand
-// (dynamicParams defaults to true) from the full `allDesigns` lookup above —
-// this keeps build times reasonable while ensuring NO design link 404s.
+// Pre-render EVERY design at build time. Static (prerendered) pages are
+// crawled and indexed far more reliably than on-demand server-rendered pages,
+// so with the reduced per-category count we statically generate all of them.
 export async function generateStaticParams() {
-  const prerender = getAllDesigns(24);
   const slugs = new Set<string>();
-  [...designs, ...prerender].forEach((d) => slugs.add(d.slug));
+  [...designs, ...allDesigns].forEach((d) => slugs.add(d.slug));
   return Array.from(slugs, (slug) => ({ slug }));
 }
 

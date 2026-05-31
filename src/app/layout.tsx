@@ -57,12 +57,14 @@ export const metadata: Metadata = {
     },
   },
 
-  // ── Verification (add your actual codes) ─────────────
-  verification: {
-    google: "ADD_YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-    // yandex: "ADD_YANDEX_CODE",
-    // bing: "ADD_BING_CODE",
-  },
+  // ── Verification ─────────────────────────────────────
+  // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in your hosting env (Vercel /
+  // .env) to the token from Google Search Console → Settings → Ownership
+  // verification → HTML tag. The placeholder is omitted when unset so no
+  // broken verification meta tag is emitted.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
 
   // ── App-specific ─────────────────────────────────────
   applicationName: "MehndiGlow",

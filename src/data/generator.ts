@@ -427,6 +427,77 @@ const TAGS: Record<string, string[]> = {
   "easy-mehndi-design":      ["easy","simple","beginner","quick"],
 };
 
+// ── Human-readable category display names ────────────────────────────────────
+const CATEGORY_DISPLAY: Record<string, string> = {
+  "bridal-mehndi-design":    "bridal",
+  "arabic-mehndi-design":    "Arabic",
+  "pakistani-mehndi-design": "Pakistani",
+  "eid-mehndi-design":       "Eid",
+  "finger-mehndi-design":    "finger",
+  "feet-mehndi-design":      "feet",
+  "minimal-mehndi-design":   "minimal",
+  "kids-mehndi-design":      "kids",
+  "back-hand-mehndi-design": "back hand",
+  "indian-mehndi-design":    "Indian",
+  "stylish-mehndi-design":   "stylish",
+  "front-hand-mehndi-design":"front hand",
+  "mehndi-tattoo-design":    "mehndi tattoo",
+  "floral-mehndi-design":    "floral",
+  "circle-mehndi-design":    "circle mandala",
+  "gol-tikki-mehndi-design": "gol tikki",
+  "easy-mehndi-design":      "easy",
+};
+
+// ── Phrase banks for UNIQUE descriptions ─────────────────────────────────────
+// Each design composes one sentence from each bank, selected by a different
+// rotating index, so no two designs share the same description text. This is
+// what lets the pages read as distinct content instead of duplicates.
+const OPENERS = [
+  "A beautifully detailed", "An elegant", "A stunning", "A graceful",
+  "A timeless", "A modern take on the", "A delicate", "A bold and intricate",
+  "A romantic", "An eye-catching", "A refined", "A classic",
+];
+const MIDDLES = [
+  "that balances fine line work with open negative space",
+  "featuring flowing motifs that wrap naturally around the hand",
+  "with layered detailing that builds depth from the centre outward",
+  "combining traditional patterns with a clean, contemporary finish",
+  "where every stroke is placed to flatter the shape of the hand",
+  "built around a central focal point with trailing vine accents",
+  "that photographs beautifully and stains a deep, rich colour",
+  "designed to look striking yet stay quick and comfortable to apply",
+  "with symmetrical detailing that reads elegantly from every angle",
+  "blending floral, paisley and geometric elements into one cohesive look",
+];
+const OCCASIONS = [
+  "Ideal for weddings, engagements and festive celebrations.",
+  "Perfect for Eid, parties and everyday wear alike.",
+  "A favourite choice for brides and mehndi artists in 2026.",
+  "Great for festive gatherings, Karwa Chauth and special days.",
+  "Suited to both minimal lovers and those who enjoy heavier detail.",
+  "A versatile pick that works for casual and formal occasions.",
+  "Especially popular for Eid mornings and last-minute looks.",
+  "A go-to design for brides who want timeless elegance.",
+];
+const TIPS = [
+  "Save it to Pinterest and share it with your mehndi artist for an exact match.",
+  "Leave the paste on for 6–8 hours to develop the deepest colour.",
+  "Pair it with simple jewellery to let the henna detailing stand out.",
+  "Practise the central motif on paper first for the cleanest finish.",
+  "Apply a lemon-sugar seal once dry to intensify the final stain.",
+  "Recreate it at home in under 30 minutes with a fine-tip cone.",
+];
+
+// Build a unique, multi-sentence description for a generated design.
+function buildDescription(category: string, titleBase: string, i: number): string {
+  const disp = CATEGORY_DISPLAY[category] ?? "mehndi";
+  const opener   = OPENERS[i % OPENERS.length];
+  const middle   = MIDDLES[(i * 3 + 1) % MIDDLES.length];
+  const occasion = OCCASIONS[(i * 5 + 2) % OCCASIONS.length];
+  const tip      = TIPS[(i * 7 + 3) % TIPS.length];
+  return `${opener} ${titleBase.toLowerCase()} ${middle}. This ${disp} mehndi design ${occasion.charAt(0).toLowerCase() + occasion.slice(1)} ${tip}`;
+}
+
 // ── All category slugs ───────────────────────────────────────────────────────
 export const ALL_CATEGORY_SLUGS = Object.keys(CATEGORY_START);
 
@@ -476,8 +547,8 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
       category,
       tags,
       image:       `https://images.unsplash.com/photo-${photoId}?${urlVariant}`,
-      alt:         `${title} – beautiful mehndi henna design`,
-      description: `Beautiful ${titleBase.toLowerCase()} – perfect for every occasion.`,
+      alt:         `${title} – intricate ${CATEGORY_DISPLAY[category] ?? "mehndi"} henna pattern for hands`,
+      description: buildDescription(category, titleBase, i),
       featured:    i < 6,
       trending:    i % 5 === 0,
       createdAt:   "2026-01-01",
