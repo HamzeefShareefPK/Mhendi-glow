@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+/* Fonts are self-hosted via next/font (see src/app/layout.tsx) — the previous
+   render-blocking Google Fonts @import has been removed for performance. */
 
 @tailwind base;
 @tailwind components;
@@ -8,8 +9,7 @@
    CSS VARIABLES
 ───────────────────────────────────────── */
 :root {
-  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-  --font-lato: 'Lato', system-ui, sans-serif;
+  /* --font-cormorant and --font-lato are injected by next/font on <html>. */
 
   --color-bg:        #FDF8F2;
   --color-text:      #2E1A0E;

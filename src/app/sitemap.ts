@@ -5,6 +5,10 @@ import { getAllDesigns } from "@/data/generator";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://mehndidesignpics.com";
   const now  = new Date();
+  // Stable lastModified for content that doesn't change every build. Using a
+  // fixed date (rather than `now`) stops crawlers from learning to ignore our
+  // lastmod signal because it changes on every deploy.
+  const stable = new Date("2026-05-20");
 
   // ── 1. Static pages ────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
@@ -14,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/ai-generator`,      lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${base}/search`,            lastModified: now, changeFrequency: "weekly",  priority: 0.7 },
     { url: `${base}/keywords`,          lastModified: now, changeFrequency: "monthly", priority: 0.65 },
+    { url: `${base}/sitemap-page`,      lastModified: now, changeFrequency: "weekly",  priority: 0.4 },
     { url: `${base}/about`,             lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/contact`,           lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/privacy-policy`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
@@ -25,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── 2. Category pages (slugs already include -design suffix) ──
   const categoryPages: MetadataRoute.Sitemap = categories.map((c) => ({
     url:             `${base}/${c.slug}`,
-    lastModified:    now,
+    lastModified:    c.updatedAt ? new Date(c.updatedAt) : stable,
     changeFrequency: "weekly" as const,
     priority:        0.85,
   }));
@@ -55,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     seenDesignSlugs.add(d.slug);
     designPages.push({
       url:             `${base}/design/${d.slug}`,
-      lastModified:    now,
+      lastModified:    stable,
       changeFrequency: "monthly",
       priority:        0.65,
     });

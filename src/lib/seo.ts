@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 
 const BASE_URL = "https://mehndidesignpics.com";
-const SITE_NAME = "MehndiGlow";
+const SITE_NAME = "MehndiDesignPics";
 const DEFAULT_IMAGE = `${BASE_URL}/images/og-image.jpg`;
 
 // ─── Core SEO builder ───────────────────────────────────────────────────────
@@ -67,8 +67,8 @@ export function buildMetadata({
     // Twitter Card
     twitter: {
       card: "summary_large_image",
-      site: "@MehndiGlow",
-      creator: "@MehndiGlow",
+      site: "@MehndiDesignPics",
+      creator: "@MehndiDesignPics",
       title: fullTitle,
       description,
       images: [ogImage],
@@ -106,9 +106,9 @@ export function organizationSchema() {
     url: BASE_URL,
     logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo.png` },
     sameAs: [
-      "https://pinterest.com/mehndiglow",
-      "https://instagram.com/mehndiglow",
-      "https://facebook.com/mehndiglow",
+      "https://pinterest.com/mehndidesignpics",
+      "https://instagram.com/mehndidesignpics",
+      "https://facebook.com/mehndidesignpics",
     ],
     contactPoint: {
       "@type": "ContactPoint",

@@ -12,9 +12,10 @@ import FAQSection      from "@/components/seo/FAQSection";
 import JsonLd          from "@/components/seo/JsonLd";
 import { websiteSchema, organizationSchema } from "@/lib/seo";
 import { generateCategoryDesigns } from "@/data/generator";
+import { categories } from "@/data";
 
 export const metadata: Metadata = {
-  title: { absolute: "MehndiGlow — Discover 1000+ Beautiful Mehndi Designs 2026" },
+  title: { absolute: "MehndiDesignPics — Discover 1000+ Beautiful Mehndi Designs 2026" },
   description:
     "Explore the most beautiful mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Free download. Updated daily. Your #1 mehndi inspiration source.",
   keywords: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://mehndidesignpics.com" },
   openGraph: {
-    title: "MehndiGlow — 1000+ Beautiful Mehndi Designs",
+    title: "MehndiDesignPics — 1000+ Beautiful Mehndi Designs",
     description: "Discover bridal, arabic, eid, minimal mehndi designs. Free download.",
     images: [{ url: "https://mehndidesignpics.com/images/og-image.jpg", width: 1200, height: 630 }],
     type: "website",
@@ -69,16 +70,13 @@ const HOME_FAQS = [
   },
   {
     question: "Is MehndiGlow free to use?",
-    answer: "Yes! MehndiGlow is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 1000+ designs across 12 categories updated regularly.",
+    answer: "Yes! MehndiDesignPics is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 1000+ designs across 25+ mehndi categories updated regularly.",
   },
 ];
 
-// Generate 200 mixed mehndi designs from all 12 categories (≈17 per category)
-const CATEGORIES = [
-  "bridal-mehndi-design","arabic-mehndi-design","pakistani-mehndi-design","eid-mehndi-design",
-  "finger-mehndi-design","feet-mehndi-design","minimal-mehndi-design","kids-mehndi-design",
-  "back-hand-mehndi-design","indian-mehndi-design","stylish-mehndi-design","front-hand-mehndi-design",
-];
+// Generate 200 mixed mehndi designs from ALL categories (derived from data so
+// new style pages are automatically represented in the homepage gallery).
+const CATEGORIES = categories.map((c) => c.slug);
 
 function getMixedDesigns(total: number) {
   const perCat = Math.ceil(total / CATEGORIES.length);

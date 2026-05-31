@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Mehndi Design Blog — Tips, Tutorials & Trends",
   description:
     "Read the latest mehndi design articles — bridal tips, arabic tutorials, eid ideas, and expert mehndi advice.",
+  alternates: { canonical: "https://mehndidesignpics.com/blog" },
   keywords: [
     "mehndi blog","mehndi tips","henna tips","mehndi tutorials",
     "how to apply mehndi","mehndi design tips","bridal mehndi tips",

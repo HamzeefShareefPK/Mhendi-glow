@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/data";
+import PopularSearches from "@/components/seo/PopularSearches";
 
 export const metadata: Metadata = {
   title: "All Mehndi Design Categories",
   description: "Browse all mehndi categories — bridal, arabic, pakistani, eid, finger, feet, minimal and more.",
+  alternates: { canonical: "https://mehndidesignpics.com/categories" },
   keywords: [
     "mehndi design categories","bridal mehndi","arabic mehndi",
     "pakistani mehndi","eid mehndi","finger mehndi","feet mehndi",
@@ -47,6 +49,7 @@ export default function CategoriesPage() {
                 src={cat.image}
                 alt={`${cat.name} mehndi designs`}
                 fill
+                sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -66,6 +69,10 @@ export default function CategoriesPage() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="mt-12 pt-8 border-t border-henna-200 dark:border-henna-800">
+        <PopularSearches />
       </div>
     </div>
   );

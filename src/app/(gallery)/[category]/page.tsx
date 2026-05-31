@@ -8,6 +8,9 @@ import JsonLd          from "@/components/seo/JsonLd";
 import { collectionPageSchema, breadcrumbSchema } from "@/lib/seo";
 import { categories } from "@/data";
 import { generateCategoryDesigns } from "@/data/generator";
+import { getCategoryArticle } from "@/data/categoryContent";
+import CategoryArticle from "@/components/category/CategoryArticle";
+import RelatedCategories from "@/components/seo/RelatedCategories";
 
 interface Props {
   params: { category: string };
@@ -113,7 +116,9 @@ export default function CategoryPage({ params }: Props) {
   const DESIGNS_PER_CATEGORY = 60;
   const designCount = DESIGNS_PER_CATEGORY;
   const catDesigns = generateCategoryDesigns(params.category, designCount);
-  const faqs = CATEGORY_FAQS[params.category] || [];
+  const article = getCategoryArticle(params.category);
+  // Prefer the in-depth article's FAQs; fall back to the legacy per-category set.
+  const faqs = article?.faqs ?? CATEGORY_FAQS[params.category] ?? [];
 
   return (
     <>
@@ -197,6 +202,9 @@ export default function CategoryPage({ params }: Props) {
           </div>
         </div>
 
+        {/* In-depth style guide (2500+ words) — only for pages that have one */}
+        {article && <CategoryArticle category={cat} article={article} />}
+
         {/* Gallery */}
         <MasonryGallery
           designs={catDesigns}
@@ -210,6 +218,9 @@ export default function CategoryPage({ params }: Props) {
             title={`${cat.name} Mehndi FAQ`}
           />
         )}
+
+        {/* Related styles — internal linking */}
+        <RelatedCategories currentSlug={params.category} />
       </div>
     </>
   );

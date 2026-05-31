@@ -1,5 +1,6 @@
-﻿import type { Metadata } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Cormorant_Garamond, Lato } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "@/styles/globals.css";
 import Header    from "@/components/layout/Header";
@@ -7,12 +8,35 @@ import Footer    from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import WebVitals from "@/components/seo/WebVitals";
 
+// Self-hosted via next/font — eliminates the render-blocking Google Fonts
+// @import and serves font files from our own origin (faster LCP, no FOUT).
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-cormorant",
+  fallback: ["Georgia", "serif"],
+  adjustFontFallback: true,
+});
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-lato",
+  fallback: ["system-ui", "sans-serif"],
+  adjustFontFallback: true,
+});
+
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-QP3L90D7F1";
+
+export const viewport: Viewport = {
+  themeColor: "#C8946A",
+};
 
 export const metadata: Metadata = {
   title: {
-    default:  "MehndiGlow — Discover Beautiful Mehndi Designs 2026",
-    template: "%s | MehndiGlow",
+    default:  "MehndiDesignPics — Discover Beautiful Mehndi Designs 2026",
+    template: "%s | MehndiDesignPics",
   },
   description:
     "Explore 1000+ mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Your daily dose of mehndi inspiration.",
@@ -30,18 +54,18 @@ export const metadata: Metadata = {
     type:        "website",
     locale:      "en_US",
     url:         "https://mehndidesignpics.com",
-    siteName:    "MehndiGlow",
-    title:       "MehndiGlow — Beautiful Mehndi Designs",
+    siteName:    "MehndiDesignPics",
+    title:       "MehndiDesignPics — Beautiful Mehndi Designs",
     description: "Explore 1000+ mehndi designs for every occasion.",
-    images:      [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "MehndiGlow — Mehndi Designs" }],
+    images:      [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "MehndiDesignPics — Mehndi Designs" }],
   },
 
   // ── Twitter Card ─────────────────────────────────────
   twitter: {
     card:        "summary_large_image",
-    site:        "@MehndiGlow",
-    creator:     "@MehndiGlow",
-    title:       "MehndiGlow — Beautiful Mehndi Designs",
+    site:        "@MehndiDesignPics",
+    creator:     "@MehndiDesignPics",
+    title:       "MehndiDesignPics — Beautiful Mehndi Designs",
     description: "Explore 1000+ mehndi designs for every occasion.",
   },
 
@@ -73,12 +97,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${cormorant.variable} ${lato.variable}`} suppressHydrationWarning>
       <head>
-        {/* DNS prefetch for performance */}
+        {/* DNS prefetch / preconnect — only for the remaining cross-origin host
+            (Unsplash). Fonts are now self-hosted via next/font. */}
         <link rel="dns-prefetch" href="//images.unsplash.com" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="preconnect" href="https://images.unsplash.com" />
 
         {/* Favicon set */}

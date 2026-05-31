@@ -8,8 +8,43 @@ import DesignCard      from "@/components/gallery/DesignCard";
 import Breadcrumb      from "@/components/seo/Breadcrumb";
 import JsonLd          from "@/components/seo/JsonLd";
 import { imageObjectSchema } from "@/lib/seo";
-import { designs } from "@/data";
+import { designs, categories } from "@/data";
 import { getAllDesigns } from "@/data/generator";
+import RelatedCategories from "@/components/seo/RelatedCategories";
+import RelatedArticles from "@/components/seo/RelatedArticles";
+
+// Map a design tag to the most relevant category page (crawlable internal link),
+// falling back to search when no category matches.
+const CATEGORY_SLUGS = new Set(categories.map((c) => c.slug));
+function tagHref(tag: string): string {
+  const t = tag.toLowerCase().trim();
+  const direct = `${t.replace(/\s+/g, "-")}-mehndi-design`;
+  if (CATEGORY_SLUGS.has(direct)) return `/${direct}`;
+  const aliases: Record<string, string> = {
+    bridal: "bridal-mehndi-design", dulhan: "dulhan-mehndi-design",
+    wedding: "bridal-mehndi-design", arabic: "arabic-mehndi-design",
+    pakistani: "pakistani-mehndi-design", indian: "indian-mehndi-design",
+    eid: "eid-mehndi-design", floral: "floral-mehndi-design",
+    flowers: "floral-mehndi-design", minimal: "minimal-mehndi-design",
+    simple: "easy-mehndi-design", easy: "easy-mehndi-design",
+    finger: "finger-mehndi-design", feet: "feet-mehndi-design",
+    ankle: "feet-mehndi-design", kids: "kids-mehndi-design",
+    stylish: "stylish-mehndi-design", modern: "stylish-mehndi-design",
+    traditional: "rajasthani-mehndi-design", mandala: "mandala-mehndi-design",
+    peacock: "peacock-mehndi-design", mor: "peacock-mehndi-design",
+    jaal: "jaal-mehndi-design", net: "jaal-mehndi-design",
+    khafif: "khafif-mehndi-design", shaded: "shaded-mehndi-design",
+    tattoo: "mehndi-tattoo-design", "full hand": "bridal-mehndi-design",
+    "back hand": "back-hand-mehndi-design", "front hand": "front-hand-mehndi-design",
+    "half hand": "half-hand-mehndi-design", engagement: "engagement-mehndi-design",
+    sagai: "engagement-mehndi-design", jewellery: "jewellery-mehndi-design",
+    hathphool: "jewellery-mehndi-design", bracelet: "wrist-mehndi-design",
+    wrist: "wrist-mehndi-design", moroccan: "moroccan-mehndi-design",
+    rajasthani: "rajasthani-mehndi-design",
+  };
+  if (aliases[t]) return `/${aliases[t]}`;
+  return `/search?q=${encodeURIComponent(tag)}`;
+}
 
 // Lookup must cover EVERY design a category page can render, otherwise those
 // card links 404. Category pages render DESIGNS_PER_CATEGORY designs each
@@ -192,7 +227,7 @@ export default function DesignPage({ params }: Props) {
               {design.tags.map((tag) => (
                 <Link
                   key={tag}
-                  href={`/search?q=${encodeURIComponent(tag)}`}
+                  href={tagHref(tag)}
                   className="tag-pill text-xs capitalize"
                   rel="tag"
                   itemProp="keywords"
@@ -230,15 +265,18 @@ export default function DesignPage({ params }: Props) {
             <div className="mt-6 pt-5 border-t border-henna-200 dark:border-henna-800">
               <p className="text-xs text-henna-500 mb-2">More collections:</p>
               <div className="flex flex-wrap gap-2">
-                {["bridal-mehndi-design", "arabic-mehndi-design", "eid-mehndi-design"].map((cat) => (
-                  <Link
-                    key={cat}
-                    href={`/${cat}`}
-                    className="text-xs text-henna-400 hover:underline capitalize"
-                  >
-                    {cat.replace(/-/g, " ")} →
-                  </Link>
-                ))}
+                {[design.category, "bridal-mehndi-design", "arabic-mehndi-design", "eid-mehndi-design"]
+                  .filter((cat, i, arr) => arr.indexOf(cat) === i)
+                  .slice(0, 3)
+                  .map((cat) => (
+                    <Link
+                      key={cat}
+                      href={`/${cat}`}
+                      className="text-xs text-henna-600 dark:text-henna-300 hover:underline capitalize"
+                    >
+                      {cat.replace(/-/g, " ")} →
+                    </Link>
+                  ))}
               </div>
             </div>
           </article>
@@ -270,13 +308,17 @@ export default function DesignPage({ params }: Props) {
         <div className="mt-8">
           <Link
             href={`/${design.category}`}
-            className="inline-flex items-center gap-2 text-sm text-henna-400 hover:text-henna-500 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-henna-600 dark:text-henna-300 hover:text-henna-700 font-medium transition-colors"
           >
             <ArrowLeft size={16} />
             Back to {catName} mehndi designs
           </Link>
         </div>
       </div>
+
+      {/* Related guides + sibling styles — internal linking */}
+      <RelatedArticles category={design.category} />
+      <RelatedCategories currentSlug={design.category} />
     </>
   );
 }

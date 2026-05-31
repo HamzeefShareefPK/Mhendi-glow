@@ -7,8 +7,10 @@ import BlogCard from "@/components/blog/BlogCard";
 import Breadcrumb from "@/components/seo/Breadcrumb";
 import JsonLd from "@/components/seo/JsonLd";
 import FAQSection from "@/components/seo/FAQSection";
+import RelatedCategories from "@/components/seo/RelatedCategories";
 import { articleSchema, howToSchema } from "@/lib/seo";
-import { blogPosts } from "@/data";
+import { blogPosts, categories } from "@/data";
+import { getRelatedPosts } from "@/lib/related";
 
 interface Props { params: { slug: string } }
 
@@ -67,7 +69,10 @@ export default function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) notFound();
 
-  const related = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
+  const related = getRelatedPosts(post, blogPosts, 3);
+  const mappedCategorySlug = categories.find(
+    (c) => c.name.toLowerCase() === post.category.toLowerCase(),
+  )?.slug;
   const isHowTo = post.title.toLowerCase().includes("how to") || post.title.toLowerCase().includes("step by step");
 
   const schemas = [
@@ -207,6 +212,12 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Blog → gallery internal links */}
+      <RelatedCategories
+        currentSlug={mappedCategorySlug}
+        heading="Browse Matching Mehndi Designs"
+      />
     </>
   );
 }

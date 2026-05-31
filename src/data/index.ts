@@ -1,5 +1,10 @@
 import { Design, Category } from "@/types";
-export { allBlogPosts as blogPosts } from "./blogPosts";
+import { allBlogPosts } from "./blogPosts";
+import { extraBlogPosts } from "./blogPostsExtra";
+
+// Merge the original posts with the new in-depth posts. All consumers import
+// `blogPosts` from "@/data", so the merge is transparent everywhere.
+export const blogPosts = [...allBlogPosts, ...extraBlogPosts];
 
 // Unsplash photo IDs (all verified real mehndi/henna design photos):
 // 1674884060571-96a46a9a7a72 — woman's hand with henna (bridal)         by Manvendra Singh
@@ -30,6 +35,20 @@ export const categories: Category[] = [
   { slug: "circle-mehndi-design",    name: "Circle",    description: "Stunning circle and mandala mehndi patterns with geometric round motifs",          image: "https://images.unsplash.com/photo-1599671229994-bc8fd4df731c?w=400&q=80", count: 32, keyword: "circle mehndi designs" },
   { slug: "gol-tikki-mehndi-design", name: "Gol Tikki", description: "Traditional gol tikki mehndi with classic round medallion patterns",              image: "https://images.unsplash.com/photo-1656702678285-59bde376828f?w=400&q=80", count: 29, keyword: "gol tikki mehndi design" },
   { slug: "easy-mehndi-design",      name: "Easy",      description: "Simple and easy mehndi designs perfect for beginners and quick home application",  image: "https://images.unsplash.com/photo-1562508548-69377b81ab9e?w=400&q=80", count: 44, keyword: "easy mehndi designs" },
+
+  // ── New in-depth style pages (each backed by a 2500+ word style guide) ──
+  { slug: "engagement-mehndi-design", name: "Engagement", description: "Elegant engagement mehndi designs for the ring ceremony and sagai",                image: "https://images.unsplash.com/photo-1674884060571-96a46a9a7a72?w=400&q=80", count: 36, keyword: "engagement mehndi design", updatedAt: "2026-05-20" },
+  { slug: "peacock-mehndi-design",    name: "Peacock",    description: "Graceful peacock mehndi designs with feather and motif detailing",                  image: "https://images.unsplash.com/photo-1656702678285-59bde376828f?w=400&q=80", count: 34, keyword: "peacock mehndi design", updatedAt: "2026-05-20" },
+  { slug: "mandala-mehndi-design",    name: "Mandala",    description: "Symmetric mandala mehndi designs with concentric rings and petal work",            image: "https://images.unsplash.com/photo-1722172312997-068983715fd1?w=400&q=80", count: 33, keyword: "mandala mehndi design", updatedAt: "2026-05-20" },
+  { slug: "dulhan-mehndi-design",     name: "Dulhan",     description: "Heavy dulhan mehndi designs for the bride — full hand, intricate and traditional",  image: "https://images.unsplash.com/photo-1676134138844-9a52b5210cf9?w=400&q=80", count: 42, keyword: "dulhan mehndi design", updatedAt: "2026-05-20" },
+  { slug: "jewellery-mehndi-design",  name: "Jewellery",  description: "Jewellery-style mehndi with hathphool, ring and bracelet-inspired patterns",        image: "https://images.unsplash.com/photo-1525135927526-a01d9e5e9484?w=400&q=80", count: 30, keyword: "jewellery mehndi design", updatedAt: "2026-05-20" },
+  { slug: "half-hand-mehndi-design",  name: "Half Hand",  description: "Half hand mehndi designs — elegant coverage from fingertips to mid-palm",          image: "https://images.unsplash.com/photo-1568566240146-a5e26db3b29b?w=400&q=80", count: 31, keyword: "half hand mehndi design", updatedAt: "2026-05-20" },
+  { slug: "wrist-mehndi-design",      name: "Wrist",      description: "Dainty wrist mehndi designs — bracelets, bands and bracelet-cuff patterns",        image: "https://images.unsplash.com/photo-1565368114375-ba1a4db7099f?w=400&q=80", count: 28, keyword: "wrist mehndi design", updatedAt: "2026-05-20" },
+  { slug: "rajasthani-mehndi-design", name: "Rajasthani", description: "Traditional Rajasthani mehndi with figures, motifs and dense detailing",            image: "https://images.unsplash.com/photo-1566664254600-3412f985e947?w=400&q=80", count: 32, keyword: "rajasthani mehndi design", updatedAt: "2026-05-20" },
+  { slug: "moroccan-mehndi-design",   name: "Moroccan",   description: "Geometric Moroccan mehndi designs with bold lines and diamond motifs",              image: "https://images.unsplash.com/photo-1599671229994-bc8fd4df731c?w=400&q=80", count: 26, keyword: "moroccan mehndi design", updatedAt: "2026-05-20" },
+  { slug: "jaal-mehndi-design",       name: "Jaal",       description: "Net-style jaal mehndi designs with interconnected mesh patterns",                  image: "https://images.unsplash.com/photo-1676134014048-bcc764ea015d?w=400&q=80", count: 27, keyword: "jaal mehndi design", updatedAt: "2026-05-20" },
+  { slug: "khafif-mehndi-design",     name: "Khafif",     description: "Light, sheer khafif mehndi designs with delicate spaced-out detailing",            image: "https://images.unsplash.com/photo-1562508548-69377b81ab9e?w=400&q=80", count: 29, keyword: "khafif mehndi design", updatedAt: "2026-05-20" },
+  { slug: "shaded-mehndi-design",     name: "Shaded",     description: "Shaded mehndi designs using dimension, gradients and double-tone technique",        image: "https://images.unsplash.com/photo-1623217509141-6f735087b50c?w=400&q=80", count: 25, keyword: "shaded mehndi design", updatedAt: "2026-05-20" },
 ];
 
 export const designs: Design[] = [

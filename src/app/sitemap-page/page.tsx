@@ -4,7 +4,7 @@ import { categories, blogPosts, designs } from "@/data";
 
 export const metadata: Metadata = {
   title: "Sitemap",
-  description: "Browse all pages, categories, designs, and blog posts on MehndiGlow.",
+  description: "Browse all pages, categories, designs, and blog posts on MehndiDesignPics.",
   robots: { index: true, follow: true },
 };
 
@@ -81,7 +81,7 @@ export default function SitemapPage() {
           Website Sitemap
         </h1>
         <p className="text-henna-600 dark:text-henna-400">
-          A complete overview of all pages on MehndiGlow. Find any page quickly.
+          A complete overview of all pages on MehndiDesignPics. Find any page quickly.
         </p>
 
         {/* XML sitemap link */}

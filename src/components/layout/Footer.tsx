@@ -83,8 +83,8 @@ export default function Footer() {
             <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.14em] text-henna-600 mb-4 sm:mb-5">
               Design Categories
             </h3>
-            <ul className="space-y-2 sm:space-y-2.5">
-              {categories.slice(0, 8).map((c) => (
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 sm:gap-y-2.5">
+              {categories.map((c) => (
                 <li key={c.slug}>
                   <Link
                     href={`/${c.slug}`}
@@ -128,7 +128,8 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-henna-900 border border-henna-800/80 text-henna-200 placeholder:text-henna-700 focus:outline-none focus:border-henna-600/80 focus:bg-henna-900/80 transition-all"
+                aria-label="Email address for newsletter"
+                className="w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-henna-900 border border-henna-800/80 text-henna-200 placeholder:text-henna-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-henna-500 focus:border-henna-600/80 focus:bg-henna-900/80 transition-all"
               />
               <button
                 type="submit"
