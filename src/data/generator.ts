@@ -1,4 +1,9 @@
 import { Design } from "@/types";
+// Per-category real Unsplash photos (populated by `npm run fetch-unsplash`).
+// Empty by default; when populated, each category uses its own distinct photos.
+import unsplashPhotos from "./unsplashPhotos.json";
+
+const UNSPLASH_BY_CATEGORY = unsplashPhotos as Record<string, string[]>;
 
 // ── 19 verified Unsplash henna TATTOO photo IDs ───────────────────────────────
 // Fetched directly from unsplash.com/s/photos/henna-tattoo — all confirmed
@@ -643,6 +648,44 @@ const DEDICATED_POOLS: Record<string, string[]> = {
   "easy-mehndi-design":      EASY_PHOTOS,
 };
 
+// Master union of every verified henna photo ID we have — the widest distinct
+// set available. (NOTE: this is a finite stock-photo set, so windows below
+// overlap; genuinely unique imagery at scale needs a live image source.)
+const MASTER_POOL: string[] = Array.from(
+  new Set<string>([
+    ...ALL_PHOTOS, ...FLORAL_PHOTOS, ...CIRCLE_PHOTOS,
+    ...GOL_TIKKI_PHOTOS, ...EASY_PHOTOS, ...TATTOO_PHOTOS,
+  ]),
+);
+
+// Build a DISTINCT photo window per category so each page's gallery has a
+// different lead image, ordering and subset — no two new pages look the same.
+function categoryWindow(offset: number, size = 24): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  // Scattered stride so each offset yields a different visual sequence.
+  for (let i = 0; out.length < size && i < MASTER_POOL.length * 2; i++) {
+    const id = MASTER_POOL[(offset * 7 + i * 2) % MASTER_POOL.length];
+    if (!seen.has(id)) { seen.add(id); out.push(id); }
+  }
+  // Top up if scatter left us short.
+  for (let k = 0; out.length < size && k < MASTER_POOL.length; k++) {
+    const id = MASTER_POOL[(offset + k) % MASTER_POOL.length];
+    if (!seen.has(id)) { seen.add(id); out.push(id); }
+  }
+  return out;
+}
+
+// Give every NEW style page its own distinct window into the master set.
+[
+  "engagement-mehndi-design", "peacock-mehndi-design", "mandala-mehndi-design",
+  "dulhan-mehndi-design", "jewellery-mehndi-design", "half-hand-mehndi-design",
+  "wrist-mehndi-design", "rajasthani-mehndi-design", "moroccan-mehndi-design",
+  "jaal-mehndi-design", "khafif-mehndi-design", "shaded-mehndi-design",
+].forEach((slug, i) => {
+  DEDICATED_POOLS[slug] = categoryWindow(i);
+});
+
 // ── Main generator ────────────────────────────────────────────────────────────
 // For new categories: 25 dedicated photos × 40 URL variants = 1000 unique URLs.
 // For other categories: 33 shared photos with category-specific start offset.
@@ -651,7 +694,9 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
   const tags      = TAGS[category] ?? ["mehndi","henna","design"];
   const startOffset = CATEGORY_START[category] ?? 0;
 
-  // Use dedicated pool per category if available, else shared pool
+  // Prefer real per-category Unsplash photos when fetched; else the curated
+  // dedicated pool; else the shared pool.
+  const apiPhotos = UNSPLASH_BY_CATEGORY[category] ?? [];
   const photoPool = DEDICATED_POOLS[category] ?? ALL_PHOTOS;
   const total     = photoPool.length;
   const designs: Design[] = [];
@@ -664,6 +709,11 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
     // Which "cycle" through the photo pool are we on?
     const cycle       = Math.floor(i / total);
     const urlVariant  = URL_VARIANTS[cycle % URL_VARIANTS.length];
+
+    // Real fetched photo for this category (distinct per design) when available.
+    const image = apiPhotos.length > 0
+      ? apiPhotos[i % apiPhotos.length]
+      : `https://images.unsplash.com/photo-${photoId}?${urlVariant}`;
 
     // Title cycles through 20 unique titles, numbering on repeat
     const titleIndex  = i % titles.length;
@@ -679,7 +729,7 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
       title,
       category,
       tags,
-      image:       `https://images.unsplash.com/photo-${photoId}?${urlVariant}`,
+      image,
       alt:         `${title} – intricate ${CATEGORY_DISPLAY[category] ?? "mehndi"} henna pattern for hands`,
       description: buildDescription(category, titleBase, i),
       featured:    i < 6,
