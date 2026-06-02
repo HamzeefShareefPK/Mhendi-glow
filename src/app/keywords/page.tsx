@@ -148,7 +148,7 @@ export default function KeywordsPage() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mt-6">
             {[
               { icon: <TrendingUp size={15} />, label: "50 Keywords" },
-              { icon: <Search size={15} />,    label: "12 Categories" },
+              { icon: <Search size={15} />,    label: "25+ Categories" },
               { icon: <Sparkles size={15} />,  label: "1000+ Designs" },
             ].map((s) => (
               <div key={s.label} className="flex items-center gap-1.5 text-sm text-henna-500">

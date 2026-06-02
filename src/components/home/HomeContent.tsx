@@ -735,7 +735,7 @@ export default function HomeContent() {
             {
               icon: <BookOpen size={18} className="text-blue-500" />,
               title: "Reference Designs",
-              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 1000+ high-resolution designs across 12 categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
+              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 1000+ high-resolution designs across 25+ categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
             },
             {
               icon: <Droplets size={18} className="text-teal-500" />,
@@ -930,7 +930,7 @@ export default function HomeContent() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {[
                 { value: "1000+", label: "Curated Designs" },
-                { value: "12",    label: "Design Categories" },
+                { value: "25+",   label: "Design Categories" },
                 { value: "100%",  label: "Free to Download" },
                 { value: "Daily", label: "New Additions" },
               ].map((stat) => (

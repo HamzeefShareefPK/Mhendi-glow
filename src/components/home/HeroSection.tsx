@@ -7,7 +7,7 @@ import { Sparkles, ChevronRight, Star, ArrowDown } from "lucide-react";
 
 const STATS = [
   { value: "1000+", label: "Designs" },
-  { value: "12",    label: "Categories" },
+  { value: "25+",   label: "Categories" },
   { value: "Free",  label: "Download" },
 ];
 

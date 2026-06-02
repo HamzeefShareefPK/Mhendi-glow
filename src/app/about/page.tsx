@@ -41,7 +41,7 @@ export default function AboutPage() {
         </p>
         <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100 mt-8">What We Offer</h2>
         <ul className="list-disc pl-5 space-y-2">
-          <li>1000+ curated mehndi designs across 12 categories</li>
+          <li>1000+ curated mehndi designs across 25+ categories</li>
           <li>Bridal, Arabic, Pakistani, Eid, Minimal, and more</li>
           <li>SEO-friendly image names and alt text for easy discovery</li>
           <li>Step-by-step mehndi tutorials for beginners</li>
