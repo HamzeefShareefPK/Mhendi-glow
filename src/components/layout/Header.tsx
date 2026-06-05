@@ -7,6 +7,41 @@ import { useTheme } from "next-themes";
 import { Search, Sun, Moon, Menu, X, Sparkles, ChevronDown, Instagram } from "lucide-react";
 import { categories } from "@/data";
 
+/* ── Mega-menu groups (like a grouped categories mega-menu) ── */
+const CATEGORY_GROUPS: { title: string; slugs: string[] }[] = [
+  {
+    title: "Bridal & Wedding",
+    slugs: [
+      "bridal-mehndi-design", "dulhan-mehndi-design", "engagement-mehndi-design",
+      "jewellery-mehndi-design", "rajasthani-mehndi-design", "indian-mehndi-design",
+      "pakistani-mehndi-design",
+    ],
+  },
+  {
+    title: "By Style",
+    slugs: [
+      "arabic-mehndi-design", "floral-mehndi-design", "peacock-mehndi-design",
+      "mandala-mehndi-design", "jaal-mehndi-design", "gol-tikki-mehndi-design",
+      "circle-mehndi-design", "moroccan-mehndi-design", "shaded-mehndi-design",
+      "khafif-mehndi-design", "minimal-mehndi-design", "stylish-mehndi-design",
+      "mehndi-tattoo-design",
+    ],
+  },
+  {
+    title: "By Placement",
+    slugs: [
+      "front-hand-mehndi-design", "back-hand-mehndi-design", "half-hand-mehndi-design",
+      "finger-mehndi-design", "wrist-mehndi-design", "feet-mehndi-design",
+    ],
+  },
+  {
+    title: "Occasion & Easy",
+    slugs: ["eid-mehndi-design", "kids-mehndi-design", "easy-mehndi-design"],
+  },
+];
+
+const CAT_BY_SLUG = Object.fromEntries(categories.map((c) => [c.slug, c]));
+
 /* ── Navbar heights (keep in sync with drawer header) ── */
 const H_MOBILE  = 64;   // px
 const H_TABLET  = 80;   // px
@@ -125,24 +160,44 @@ export default function Header() {
                 </button>
 
                 {catOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[260px] lg:w-[280px] bg-white dark:bg-henna-900 rounded-2xl shadow-xl shadow-henna-900/12 dark:shadow-black/40 border border-henna-100 dark:border-henna-800 p-2 animate-slide-down z-50">
-                    <div className="grid grid-cols-2 gap-0.5">
-                      {categories.map((c) => (
-                        <Link
-                          key={c.slug}
-                          href={`/${c.slug}`}
-                          onClick={() => setCatOpen(false)}
-                          className="flex items-center px-3 py-2 rounded-xl text-xs lg:text-sm text-henna-700 dark:text-henna-300 hover:bg-henna-50 dark:hover:bg-henna-800 hover:text-henna-600 transition-colors font-medium"
-                        >
-                          {c.name}
-                        </Link>
+                  <div className="absolute top-full left-0 mt-2 w-[680px] lg:w-[760px] max-w-[92vw] bg-white dark:bg-henna-900 rounded-2xl shadow-xl shadow-henna-900/12 dark:shadow-black/40 border border-henna-100 dark:border-henna-800 p-5 animate-slide-down z-50">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5">
+                      {CATEGORY_GROUPS.map((group) => (
+                        <div key={group.title}>
+                          <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-henna-400 mb-2 px-2">
+                            {group.title}
+                          </p>
+                          <ul className="space-y-0.5">
+                            {group.slugs.map((slug) => {
+                              const c = CAT_BY_SLUG[slug];
+                              if (!c) return null;
+                              return (
+                                <li key={slug}>
+                                  <Link
+                                    href={`/${slug}`}
+                                    onClick={() => setCatOpen(false)}
+                                    className="block px-2 py-1.5 rounded-lg hover:bg-henna-50 dark:hover:bg-henna-800 transition-colors group/item"
+                                  >
+                                    <span className="block text-sm font-medium text-henna-800 dark:text-henna-200 group-hover/item:text-henna-600 leading-tight">
+                                      {c.name} Mehndi
+                                    </span>
+                                    <span className="block text-[11px] text-henna-400 dark:text-henna-500 leading-tight">
+                                      {c.count}+ designs
+                                    </span>
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
                       ))}
                     </div>
-                    <div className="mt-1 pt-1.5 border-t border-henna-100 dark:border-henna-800/60">
+                    <div className="mt-4 pt-3 border-t border-henna-100 dark:border-henna-800/60 flex items-center justify-between px-2">
+                      <span className="text-[11px] text-henna-400">{categories.length} mehndi categories</span>
                       <Link
                         href="/categories"
                         onClick={() => setCatOpen(false)}
-                        className="flex items-center justify-center gap-1 text-xs text-henna-400 hover:text-henna-500 font-semibold py-1.5 transition-colors"
+                        className="inline-flex items-center gap-1 text-xs text-henna-500 hover:text-henna-600 font-semibold transition-colors"
                       >
                         View all categories →
                       </Link>
