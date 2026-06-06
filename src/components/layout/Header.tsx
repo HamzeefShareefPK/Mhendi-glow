@@ -13,17 +13,22 @@ const CATEGORY_GROUPS: { title: string; slugs: string[] }[] = [
     title: "Bridal & Wedding",
     slugs: [
       "bridal-mehndi-design", "dulhan-mehndi-design", "engagement-mehndi-design",
-      "jewellery-mehndi-design", "rajasthani-mehndi-design", "indian-mehndi-design",
-      "pakistani-mehndi-design",
+      "jewellery-mehndi-design", "groom-mehndi-design", "rajasthani-mehndi-design",
+      "indian-mehndi-design", "pakistani-mehndi-design", "heavy-mehndi-design",
+      "full-hand-mehndi-design", "wedding-guest-mehndi-design",
     ],
   },
   {
     title: "By Style",
     slugs: [
-      "arabic-mehndi-design", "floral-mehndi-design", "peacock-mehndi-design",
-      "mandala-mehndi-design", "jaal-mehndi-design", "gol-tikki-mehndi-design",
-      "circle-mehndi-design", "moroccan-mehndi-design", "shaded-mehndi-design",
+      "arabic-mehndi-design", "indo-arabic-mehndi-design", "moroccan-mehndi-design",
+      "mughal-mehndi-design", "sudani-mehndi-design", "floral-mehndi-design",
+      "peacock-mehndi-design", "rose-mehndi-design", "lotus-mehndi-design",
+      "vine-mehndi-design", "paisley-mehndi-design", "heart-mehndi-design",
+      "mandala-mehndi-design", "circle-mehndi-design", "gol-tikki-mehndi-design",
+      "jaal-mehndi-design", "dotwork-mehndi-design", "shaded-mehndi-design",
       "khafif-mehndi-design", "minimal-mehndi-design", "stylish-mehndi-design",
+      "white-mehndi-design", "glitter-mehndi-design", "kundan-mehndi-design",
       "mehndi-tattoo-design",
     ],
   },
@@ -31,12 +36,18 @@ const CATEGORY_GROUPS: { title: string; slugs: string[] }[] = [
     title: "By Placement",
     slugs: [
       "front-hand-mehndi-design", "back-hand-mehndi-design", "half-hand-mehndi-design",
-      "finger-mehndi-design", "wrist-mehndi-design", "feet-mehndi-design",
+      "palm-mehndi-design", "finger-mehndi-design", "nail-mehndi-design",
+      "wrist-mehndi-design", "feet-mehndi-design", "leg-mehndi-design",
+      "shoulder-mehndi-design",
     ],
   },
   {
-    title: "Occasion & Easy",
-    slugs: ["eid-mehndi-design", "kids-mehndi-design", "easy-mehndi-design"],
+    title: "Occasion & Festival",
+    slugs: [
+      "eid-mehndi-design", "karwa-chauth-mehndi-design", "teej-mehndi-design",
+      "diwali-mehndi-design", "godh-bharai-mehndi-design",
+      "kids-mehndi-design", "easy-mehndi-design",
+    ],
   },
 ];
 
