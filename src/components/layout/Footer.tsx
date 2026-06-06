@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Mail, Heart, ArrowRight } from "lucide-react";
 import { categories } from "@/data";
 
@@ -30,19 +31,15 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-4 sm:mb-5 group">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-base shadow-lg shadow-henna-400/20 transition-transform duration-300 group-hover:scale-105 shrink-0"
-                style={{ background: "linear-gradient(135deg, #C8946A, #7A4020)" }}>
-                🌸
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-lg sm:text-xl font-semibold text-white group-hover:text-henna-400 transition-colors tracking-tight">
-                  MehndiDesignPics
-                </span>
-                <span className="text-[9px] font-semibold tracking-[0.12em] uppercase text-henna-600 mt-0.5">
-                  Art of Henna & Beauty
-                </span>
-              </div>
+            <Link href="/" className="inline-flex items-center mb-4 sm:mb-5 group">
+              <Image
+                src="/images/logo.svg"
+                alt="MehndiDesignPics — Art of Henna & Beauty"
+                width={220}
+                height={48}
+                className="h-[42px] sm:h-[48px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+                unoptimized
+              />
             </Link>
 
             <p className="text-xs sm:text-sm text-henna-500 mb-4 sm:mb-6 leading-relaxed max-w-[240px]">
