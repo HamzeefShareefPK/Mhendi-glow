@@ -37,13 +37,14 @@ export default function Footer() {
                 alt="MehndiDesignPics — Art of Henna & Beauty"
                 width={220}
                 height={48}
-                className="h-[42px] sm:h-[48px] w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+                style={{ height: "48px", width: "auto" }}
+                className="object-contain transition-opacity duration-300 group-hover:opacity-80"
                 unoptimized
               />
             </Link>
 
             <p className="text-xs sm:text-sm text-henna-500 mb-4 sm:mb-6 leading-relaxed max-w-[240px]">
-              Your daily dose of mehndi inspiration. 1000+ beautiful designs for every occasion — completely free.
+              Your daily dose of mehndi inspiration. 3000+ beautiful designs for every occasion — completely free.
             </p>
 
             {/* Social icons */}

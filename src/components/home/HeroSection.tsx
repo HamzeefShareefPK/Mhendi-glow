@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import { Sparkles, ChevronRight, Star, ArrowDown } from "lucide-react";
 
 const STATS = [
-  { value: "1000+", label: "Designs" },
-  { value: "25+",   label: "Categories" },
+  { value: "3000+", label: "Designs" },
+  { value: "50+",   label: "Categories" },
   { value: "Free",  label: "Download" },
 ];
 
@@ -67,7 +67,7 @@ export default function HeroSection() {
             >
               <Sparkles size={11} className="text-henna-400" />
               <span className="text-henna-300 text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase">
-                1000+ Designs · Updated 2026
+                3000+ Designs · Updated 2026
               </span>
             </motion.div>
 

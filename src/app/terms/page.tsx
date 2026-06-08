@@ -41,19 +41,19 @@ export default function TermsPage() {
       <div className="space-y-6 text-henna-700 dark:text-henna-300 leading-relaxed text-sm">
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">1. Acceptance of Terms</h2>
-          <p>By accessing MehndiGlow, you agree to be bound by these terms and conditions.</p>
+          <p>By accessing MehndiDesignPics, you agree to be bound by these terms and conditions.</p>
         </section>
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">2. Use of Content</h2>
-          <p>Images on MehndiGlow are for personal inspiration only. Commercial use without permission is prohibited. Downloading images for personal use is allowed.</p>
+          <p>Images on MehndiDesignPics are for personal inspiration only. Commercial use without permission is prohibited. Downloading images for personal use is allowed.</p>
         </section>
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">3. Intellectual Property</h2>
-          <p>All original content, logos, and designs on MehndiGlow are the property of MehndiGlow. Unauthorized reproduction is not permitted.</p>
+          <p>All original content, logos, and designs on MehndiDesignPics are the property of MehndiDesignPics. Unauthorized reproduction is not permitted.</p>
         </section>
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">4. Limitation of Liability</h2>
-          <p>MehndiGlow is not liable for any damages arising from the use of this website or its content.</p>
+          <p>MehndiDesignPics is not liable for any damages arising from the use of this website or its content.</p>
         </section>
         <section>
           <h2 className="font-serif text-lg font-semibold text-henna-900 dark:text-henna-100 mb-2">5. Contact</h2>
@@ -63,3 +63,4 @@ export default function TermsPage() {
     </div>
   );
 }
+

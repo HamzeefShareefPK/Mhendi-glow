@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read MehndiGlow privacy policy to understand how we collect and use your data.",
+  description: "Read MehndiDesignPics privacy policy to understand how we collect and use your data.",
   keywords: [
     "mehndidesignpics privacy policy","mehndi website privacy",
     "henna website privacy policy","user data privacy mehndi",
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
       <div className="space-y-8 text-henna-700 dark:text-henna-300 leading-relaxed">
         <section>
           <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100 mb-3">1. Information We Collect</h2>
-          <p>MehndiGlow may collect the following information when you visit our website:</p>
+          <p>MehndiDesignPics may collect the following information when you visit our website:</p>
           <ul className="list-disc pl-5 mt-2 space-y-1 text-sm">
             <li>Usage data (pages visited, time spent, browser type)</li>
             <li>Email address (if you subscribe to our newsletter)</li>
@@ -73,3 +73,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

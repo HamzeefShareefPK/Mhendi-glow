@@ -69,8 +69,8 @@ const HOME_FAQS = [
     answer: "To get a darker mehndi color: use natural henna paste, keep it on for 8+ hours, apply a lemon-sugar solution while drying, warm your hands near heat after removing, avoid water for 24 hours, and apply mustard oil or clove oil over dried mehndi.",
   },
   {
-    question: "Is MehndiGlow free to use?",
-    answer: "Yes! MehndiDesignPics is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 1000+ designs across 25+ mehndi categories updated regularly.",
+    question: "Is MehndiDesignPics free to use?",
+    answer: "Yes! MehndiDesignPics is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 3000+ designs across 50+ mehndi categories updated regularly.",
   },
 ];
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound }    from "next/navigation";
 import Image           from "next/image";
 import MasonryGallery  from "@/components/gallery/MasonryGallery";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = categories.find((c) => c.slug === params.category);
   if (!cat) return {};
   return {
-    title: `${cat.name} Mehndi Designs 2026 — ${cat.count}+ Beautiful Patterns`,
+    title: `${cat.name} Mehndi Designs 2026 â€” ${cat.count}+ Beautiful Patterns`,
     description: `Discover ${cat.count}+ beautiful ${cat.name} mehndi designs for 2026. ${cat.description}. Free download available.`,
     keywords: [
       cat.keyword,
@@ -66,8 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
   "bridal-mehndi-design": [
     { question: "What is the best bridal mehndi design for 2026?", answer: "The best bridal mehndi designs for 2026 include full hand Arabic patterns, minimal geometric designs, and fusion styles combining Pakistani and Arabic elements. Designs with groom's name hidden in the pattern are also very popular." },
-    { question: "How many days before the wedding should mehndi be applied?", answer: "Mehndi should be applied 1–2 days before the wedding. This gives the color time to develop fully — it peaks in darkness at 24–48 hours after application." },
-    { question: "How long should bridal mehndi stay on?", answer: "For bridal mehndi, keep it on for at least 8–12 hours, ideally overnight. The longer you leave it, the darker and longer-lasting the color." },
+    { question: "How many days before the wedding should mehndi be applied?", answer: "Mehndi should be applied 1â€“2 days before the wedding. This gives the color time to develop fully â€” it peaks in darkness at 24â€“48 hours after application." },
+    { question: "How long should bridal mehndi stay on?", answer: "For bridal mehndi, keep it on for at least 8â€“12 hours, ideally overnight. The longer you leave it, the darker and longer-lasting the color." },
   ],
   "arabic-mehndi-design": [
     { question: "What makes Arabic mehndi different from other styles?", answer: "Arabic mehndi is characterized by bold, flowing floral designs with lots of negative space. Unlike Indian mehndi which covers the entire hand densely, Arabic mehndi uses elegant isolated motifs that look modern and stylish." },
@@ -78,19 +78,19 @@ const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
     { question: "How do I do mehndi quickly for Eid?", answer: "For quick Eid mehndi, stick to finger mehndi, simple arabic flowers on the back hand, or ready-made mehndi stencils. A simple 5-minute mehndi design can look stunning when done neatly." },
   ],
   "mehndi-tattoo-design": [
-    { question: "What is mehndi tattoo?", answer: "Mehndi tattoo (also called henna tattoo) is a temporary body art made from natural henna paste. It stains the skin dark brown or black and lasts 1–3 weeks. Unlike permanent tattoos, mehndi tattoos are completely safe, painless, and fade naturally over time." },
+    { question: "What is mehndi tattoo?", answer: "Mehndi tattoo (also called henna tattoo) is a temporary body art made from natural henna paste. It stains the skin dark brown or black and lasts 1â€“3 weeks. Unlike permanent tattoos, mehndi tattoos are completely safe, painless, and fade naturally over time." },
     { question: "How long does a mehndi tattoo last?", answer: "A mehndi tattoo typically lasts 1 to 3 weeks depending on skin type, placement, and aftercare. Areas with thicker skin like palms and soles last longest. Keeping the design moisturized with oil daily extends its life significantly." },
-    { question: "Is mehndi tattoo safe for skin?", answer: "Yes — natural henna mehndi tattoos are completely safe for all skin types including children. Always use 100% natural henna. Avoid black henna which contains PPD (paraphenylenediamine), a chemical dye that can cause severe allergic reactions and skin damage." },
+    { question: "Is mehndi tattoo safe for skin?", answer: "Yes â€” natural henna mehndi tattoos are completely safe for all skin types including children. Always use 100% natural henna. Avoid black henna which contains PPD (paraphenylenediamine), a chemical dye that can cause severe allergic reactions and skin damage." },
   ],
   "floral-mehndi-design": [
     { question: "What are floral mehndi designs?", answer: "Floral mehndi designs feature flowers, roses, lotus blossoms, jasmine, and botanical vine patterns. They are the most romantic and feminine style of henna, perfect for weddings, Eid, and everyday wear. Roses and lotus flowers are the most popular motifs in 2026." },
     { question: "Which flowers are most popular in floral mehndi?", answer: "Roses, lotus flowers, jasmine vines, daisy clusters, and peony patterns are the most popular floral mehndi motifs. Arabic-style roses with bold outlines and Indian-style lotus patterns are particularly trending in 2026 for bridal and Eid mehndi." },
-    { question: "Is floral mehndi suitable for beginners?", answer: "Yes! Simple single-flower designs — like a rose on the thumb or a daisy on the back hand — are perfect for beginners. Start with one large flower and add leaf details around it. Floral patterns are forgiving because they naturally look hand-drawn and organic." },
+    { question: "Is floral mehndi suitable for beginners?", answer: "Yes! Simple single-flower designs â€” like a rose on the thumb or a daisy on the back hand â€” are perfect for beginners. Start with one large flower and add leaf details around it. Floral patterns are forgiving because they naturally look hand-drawn and organic." },
   ],
   "circle-mehndi-design": [
     { question: "What is circle mehndi design?", answer: "Circle mehndi features round mandala patterns, concentric circles, and geometric ring designs. The circular motif is placed in the center of the palm or back hand with detailed patterns radiating outward. It is one of the most striking and symmetric mehndi styles." },
     { question: "How to draw a mandala circle mehndi?", answer: "Start with a small circle in the center of your hand. Draw petals outward from this center, then add a ring of dots, then larger petal shapes, and continue adding layers outward. Work in rings and keep spacing even. Practice on paper first to maintain symmetry." },
-    { question: "Is circle mehndi good for the back hand?", answer: "Yes — circle and mandala mehndi looks especially stunning on the back hand where there is more flat space for the pattern to expand. A large central mandala on the back hand with vine extensions to the fingers is one of the most sought-after designs in 2026." },
+    { question: "Is circle mehndi good for the back hand?", answer: "Yes â€” circle and mandala mehndi looks especially stunning on the back hand where there is more flat space for the pattern to expand. A large central mandala on the back hand with vine extensions to the fingers is one of the most sought-after designs in 2026." },
   ],
   "gol-tikki-mehndi-design": [
     { question: "What is gol tikki mehndi?", answer: "Gol tikki mehndi features round filled-circle medallions (tikkis) as the main motif. The gol (round) tikki is placed in the center of the palm, surrounded by intricate jaal (net) patterns, vines, and fine detail work. It is a traditional Pakistani and Indian mehndi style." },
@@ -99,8 +99,8 @@ const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
   ],
   "easy-mehndi-design": [
     { question: "What are the easiest mehndi designs for beginners?", answer: "The easiest mehndi designs for beginners include single Arabic flowers on the back hand, simple vine patterns along the fingers, small leaf clusters on the wrist, and basic dotwork patterns. These require minimal cone control and look beautiful even when done by a first-timer." },
-    { question: "How long does easy mehndi take to apply?", answer: "Simple mehndi designs take just 5–15 minutes to apply, making them perfect for Eid morning or last-minute occasions. A single Arabic flower back hand design can be done in under 10 minutes. Quick finger mehndi takes just 3–5 minutes per hand." },
-    { question: "How can I learn mehndi at home easily?", answer: "Start with simple single-line patterns and basic flower shapes. Use a ready-made mehndi cone for easier control. Practice on paper first, then on your own hand. MehndiGlow has 1000+ easy mehndi designs with step-by-step reference images to help you practice." },
+    { question: "How long does easy mehndi take to apply?", answer: "Simple mehndi designs take just 5â€“15 minutes to apply, making them perfect for Eid morning or last-minute occasions. A single Arabic flower back hand design can be done in under 10 minutes. Quick finger mehndi takes just 3â€“5 minutes per hand." },
+    { question: "How can I learn mehndi at home easily?", answer: "Start with simple single-line patterns and basic flower shapes. Use a ready-made mehndi cone for easier control. Practice on paper first, then on your own hand. MehndiDesignPics has 1000+ easy mehndi designs with step-by-step reference images to help you practice." },
   ],
 };
 
@@ -150,12 +150,12 @@ export default function CategoryPage({ params }: Props) {
               {/* Breadcrumb */}
               <Breadcrumb items={[{ name: `${cat.name} Mehndi`, url: `/${params.category}` }]} />
 
-              {/* H1 — Primary keyword */}
+              {/* H1 â€” Primary keyword */}
               <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-white mb-2">
                 {cat.name} Mehndi Designs 2026
               </h1>
 
-              {/* Description — secondary keyword */}
+              {/* Description â€” secondary keyword */}
               <p className="text-henna-200 text-sm max-w-lg">{cat.description}</p>
 
               <div className="flex flex-wrap items-center gap-2 mt-3">
@@ -173,21 +173,21 @@ export default function CategoryPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Category description — Topical Authority text */}
+        {/* Category description â€” Topical Authority text */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
           <div className="bg-henna-100 dark:bg-henna-800 rounded-2xl p-6 border border-henna-200 dark:border-henna-700">
-            {/* H2 — Secondary keyword */}
+            {/* H2 â€” Secondary keyword */}
             <h2 className="font-serif text-xl font-semibold text-henna-900 dark:text-henna-100 mb-3">
               About {cat.name} Mehndi Designs
             </h2>
             <p className="text-henna-700 dark:text-henna-300 text-sm leading-relaxed">
               {cat.description}. Browse our collection of {cat.count}+ hand-picked {cat.name.toLowerCase()} mehndi patterns,
               updated regularly with the latest trends. Whether you are looking for simple designs for beginners
-              or intricate bridal patterns, MehndiGlow has the perfect {cat.name.toLowerCase()} mehndi design for you.
+              or intricate bridal patterns, MehndiDesignPics has the perfect {cat.name.toLowerCase()} mehndi design for you.
               All designs are free to view and download for personal use.
             </p>
 
-            {/* Keyword-rich tags — Semantic SEO */}
+            {/* Keyword-rich tags â€” Semantic SEO */}
             <div className="flex flex-wrap gap-2 mt-4">
               {[
                 `${cat.name} Mehndi 2026`,
@@ -202,7 +202,7 @@ export default function CategoryPage({ params }: Props) {
           </div>
         </div>
 
-        {/* In-depth style guide (2500+ words) — only for pages that have one */}
+        {/* In-depth style guide (2500+ words) â€” only for pages that have one */}
         {article && <CategoryArticle category={cat} article={article} />}
 
         {/* Gallery */}
@@ -211,7 +211,7 @@ export default function CategoryPage({ params }: Props) {
           showFilter={false}
         />
 
-        {/* FAQ Section — targets "People Also Ask" */}
+        {/* FAQ Section â€” targets "People Also Ask" */}
         {faqs.length > 0 && (
           <FAQSection
             faqs={faqs}
@@ -219,9 +219,10 @@ export default function CategoryPage({ params }: Props) {
           />
         )}
 
-        {/* Related styles — internal linking */}
+        {/* Related styles â€” internal linking */}
         <RelatedCategories currentSlug={params.category} />
       </div>
     </>
   );
 }
+

@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "mehndi designs", "bridal mehndi", "arabic mehndi", "eid mehndi 2026",
     "pakistani mehndi", "simple mehndi", "mehndi designs 2026",
   ],
-  authors:      [{ name: "MehndiGlow" }],
-  creator:      "MehndiGlow",
-  publisher:    "MehndiGlow",
+  authors:      [{ name: "MehndiDesignPics" }],
+  creator:      "MehndiDesignPics",
+  publisher:    "MehndiDesignPics",
   metadataBase: new URL("https://mehndidesignpics.com"),
 
   // ── Open Graph ───────────────────────────────────────
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     : {}),
 
   // ── App-specific ─────────────────────────────────────
-  applicationName: "MehndiGlow",
+  applicationName: "MehndiDesignPics",
   category:        "lifestyle",
 };
 

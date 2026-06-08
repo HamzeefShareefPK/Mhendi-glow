@@ -129,7 +129,7 @@ export default function HomeContent() {
         <SectionHeading
           chip="Design Styles"
           title="Popular Types of Mehndi Designs in 2026"
-          subtitle="From heavy bridal patterns to simple everyday mehndi, there is a design for every occasion and skill level. Here are the most popular styles you will find on MehndiGlow."
+          subtitle="From heavy bridal patterns to simple everyday mehndi, there is a design for every occasion and skill level. Here are the most popular styles you will find on MehndiDesignPics."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-10">
@@ -415,7 +415,7 @@ export default function HomeContent() {
                 {
                   num: "04",
                   title: "Start with the Outline",
-                  text: "Begin with the main outline of your chosen design. Keep your hand relaxed and move the cone smoothly and consistently. Work from one side of the design to the other to avoid smudging. Reference a design from MehndiGlow on your phone or tablet. If you make a mistake, wait for the paste to dry slightly and then scrape it off carefully with a toothpick.",
+                  text: "Begin with the main outline of your chosen design. Keep your hand relaxed and move the cone smoothly and consistently. Work from one side of the design to the other to avoid smudging. Reference a design from MehndiDesignPics on your phone or tablet. If you make a mistake, wait for the paste to dry slightly and then scrape it off carefully with a toothpick.",
                 },
                 {
                   num: "05",
@@ -735,7 +735,7 @@ export default function HomeContent() {
             {
               icon: <BookOpen size={18} className="text-blue-500" />,
               title: "Reference Designs",
-              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 1000+ high-resolution designs across 25+ categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
+              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 3000+ high-resolution designs across 50+ categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
             },
             {
               icon: <Droplets size={18} className="text-teal-500" />,
@@ -849,7 +849,7 @@ export default function HomeContent() {
               <li><strong className="text-henna-700 dark:text-henna-300">Global popularity:</strong> Mehndi went global in the 1990s when Western celebrities and musicians began wearing henna at music festivals, introducing the art to international audiences.</li>
               <li><strong className="text-henna-700 dark:text-henna-300">Social media influence:</strong> Instagram and Pinterest have transformed mehndi into a global visual art form. Pakistani and Indian artists now have millions of followers worldwide.</li>
               <li><strong className="text-henna-700 dark:text-henna-300">Professional industry:</strong> Mehndi has grown into a multi-billion rupee professional industry. Top bridal artists in Pakistan charge Rs. 50,000–500,000+ for a single bridal application.</li>
-              <li><strong className="text-henna-700 dark:text-henna-300">Digital inspiration:</strong> Platforms like MehndiGlow have democratized access to design inspiration, enabling women everywhere to find and share beautiful designs for free.</li>
+              <li><strong className="text-henna-700 dark:text-henna-300">Digital inspiration:</strong> Platforms like MehndiDesignPics have democratized access to design inspiration, enabling women everywhere to find and share beautiful designs for free.</li>
             </ul>
           </div>
         </div>
@@ -908,7 +908,7 @@ export default function HomeContent() {
       </Section>
 
       {/* ════════════════════════════════════════════
-          SECTION 14 — Why MehndiGlow
+          SECTION 14 — Why MehndiDesignPics
       ════════════════════════════════════════════ */}
       <Section>
         <div className="relative rounded-3xl overflow-hidden p-8 sm:p-12"
@@ -919,18 +919,18 @@ export default function HomeContent() {
           }} />
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-henna-400 bg-henna-400/10 border border-henna-400/25 px-3 py-1 rounded-full mb-5">
-              <Star size={10} className="fill-henna-400" /> Why MehndiGlow
+              <Star size={10} className="fill-henna-400" /> Why MehndiDesignPics
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-white mb-4 leading-tight">
               Pakistan&apos;s #1 Free Mehndi Design Gallery
             </h2>
             <p className="text-henna-300/80 text-sm sm:text-base leading-relaxed mb-8">
-              MehndiGlow is your ultimate destination for mehndi design inspiration. We curate the most beautiful, trending, and traditional mehndi designs from across South Asia and the Middle East — completely free. Whether you are a bride planning your wedding mehndi, a professional mehndi artist looking for fresh ideas, a girl wanting Eid mehndi inspiration, or simply a mehndi enthusiast who loves this art form, you will find everything you need here. Our collection spans 12 categories with over 1000 curated designs, updated daily with the latest trends from Pakistan, India, and beyond.
+              MehndiDesignPics is your ultimate destination for mehndi design inspiration. We curate the most beautiful, trending, and traditional mehndi designs from across South Asia and the Middle East — completely free. Whether you are a bride planning your wedding mehndi, a professional mehndi artist looking for fresh ideas, a girl wanting Eid mehndi inspiration, or simply a mehndi enthusiast who loves this art form, you will find everything you need here. Our collection spans 50+ categories with over 3000 curated designs, updated daily with the latest trends from Pakistan, India, and beyond.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {[
-                { value: "1000+", label: "Curated Designs" },
-                { value: "25+",   label: "Design Categories" },
+                { value: "3000+", label: "Curated Designs" },
+                { value: "50+",   label: "Design Categories" },
                 { value: "100%",  label: "Free to Download" },
                 { value: "Daily", label: "New Additions" },
               ].map((stat) => (

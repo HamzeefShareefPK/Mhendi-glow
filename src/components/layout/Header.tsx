@@ -131,16 +131,8 @@ export default function Header() {
                 alt="MehndiDesignPics — Art of Henna & Beauty"
                 width={480}
                 height={100}
-                className="
-                  h-[46px]
-                  xs:h-[52px]
-                  sm:h-[58px]
-                  md:h-[68px]
-                  lg:h-[76px]
-                  w-auto object-contain
-                  transition-opacity duration-300
-                  group-hover:opacity-80
-                "
+                style={{ height: "clamp(44px, 6.5vw, 76px)", width: "auto" }}
+                className="object-contain transition-opacity duration-300 group-hover:opacity-80"
                 priority
                 unoptimized
               />
@@ -171,14 +163,14 @@ export default function Header() {
                 </button>
 
                 {catOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[680px] lg:w-[760px] max-w-[92vw] bg-white dark:bg-henna-900 rounded-2xl shadow-xl shadow-henna-900/12 dark:shadow-black/40 border border-henna-100 dark:border-henna-800 p-5 animate-slide-down z-50">
+                  <div className="absolute top-full left-0 mt-2 w-[680px] lg:w-[820px] max-w-[92vw] bg-white dark:bg-henna-900 rounded-2xl shadow-xl shadow-henna-900/12 dark:shadow-black/40 border border-henna-100 dark:border-henna-800 p-5 animate-slide-down z-50">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5">
                       {CATEGORY_GROUPS.map((group) => (
                         <div key={group.title}>
                           <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-henna-400 mb-2 px-2">
                             {group.title}
                           </p>
-                          <ul className="space-y-0.5">
+                          <ul className="space-y-0.5 max-h-72 overflow-y-auto scrollbar-hide">
                             {group.slugs.map((slug) => {
                               const c = CAT_BY_SLUG[slug];
                               if (!c) return null;
