@@ -19,13 +19,17 @@ import { article as khafif }     from "./articles/khafif-mehndi-design";
 import { article as shaded }     from "./articles/shaded-mehndi-design";
 
 // ── Batch 2 (available so far) ────────────────────────────────────────────
-import { article as lotus }    from "./articles/lotus-mehndi-design";
-import { article as rose }     from "./articles/rose-mehndi-design";
-import { article as vine }     from "./articles/vine-mehndi-design";
-import { article as dotwork }  from "./articles/dotwork-mehndi-design";
-import { article as mughal }   from "./articles/mughal-mehndi-design";
-import { article as sudani }   from "./articles/sudani-mehndi-design";
-import { article as kundan }   from "./articles/kundan-mehndi-design";
+import { article as lotus }      from "./articles/lotus-mehndi-design";
+import { article as rose }       from "./articles/rose-mehndi-design";
+import { article as vine }       from "./articles/vine-mehndi-design";
+import { article as dotwork }    from "./articles/dotwork-mehndi-design";
+import { article as mughal }     from "./articles/mughal-mehndi-design";
+import { article as sudani }     from "./articles/sudani-mehndi-design";
+import { article as kundan }     from "./articles/kundan-mehndi-design";
+import { article as indoArabic } from "./articles/indo-arabic-mehndi-design";
+import { article as leg }        from "./articles/leg-mehndi-design";
+import { article as shoulder }   from "./articles/shoulder-mehndi-design";
+import { article as nail }       from "./articles/nail-mehndi-design";
 
 // Sibling-style relationships used by the RelatedCategories module.
 export const CATEGORY_RELATIONS: Record<string, string[]> = {
@@ -76,6 +80,7 @@ const ALL: CategoryArticle[] = [
   wrist, rajasthani, moroccan, jaal, khafif, shaded,
   // Batch 2 (available)
   lotus, rose, vine, dotwork, mughal, sudani, kundan,
+  indoArabic, leg, shoulder, nail,
 ];
 
 export const categoryArticles: Record<string, CategoryArticle> = Object.fromEntries(
