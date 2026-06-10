@@ -1017,7 +1017,7 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
       category,
       tags,
       image,
-      alt:         `${title} – intricate ${CATEGORY_DISPLAY[category] ?? "mehndi"} henna pattern for hands`,
+      alt:         `${title} – ${CATEGORY_DISPLAY[category] ?? "mehndi"} mehndi design 2026 free download`,
       description: buildDescription(category, titleBase, i),
       featured:    i < 6,
       trending:    i % 5 === 0,

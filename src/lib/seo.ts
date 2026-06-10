@@ -190,16 +190,19 @@ export function collectionPageSchema({
 }: {
   name: string; description: string; url: string; imageUrl: string; count: number;
 }) {
+  const today = new Date().toISOString().split("T")[0];
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${name} Mehndi Designs`,
+    name: `${name} Mehndi Designs 2026`,
     description,
     url: `${BASE_URL}${url}`,
     image: imageUrl,
     numberOfItems: count,
+    dateModified: today,
     publisher: organizationSchema(),
     inLanguage: "en-US",
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
   };
 }
 
