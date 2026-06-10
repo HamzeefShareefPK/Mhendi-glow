@@ -100,7 +100,7 @@ const CATEGORY_FAQS: Record<string, { question: string; answer: string }[]> = {
   "easy-mehndi-design": [
     { question: "What are the easiest mehndi designs for beginners?", answer: "The easiest mehndi designs for beginners include single Arabic flowers on the back hand, simple vine patterns along the fingers, small leaf clusters on the wrist, and basic dotwork patterns. These require minimal cone control and look beautiful even when done by a first-timer." },
     { question: "How long does easy mehndi take to apply?", answer: "Simple mehndi designs take just 5â€“15 minutes to apply, making them perfect for Eid morning or last-minute occasions. A single Arabic flower back hand design can be done in under 10 minutes. Quick finger mehndi takes just 3â€“5 minutes per hand." },
-    { question: "How can I learn mehndi at home easily?", answer: "Start with simple single-line patterns and basic flower shapes. Use a ready-made mehndi cone for easier control. Practice on paper first, then on your own hand. MehndiDesignPics has 1000+ easy mehndi designs with step-by-step reference images to help you practice." },
+    { question: "How can I learn mehndi at home easily?", answer: "Start with simple single-line patterns and basic flower shapes. Use a ready-made mehndi cone for easier control. Practice on paper first, then on your own hand. MehndiDesignPics has 3000+ easy mehndi designs with step-by-step reference images to help you practice." },
   ],
 };
 
@@ -131,6 +131,10 @@ export default function CategoryPage({ params }: Props) {
           imageUrl: cat.image,
           count: cat.count,
         }),
+        breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: `${cat.name} Mehndi Designs`, url: `/${params.category}` },
+        ]),
       ]} />
 
       <div>

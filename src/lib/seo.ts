@@ -87,7 +87,7 @@ export function websiteSchema() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: BASE_URL,
-    description: "Discover 1000+ beautiful mehndi designs — bridal, Arabic, Pakistani, Eid and more.",
+    description: "Discover 3000+ beautiful mehndi designs — bridal, Arabic, Pakistani, Eid and more. Free download.",
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/search?q={search_term_string}` },
@@ -104,7 +104,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: SITE_NAME,
     url: BASE_URL,
-    logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo.png` },
+    logo: { "@type": "ImageObject", url: `${BASE_URL}/images/logo.svg`, width: 480, height: 100 },
     sameAs: [
       "https://pinterest.com/mehndidesignpics",
       "https://instagram.com/mehndidesignpics",

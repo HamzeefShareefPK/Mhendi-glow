@@ -15,7 +15,7 @@ import { generateCategoryDesigns } from "@/data/generator";
 import { categories } from "@/data";
 
 export const metadata: Metadata = {
-  title: { absolute: "MehndiDesignPics — Discover 1000+ Beautiful Mehndi Designs 2026" },
+  title: { absolute: "MehndiDesignPics — Discover 3000+ Beautiful Mehndi Designs 2026" },
   description:
     "Explore the most beautiful mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Free download. Updated daily. Your #1 mehndi inspiration source.",
   keywords: [
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://mehndidesignpics.com" },
   openGraph: {
-    title: "MehndiDesignPics — 1000+ Beautiful Mehndi Designs",
-    description: "Discover bridal, arabic, eid, minimal mehndi designs. Free download.",
+    title: "MehndiDesignPics — 3000+ Beautiful Mehndi Designs",
+    description: "Discover 3000+ bridal, arabic, eid, minimal mehndi designs. Free download.",
     images: [{ url: "https://mehndidesignpics.com/images/og-image.jpg", width: 1200, height: 630 }],
     type: "website",
   },

@@ -7,7 +7,7 @@ import ShareButton from "@/components/gallery/ShareButton";
 import DesignCard      from "@/components/gallery/DesignCard";
 import Breadcrumb      from "@/components/seo/Breadcrumb";
 import JsonLd          from "@/components/seo/JsonLd";
-import { imageObjectSchema } from "@/lib/seo";
+import { imageObjectSchema, breadcrumbSchema } from "@/lib/seo";
 import { designs, categories } from "@/data";
 import { getAllDesigns } from "@/data/generator";
 import RelatedCategories from "@/components/seo/RelatedCategories";
@@ -133,16 +133,23 @@ export default function DesignPage({ params }: Props) {
 
   return (
     <>
-      {/* Structured Data — ImageObject */}
-      <JsonLd data={imageObjectSchema({
-        name:        design.title,
-        description: design.description,
-        imageUrl:    design.image,
-        slug:        design.slug,
-        category:    design.category,
-        tags:        design.tags,
-        publishedAt: design.createdAt,
-      })} />
+      {/* Structured Data — ImageObject + BreadcrumbList */}
+      <JsonLd data={[
+        imageObjectSchema({
+          name:        design.title,
+          description: design.description,
+          imageUrl:    design.image,
+          slug:        design.slug,
+          category:    design.category,
+          tags:        design.tags,
+          publishedAt: design.createdAt,
+        }),
+        breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: `${catName.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")} Mehndi`, url: `/${design.category}` },
+          { name: design.title, url: `/design/${design.slug}` },
+        ]),
+      ]} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 

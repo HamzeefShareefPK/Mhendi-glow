@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | MehndiDesignPics",
   },
   description:
-    "Explore 1000+ mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Your daily dose of mehndi inspiration.",
+    "Explore 3000+ mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Your daily dose of mehndi inspiration.",
   keywords: [
     "mehndi designs", "bridal mehndi", "arabic mehndi", "eid mehndi 2026",
     "pakistani mehndi", "simple mehndi", "mehndi designs 2026",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url:         "https://mehndidesignpics.com",
     siteName:    "MehndiDesignPics",
     title:       "MehndiDesignPics — Beautiful Mehndi Designs",
-    description: "Explore 1000+ mehndi designs for every occasion.",
+    description: "Explore 3000+ mehndi designs for every occasion — free download.",
     images:      [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "MehndiDesignPics — Mehndi Designs" }],
   },
 
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     site:        "@MehndiDesignPics",
     creator:     "@MehndiDesignPics",
     title:       "MehndiDesignPics — Beautiful Mehndi Designs",
-    description: "Explore 1000+ mehndi designs for every occasion.",
+    description: "Explore 3000+ mehndi designs for every occasion — free download.",
   },
 
   // ── Robots ───────────────────────────────────────────
