@@ -55,8 +55,17 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
               />
             </button>
 
-            {open === i && (
+            {open === i ? (
               <div className="px-5 py-4 bg-henna-50 dark:bg-henna-800 border-t border-henna-200 dark:border-henna-700">
+                <p className="text-sm text-henna-700 dark:text-henna-300 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ) : (
+              // Closed answers stay in the server-rendered HTML (visually
+              // hidden) so crawlers and answer engines can read every Q&A —
+              // the FAQPage JSON-LD above must match visible page content.
+              <div className="hidden">
                 <p className="text-sm text-henna-700 dark:text-henna-300 leading-relaxed">
                   {faq.answer}
                 </p>

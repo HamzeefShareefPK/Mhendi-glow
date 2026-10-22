@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Sitemap",
   description: "Browse all pages, categories, designs, and blog posts on MehndiDesignPics.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://mehndidesignpics.com/sitemap-page" },
 };
 
 interface SitemapGroup {

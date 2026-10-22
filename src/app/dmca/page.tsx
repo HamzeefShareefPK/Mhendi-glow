@@ -3,6 +3,7 @@
 export const metadata: Metadata = {
   title: "DMCA Policy",
   description: "MehndiDesignPics DMCA copyright policy and image removal request process.",
+  alternates: { canonical: "https://mehndidesignpics.com/dmca" },
   keywords: [
     "mehndidesignpics dmca","mehndi website dmca","henna website dmca",
     "mehndi design copyright","mehndi image copyright removal",

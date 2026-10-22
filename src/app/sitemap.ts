@@ -11,20 +11,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const stable = new Date("2026-05-20");
 
   // ── 1. Static pages ────────────────────────────────
+  // NOTE: /search is intentionally NOT listed here — search results are
+  // noindex (see src/app/search/layout.tsx), and noindex URLs must not be
+  // submitted in a sitemap. Legal/utility pages use the stable date: they do
+  // not change on every deploy, so a fresh lastmod would be a false signal.
   const staticPages: MetadataRoute.Sitemap = [
     { url: base,                        lastModified: now, changeFrequency: "daily",   priority: 1.0 },
     { url: `${base}/blog`,              lastModified: now, changeFrequency: "daily",   priority: 0.9 },
     { url: `${base}/categories`,        lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
     { url: `${base}/ai-generator`,      lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
-    { url: `${base}/search`,            lastModified: now, changeFrequency: "weekly",  priority: 0.7 },
     { url: `${base}/keywords`,          lastModified: now, changeFrequency: "monthly", priority: 0.65 },
-    { url: `${base}/sitemap-page`,      lastModified: now, changeFrequency: "weekly",  priority: 0.4 },
-    { url: `${base}/about`,             lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${base}/contact`,           lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/privacy-policy`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${base}/disclaimer`,        lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${base}/terms`,             lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
-    { url: `${base}/dmca`,              lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/sitemap-page`,      lastModified: stable, changeFrequency: "weekly",  priority: 0.4 },
+    { url: `${base}/about`,             lastModified: stable, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/contact`,           lastModified: stable, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/privacy-policy`,    lastModified: stable, changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/disclaimer`,        lastModified: stable, changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/terms`,             lastModified: stable, changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/dmca`,              lastModified: stable, changeFrequency: "yearly",  priority: 0.3 },
   ];
 
   // ── 2. Category pages (slugs already include -design suffix) ──

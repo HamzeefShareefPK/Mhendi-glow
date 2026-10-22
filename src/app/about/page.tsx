@@ -3,6 +3,7 @@
 export const metadata: Metadata = {
   title: "About MehndiDesignPics — Your Mehndi Inspiration Hub",
   description: "Learn about MehndiDesignPics — your go-to destination for beautiful mehndi designs, tutorials and trends.",
+  alternates: { canonical: "https://mehndidesignpics.com/about" },
   keywords: [
     "about mehndidesignpics","mehndi design website","henna design website",
     "mehndi inspiration site","mehndi design platform","free mehndi designs",

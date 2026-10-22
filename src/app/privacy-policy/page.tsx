@@ -3,6 +3,7 @@
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Read MehndiDesignPics privacy policy to understand how we collect and use your data.",
+  alternates: { canonical: "https://mehndidesignpics.com/privacy-policy" },
   keywords: [
     "mehndidesignpics privacy policy","mehndi website privacy",
     "henna website privacy policy","user data privacy mehndi",

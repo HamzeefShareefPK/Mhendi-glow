@@ -17,7 +17,7 @@ function xml(s: string): string {
 export async function GET() {
   const base = "https://mehndidesignpics.com";
 
-  // Design pages: hardcoded designs + the first 20 generated per category,
+  // Design pages: hardcoded designs + all 60 generated per category,
   // deduplicated by slug. Each entry exposes its image to Google Images.
   const seen = new Set<string>();
   const designEntries: string[] = [];
@@ -37,7 +37,6 @@ export async function GET() {
       <image:loc>${xml(image)}</image:loc>
       <image:title>${xml(title)}</image:title>
       <image:caption>${xml(caption)}</image:caption>
-      <image:geo_location>Pakistan</image:geo_location>
       <image:license>${xml(`${base}/terms`)}</image:license>
     </image:image>
   </url>`);

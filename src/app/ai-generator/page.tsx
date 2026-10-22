@@ -4,6 +4,7 @@ import AiGeneratorClient from "./AiGeneratorClient";
 export const metadata: Metadata = {
   title: "AI Mehndi Design Generator 2026",
   description: "Generate beautiful mehndi designs using AI. Describe your style — bridal, Arabic, Pakistani, minimal — and get instant design inspiration.",
+  alternates: { canonical: "https://mehndidesignpics.com/ai-generator" },
   keywords: [
     "ai mehndi generator","mehndi design generator","ai henna design",
     "generate mehndi design","mehndi ai tool","free mehndi generator",

@@ -3,6 +3,7 @@
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "Read MehndiDesignPics terms and conditions — rules for using our mehndi design website, content policy and user guidelines.",
+  alternates: { canonical: "https://mehndidesignpics.com/terms" },
   keywords: [
     "mehndidesignpics terms","mehndi website terms of service",
     "henna website terms","mehndi design site terms",
