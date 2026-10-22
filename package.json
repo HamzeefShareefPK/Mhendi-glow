@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "submit-indexnow": "node scripts/submit-indexnow.mjs",
+    "qa:seo": "node scripts/seo-qa.mjs",
     "fetch-unsplash": "node scripts/fetch-unsplash.mjs"
   },
   "dependencies": {

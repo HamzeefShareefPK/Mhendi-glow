@@ -15,7 +15,9 @@ export function indexNowKey(): string {
 }
 
 // Submit a batch of absolute URLs. Best-effort: never throws, chunks to the
-// IndexNow 10,000-URL limit, returns the per-chunk HTTP statuses.
+// IndexNow 10,000-URL limit, retries each chunk up to 3 times with backoff
+// on network errors / 429 / 5xx, logs per-chunk outcomes, and returns the
+// per-chunk HTTP statuses (0 = network failure after retries).
 export async function submitUrls(
   urls: string[],
   key: string = indexNowKey(),
@@ -28,16 +30,24 @@ export async function submitUrls(
 
   for (let i = 0; i < unique.length; i += 10000) {
     const urlList = unique.slice(i, i + 10000);
-    try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json; charset=utf-8" },
-        body: JSON.stringify({ host: HOST, key, keyLocation, urlList }),
-      });
-      statuses.push(res.status);
-    } catch {
-      statuses.push(0); // network error — best-effort, keep going
+    let status = 0;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json; charset=utf-8" },
+          body: JSON.stringify({ host: HOST, key, keyLocation, urlList }),
+        });
+        status = res.status;
+        if (status === 200 || status === 202) break;
+        if (status !== 429 && status < 500) break; // non-retryable
+      } catch {
+        status = 0; // network error — retry below
+      }
+      if (attempt < 3) await new Promise((r) => setTimeout(r, 1000 * 3 ** (attempt - 1)));
     }
+    console.info(`[indexnow] chunk ${i / 10000 + 1}: ${urlList.length} urls -> HTTP ${status}`);
+    statuses.push(status);
   }
   return statuses;
 }

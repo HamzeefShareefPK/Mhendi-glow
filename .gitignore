@@ -32,6 +32,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# indexnow submission state (per-machine; do not commit)
+scripts/.indexnow-state.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
