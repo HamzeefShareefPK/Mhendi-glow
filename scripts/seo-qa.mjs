@@ -12,6 +12,11 @@
 //   - robots.txt references both sitemaps and the AI-crawler policy group
 //   - the IndexNow key-verification file is served and matches the key
 //   - sitemap-images.xml is valid and carries no geo_location assertions
+//   - every blog post renders its OWN FAQ set (>= 3 questions, no question
+//     repeated on another post — guards the per-post FAQ data in
+//     src/data/blogFaqs.ts against shared-boilerplate regressions)
+//   - category / design / blog templates emit page-level twitter:card tags
+//     whose title matches the page's own og:title (not the root default)
 //
 // Usage:
 //   npm run build && npm run start        (terminal 1, port 3107 below)
@@ -87,7 +92,29 @@ async function main() {
     const links = new Set(
       [...text.matchAll(/href="(\/[^"#]*)"/g)].map((m) => m[1].split("?")[0]),
     );
-    return { url, path, status, canonical, robotsMeta, title, h1Count, links, hasJsonLd: text.includes("application/ld+json") };
+    const metaContent = (attr, name) =>
+      new RegExp(`<meta[^>]*${attr}="${name}"[^>]*content="([^"]*)"`).exec(text)?.[1] ??
+      new RegExp(`<meta[^>]*content="([^"]*)"[^>]*${attr}="${name}"`).exec(text)?.[1] ??
+      "";
+    const twitterTitle = metaContent("name", "twitter:title");
+    const twitterImage = metaContent("name", "twitter:image");
+    const ogTitle = metaContent("property", "og:title");
+    // FAQPage questions from JSON-LD (blog posts): used to prove no two
+    // posts share a generic FAQ block.
+    let faqQuestions = [];
+    if (path.startsWith("/blog/")) {
+      for (const m of text.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+        try {
+          const parsed = JSON.parse(m[1]);
+          for (const node of Array.isArray(parsed) ? parsed : [parsed]) {
+            if (node && node["@type"] === "FAQPage" && Array.isArray(node.mainEntity)) {
+              faqQuestions = node.mainEntity.map((q) => q.name).filter(Boolean);
+            }
+          }
+        } catch { /* invalid JSON-LD is caught by hasJsonLd consumers elsewhere */ }
+      }
+    }
+    return { url, path, status, canonical, robotsMeta, title, h1Count, links, hasJsonLd: text.includes("application/ld+json"), twitterTitle, twitterImage, ogTitle, faqQuestions };
   });
 
   const non200 = rows.filter((r) => r.status !== 200);
@@ -122,6 +149,35 @@ async function main() {
   }
   const orphans = rows.filter((r) => r.path !== "/" && (inbound.get(r.path) ?? 0) === 0);
   check("zero orphan sitemap URLs", orphans.length === 0, orphans.slice(0, 10).map((r) => r.path).join(", "));
+
+  // ── Blog FAQ uniqueness (per-post FAQs, no shared boilerplate) ──
+  const blogRows = rows.filter((r) => r.path.startsWith("/blog/"));
+  const postsWithoutFaq = blogRows.filter((r) => r.faqQuestions.length < 3);
+  check("every blog post renders >= 3 FAQ questions", postsWithoutFaq.length === 0,
+    postsWithoutFaq.slice(0, 5).map((r) => `${r.path}:${r.faqQuestions.length}`).join(", "));
+  const questionOwners = new Map();
+  for (const r of blogRows) {
+    for (const q of r.faqQuestions) {
+      const key = q.toLowerCase();
+      if (!questionOwners.has(key)) questionOwners.set(key, []);
+      questionOwners.get(key).push(r.path);
+    }
+  }
+  const repeatedQuestions = [...questionOwners.entries()].filter(([, owners]) => owners.length > 1);
+  check("no FAQ question repeats across blog posts", repeatedQuestions.length === 0,
+    repeatedQuestions.slice(0, 5).map(([q, owners]) => `"${q}" on ${owners.join(", ")}`).join("; "));
+
+  // ── Page-level Twitter cards (category / design / blog) ─────────
+  const GENERIC_TWITTER_TITLE = "MehndiDesignPics — Beautiful Mehndi Designs";
+  const STATIC_SINGLE_SEGMENT = new Set(["/about", "/contact", "/blog", "/categories", "/keywords", "/terms", "/dmca", "/disclaimer", "/privacy-policy", "/ai-generator", "/sitemap-page", "/search"]);
+  const categorySample = rows.find((r) => r.path.split("/").filter(Boolean).length === 1 && !STATIC_SINGLE_SEGMENT.has(r.path));
+  const designSample = rows.find((r) => r.path.startsWith("/design/"));
+  const blogSample = blogRows[0];
+  for (const [kind, sample] of [["category", categorySample], ["design", designSample], ["blog", blogSample]]) {
+    check(`${kind} page has page-level twitter card`,
+      !!sample && sample.twitterTitle.length > 0 && sample.twitterTitle !== GENERIC_TWITTER_TITLE && sample.twitterTitle === sample.ogTitle && sample.twitterImage.length > 0,
+      sample ? `${sample.path} twitter:title="${sample.twitterTitle}"` : "no sample row found");
+  }
 
   // ── /search behaviour ─────────────────────────────────────────
   const search = await fetchText(`${BASE}/search`);
