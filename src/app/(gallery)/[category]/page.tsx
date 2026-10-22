@@ -59,6 +59,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: cat.description,
       images: [{ url: cat.image }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${cat.name} Mehndi Designs 2026`,
+      description: cat.description,
+      images: [cat.image],
+    },
   };
 }
 
