@@ -219,12 +219,14 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
-/** HowTo schema — for tutorial blog posts */
+/** HowTo schema — for tutorial blog posts. Only emit it when the steps are
+ * the article's real, visible steps, and only state a totalTime the article
+ * itself supports — never a made-up duration. */
 export function howToSchema({
   name, description, imageUrl, steps, totalTime,
 }: {
   name: string; description: string; imageUrl: string;
-  steps: { name: string; text: string }[]; totalTime: string;
+  steps: { name: string; text: string }[]; totalTime?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -232,7 +234,7 @@ export function howToSchema({
     name,
     description,
     image: imageUrl,
-    totalTime,
+    ...(totalTime && { totalTime }),
     step: steps.map((s, i) => ({
       "@type": "HowToStep",
       position: i + 1,

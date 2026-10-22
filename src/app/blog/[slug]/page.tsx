@@ -10,6 +10,8 @@ import FAQSection from "@/components/seo/FAQSection";
 import RelatedCategories from "@/components/seo/RelatedCategories";
 import { articleSchema, howToSchema } from "@/lib/seo";
 import { blogPosts, categories } from "@/data";
+import { blogFaqs } from "@/data/blogFaqs";
+import { howToStepsFromContent } from "@/lib/blogContent";
 import { getRelatedPosts } from "@/lib/related";
 
 interface Props { params: { slug: string } }
@@ -25,23 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     keywords: [
-      post.category.toLowerCase(), post.title.toLowerCase(),
-      "mehndi designs 2026","bridal mehndi designs","arabic mehndi designs",
-      "eid mehndi designs","pakistani mehndi","simple mehndi designs",
-      "mehndi designs for hands","henna designs","beautiful mehndi designs",
-      "latest mehndi designs","mehndi tips","henna tips","mehndi tutorials",
-      "how to apply mehndi","mehndi design tips","bridal mehndi tips",
-      "arabic mehndi tutorial","eid mehndi ideas","mehndi aftercare",
-      "mehndi color tips","dark mehndi tips","mehndi for beginners",
-      "mehndi paste recipe","how to make mehndi","mehndi cone tips",
-      "mehndi removal tips","mehndi care guide","henna tutorial",
-      "mehndi design guide","mehndi step by step","mehndi diy",
-      "mehndi at home","mehndi artist tips","professional mehndi",
-      "mehndi trends 2026","latest mehndi trends","best mehndi tips",
-      "henna art blog","mehndi inspiration","mehndi design articles",
-      "natural henna tips","henna powder guide","mehndi application guide",
-      "mehndi technique","mehndi color dark tips","mehndi stain tips",
-      "mehndi blog 2026","henna blog","mehndidesignpics blog",
+      post.title.toLowerCase(),
+      post.category.toLowerCase(),
+      `${post.category.toLowerCase()} mehndi`,
+      ...(post.tags ?? []),
+      "mehndi designs 2026",
+      "henna designs",
     ],
     alternates: { canonical: `https://mehndidesignpics.com/blog/${post.slug}` },
     openGraph: {
@@ -51,19 +42,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.publishedAt,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
   };
 }
 
-// How-To steps for tutorial posts
-const HOW_TO_STEPS = [
-  { name: "Prepare your henna paste",   text: "Mix natural henna powder with lemon juice, sugar, and essential oil. Let it rest for 6–8 hours." },
-  { name: "Fill the cone",              text: "Fill a mehndi cone with the prepared paste. Seal the back tightly." },
-  { name: "Clean and prep your skin",   text: "Wash hands thoroughly and apply a thin layer of eucalyptus oil for better color." },
-  { name: "Start with basic outline",   text: "Begin with the main design outline. Keep the cone at a 45-degree angle for consistent lines." },
-  { name: "Add details and fill",       text: "Add inner details, dots, and fill in the pattern areas for depth." },
-  { name: "Let it dry completely",      text: "Allow the mehndi to dry for 6–8 hours. Apply lemon-sugar solution to keep it moist." },
-  { name: "Remove and moisturize",      text: "Scrape off dried mehndi (don't wash). Apply mustard oil for a deeper color." },
-];
+// HowTo schema is emitted ONLY for genuine step-by-step tutorials, with the
+// steps taken from the article's own sections (see lib/blogContent) — schema
+// must describe what is actually visible on the page. Tips/list articles do
+// not get HowTo schema: their sections are advice, not a procedure.
+const HOWTO_TUTORIAL_SLUGS = new Set([
+  "how-to-make-natural-henna-paste",
+  "how-to-apply-mehndi-cone-step-by-step",
+]);
 
 export default function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === params.slug);
@@ -73,7 +68,8 @@ export default function BlogPostPage({ params }: Props) {
   const mappedCategorySlug = categories.find(
     (c) => c.name.toLowerCase() === post.category.toLowerCase(),
   )?.slug;
-  const isHowTo = post.title.toLowerCase().includes("how to") || post.title.toLowerCase().includes("step by step");
+  const isHowTo = HOWTO_TUTORIAL_SLUGS.has(post.slug);
+  const howToSteps = isHowTo ? howToStepsFromContent(post.content) : [];
 
   const schemas = [
     articleSchema({
@@ -86,20 +82,17 @@ export default function BlogPostPage({ params }: Props) {
       modifiedAt:  post.publishedAt,
       keywords:    [post.category, "mehndi", "henna"],
     }),
-    ...(isHowTo ? [howToSchema({
+    ...(howToSteps.length >= 2 ? [howToSchema({
       name:        post.title,
       description: post.excerpt,
       imageUrl:    post.coverImage,
-      steps:       HOW_TO_STEPS,
-      totalTime:   "PT30M",
+      steps:       howToSteps,
     })] : []),
   ];
 
-  const POST_FAQS = [
-    { question: `How to do ${post.category.toLowerCase()} mehndi at home?`, answer: `To do ${post.category.toLowerCase()} mehndi at home, you need a good henna cone, a steady hand, and a reference design. Start with simple patterns and practice on paper first. Natural henna paste gives the best color.` },
-    { question: `What is the best henna brand for ${post.category.toLowerCase()} mehndi?`, answer: "The best henna brands are Neha Henna, Al Noor, and Golecha. Always use natural henna without chemicals for safe, dark color." },
-    { question: "How long does it take to learn mehndi?", answer: "Basic mehndi patterns can be learned in 2–4 weeks of daily practice. Intermediate designs take 2–3 months. Professional-level bridal mehndi may take 6–12 months of consistent practice." },
-  ];
+  // Per-post FAQs derived from this article's own content (src/data/blogFaqs).
+  // Posts without an entry simply render no FAQ block — never a shared one.
+  const postFaqs = blogFaqs[post.slug];
 
   return (
     <>
@@ -197,8 +190,10 @@ export default function BlogPostPage({ params }: Props) {
         </div>
       </article>
 
-      {/* FAQ — People Also Ask */}
-      <FAQSection faqs={POST_FAQS} title="Mehndi Questions & Answers" />
+      {/* FAQ — this post's own questions & answers */}
+      {postFaqs && postFaqs.length > 0 && (
+        <FAQSection faqs={postFaqs} title="Mehndi Questions & Answers" />
+      )}
 
       {/* Related posts */}
       {related.length > 0 && (
