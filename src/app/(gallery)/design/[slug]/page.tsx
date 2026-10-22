@@ -62,6 +62,38 @@ function getMergedDesigns() {
 // Cache at module level so it's computed once per server start
 const allDesigns = getMergedDesigns();
 
+// Some titles legitimately repeat (e.g. "Bridal Peacock Mehndi" exists in
+// both the bridal and the peacock collections, as different designs with
+// unique images/descriptions; a few repeat within one collection too). For
+// those, the page <title> gets the collection name appended — plus an
+// occurrence number if the same title repeats inside one collection — so
+// every design page has a unique title tag. URLs/slugs never change.
+function categoryTitleOf(category: string): string {
+  const base = category.replace(/-mehndi-design$/, "").replace(/-mehndi$/, "").replace(/-/g, " ");
+  return base.split(" ").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+const displayTitleBySlug = new Map<string, string>();
+{
+  const byTitle = new Map<string, typeof allDesigns>();
+  for (const d of allDesigns) {
+    const group = byTitle.get(d.title) ?? [];
+    group.push(d);
+    byTitle.set(d.title, group);
+  }
+  for (const group of Array.from(byTitle.values())) {
+    if (group.length < 2) continue;
+    const seenInCategory = new Map<string, number>();
+    for (const d of group) {
+      const n = (seenInCategory.get(d.category) ?? 0) + 1;
+      seenInCategory.set(d.category, n);
+      displayTitleBySlug.set(
+        d.slug,
+        `${d.title} (${categoryTitleOf(d.category)} Mehndi)${n > 1 ? ` ${n}` : ""} — Free Download`,
+      );
+    }
+  }
+}
+
 interface Props {
   params: { slug: string };
 }
@@ -79,8 +111,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const d = allDesigns.find((x) => x.slug === params.slug);
   if (!d) return {};
   const catDisplay = d.category.replace(/-mehndi$/, "").replace(/-/g, " ");
+  const pageTitle = displayTitleBySlug.get(d.slug) ?? `${d.title} — Free Download`;
   return {
-    title: `${d.title} — Free Download`,
+    title: pageTitle,
     description: `${d.description} Download this beautiful ${catDisplay} mehndi design for free. Part of our ${catDisplay} mehndi collection 2026.`,
     keywords: [
       ...d.tags,

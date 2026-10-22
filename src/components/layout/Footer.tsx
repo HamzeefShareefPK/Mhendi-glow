@@ -15,6 +15,7 @@ const QUICK_LINKS = [
   { href: "/terms",          label: "Terms & Conditions" },
   { href: "/disclaimer",     label: "Disclaimer" },
   { href: "/dmca",           label: "DMCA" },
+  { href: "/sitemap-page",   label: "Sitemap" },
 ];
 
 export default function Footer() {

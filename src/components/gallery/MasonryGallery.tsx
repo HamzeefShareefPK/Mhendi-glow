@@ -10,6 +10,11 @@ interface Props {
   designs: Design[];
   title?: string;
   showFilter?: boolean;
+  // How many designs are in the initial render. Category pages pass their
+  // full design count so EVERY design card (and its crawlable link) is in
+  // the server-rendered HTML — designs hidden behind the client-side
+  // "Load More" button would otherwise be undiscoverable orphan pages.
+  initialVisible?: number;
 }
 
 const CATEGORIES = ["All", "Bridal", "Arabic", "Pakistani", "Eid", "Finger", "Feet", "Minimal"];
@@ -23,9 +28,9 @@ const breakpoints = {
   0:       1,
 };
 
-export default function MasonryGallery({ designs, title, showFilter = false }: Props) {
+export default function MasonryGallery({ designs, title, showFilter = false, initialVisible = 24 }: Props) {
   const [active, setActive]       = useState("All");
-  const [visible, setVisible]     = useState(24);
+  const [visible, setVisible]     = useState(initialVisible);
   const [loading, setLoading]     = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
