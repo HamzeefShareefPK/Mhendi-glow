@@ -15,32 +15,20 @@ import { generateCategoryDesigns } from "@/data/generator";
 import { categories } from "@/data";
 
 export const metadata: Metadata = {
-  title: { absolute: "MehndiDesignPics — Discover 3000+ Beautiful Mehndi Designs 2026" },
+  title: { absolute: "MehndiDesignPics — Discover 1000+ Beautiful Mehndi Designs 2026" },
   description:
     "Explore the most beautiful mehndi designs — bridal, Arabic, Pakistani, Eid, minimal and more. Free download. Updated daily. Your #1 mehndi inspiration source.",
   keywords: [
     "mehndi designs 2026","bridal mehndi designs","arabic mehndi designs",
     "eid mehndi designs","pakistani mehndi","simple mehndi designs",
-    "mehndi designs for hands","henna designs","new mehndi designs",
-    "beautiful mehndi designs","latest mehndi designs","mehndi for wedding",
-    "mehndi design download","front hand mehndi","back hand mehndi",
-    "full hand mehndi","minimal mehndi designs","mehndi design for girls",
-    "indian mehndi designs","bridal henna designs","traditional mehndi",
-    "mehndi patterns","flower mehndi design","finger mehndi designs",
-    "feet mehndi designs","easy mehndi designs","stylish mehndi designs",
-    "heavy mehndi designs","mehndi art","henna art","mehndi ka design",
-    "dulhan mehndi","eid special mehndi","mehndi for kids",
-    "modern mehndi designs","mehndi design pics","mehndi design photo",
-    "best mehndi designs","trending mehndi designs","free mehndi designs",
-    "mehndi design download free","henna mehndi designs","mehndi for bride",
-    "arabic henna","pakistani bridal mehndi","mehndi design ideas",
-    "simple henna designs","mehndi wale design","mehndi tattoo designs",
-    "mehndidesignpics",
+    "mehndi designs for hands","henna designs","beautiful mehndi designs",
+    "latest mehndi designs","mehndi design download","minimal mehndi designs",
+    "indian mehndi designs","mehndi design pics","mehndidesignpics",
   ],
   alternates: { canonical: "https://mehndidesignpics.com" },
   openGraph: {
-    title: "MehndiDesignPics — 3000+ Beautiful Mehndi Designs",
-    description: "Discover 3000+ bridal, arabic, eid, minimal mehndi designs. Free download.",
+    title: "MehndiDesignPics — 1000+ Beautiful Mehndi Designs",
+    description: "Discover 1000+ bridal, arabic, eid, minimal mehndi designs. Free download.",
     images: [{ url: "https://mehndidesignpics.com/images/og-image.jpg", width: 1200, height: 630 }],
     type: "website",
   },
@@ -70,12 +58,14 @@ const HOME_FAQS = [
   },
   {
     question: "Is MehndiDesignPics free to use?",
-    answer: "Yes! MehndiDesignPics is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 3000+ designs across 50+ mehndi categories updated regularly.",
+    answer: "Yes! MehndiDesignPics is completely free. You can browse, download, and share all mehndi designs for personal use at no cost. We have 1000+ designs across 50+ mehndi categories updated regularly.",
   },
 ];
 
-// Generate 200 mixed mehndi designs from ALL categories (derived from data so
-// new style pages are automatically represented in the homepage gallery).
+// Generate a mixed set of mehndi designs from ALL categories for the
+// homepage gallery (derived from data so new style pages are automatically
+// represented). 60 keeps the serialized gallery payload lean — the previous
+// 200-design payload was a major contributor to the homepage's 684 KB HTML.
 const CATEGORIES = categories.map((c) => c.slug);
 
 function getMixedDesigns(total: number) {
@@ -94,7 +84,7 @@ function getMixedDesigns(total: number) {
   return mixed.slice(0, total);
 }
 
-const HOME_GALLERY = getMixedDesigns(200);
+const HOME_GALLERY = getMixedDesigns(60);
 
 export default function HomePage() {
   return (
@@ -118,7 +108,7 @@ export default function HomePage() {
         {/* Categories — nav landmark */}
         <CategoryGrid />
 
-        {/* Gallery — 200 mixed designs from all categories */}
+        {/* Gallery — 60 mixed designs from all categories */}
         <MasonryGallery
           designs={HOME_GALLERY}
           title="✦ Latest Mehndi Designs"

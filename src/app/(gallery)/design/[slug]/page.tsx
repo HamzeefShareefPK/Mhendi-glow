@@ -12,6 +12,9 @@ import { designs, categories } from "@/data";
 import { getAllDesigns } from "@/data/generator";
 import RelatedCategories from "@/components/seo/RelatedCategories";
 import RelatedArticles from "@/components/seo/RelatedArticles";
+import FAQSection from "@/components/seo/FAQSection";
+import { getCategoryArticle } from "@/data/categoryContent";
+import { CATEGORY_FAQS } from "@/data/categoryFaqs";
 
 // Map a design tag to the most relevant category page (crawlable internal link),
 // falling back to search when no category matches.
@@ -48,8 +51,9 @@ function tagHref(tag: string): string {
 
 // Lookup must cover EVERY design a category page can render, otherwise those
 // card links 404. Category pages render DESIGNS_PER_CATEGORY designs each
-// (see [category]/page.tsx), so the lookup must match that number.
-const LOOKUP_COUNT = 60;
+// (see [category]/page.tsx), so the lookup must match that number. Keep in
+// sync with DESIGNS_PER_CATEGORY, sitemap.ts and sitemap-images.xml.
+const LOOKUP_COUNT = 20;
 
 // Merge hardcoded designs with all generated designs (deduplicated by slug)
 function getMergedDesigns() {
@@ -121,22 +125,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       d.title.toLowerCase(),
       `${d.title.toLowerCase()} download`,
       `${d.title.toLowerCase()} image`,
-      `${d.category.replace(/-/g, " ")} 2026`,
-      `beautiful ${d.category.replace(/-mehndi$/, "").replace(/-/g, " ")} mehndi`,
-      `best ${d.category.replace(/-mehndi$/, "").replace(/-/g, " ")} mehndi`,
-      "mehndi design","free download","henna","mehndi designs 2026",
-      "bridal mehndi designs","arabic mehndi designs","eid mehndi designs",
-      "pakistani mehndi","simple mehndi designs","mehndi designs for hands",
-      "henna designs","beautiful mehndi designs","latest mehndi designs",
-      "mehndi for wedding","mehndi design download","front hand mehndi",
-      "back hand mehndi","full hand mehndi","minimal mehndi designs",
-      "mehndi design for girls","indian mehndi designs","bridal henna designs",
-      "traditional mehndi","mehndi patterns","flower mehndi design",
-      "finger mehndi designs","feet mehndi designs","easy mehndi designs",
-      "stylish mehndi designs","heavy mehndi designs","mehndi art",
-      "henna art","dulhan mehndi","eid special mehndi","modern mehndi designs",
-      "mehndi design photo","best mehndi designs","free mehndi designs",
-      "mehndidesignpics",
     ],
     alternates: { canonical: `https://mehndidesignpics.com/design/${d.slug}` },
     openGraph: {
@@ -170,6 +158,38 @@ export default function DesignPage({ params }: Props) {
 
   const catName = design.category.replace("-mehndi", "").replace(/-/g, " ");
 
+  // Curated designs (hand-written entries, numeric ids) carry real dates.
+  // Generated designs only have a batch constant — asserting it as a
+  // per-page publication date is a false freshness signal, so generated
+  // pages show and claim no date.
+  const isCurated = /^\d+$/.test(design.id);
+  const category = categories.find((c) => c.slug === design.category);
+
+  // ── Facts about THIS design, derived from its own catalogue data ──────
+  // (title motifs, tag placement, tag occasions). Everything rendered from
+  // these is a true statement about how this design is catalogued — it is
+  // what differentiates one design page from its siblings.
+  const PLACEMENT_TAGS = ["full hand", "back hand", "front hand", "half hand", "finger", "feet", "ankle", "wrist", "palm", "leg", "shoulder", "arm"];
+  const placement = design.tags.find((t) => PLACEMENT_TAGS.includes(t.toLowerCase()));
+  const MOTIF_WORDS = ["peacock", "lotus", "rose", "mandala", "paisley", "vine", "jaal", "tikki", "floral", "flower", "geometric", "heart", "dotwork", "leaf", "feather", "moon", "diamond", "star"];
+  const titlePadded = ` ${design.title.toLowerCase()} `;
+  const motifs = MOTIF_WORDS.filter((m) => titlePadded.includes(` ${m}`));
+  const OCCASION_BY_TAG: Record<string, string> = {
+    bridal: "weddings", wedding: "weddings", dulhan: "weddings",
+    eid: "Eid", engagement: "engagements", sagai: "engagements",
+    festive: "festive occasions", party: "parties",
+    "karwa chauth": "Karwa Chauth", teej: "Teej", diwali: "Diwali",
+    "godh bharai": "baby showers (Godh Bharai)", "baby shower": "baby showers (Godh Bharai)",
+  };
+  const occasions = Array.from(new Set(
+    design.tags.map((t) => OCCASION_BY_TAG[t.toLowerCase()]).filter(Boolean) as string[],
+  ));
+
+  // This category's own FAQs (in-depth article FAQs where they exist, else
+  // the hand-written category set) — real content shared with the category
+  // page, shown on its design pages as supporting information.
+  const catFaqs = (getCategoryArticle(design.category)?.faqs ?? CATEGORY_FAQS[design.category] ?? []).slice(0, 3);
+
   return (
     <>
       {/* Structured Data — ImageObject + BreadcrumbList */}
@@ -181,7 +201,7 @@ export default function DesignPage({ params }: Props) {
           slug:        design.slug,
           category:    design.category,
           tags:        design.tags,
-          publishedAt: design.createdAt,
+          publishedAt: isCurated ? design.createdAt : undefined,
         }),
         breadcrumbSchema([
           { name: "Home", url: "/" },
@@ -239,13 +259,15 @@ export default function DesignPage({ params }: Props) {
               {design.title}
             </h1>
 
-            {/* Date */}
-            <div className="flex items-center gap-2 text-xs text-henna-500 mb-4">
-              <Calendar size={12} />
-              <time dateTime={design.createdAt} itemProp="datePublished">
-                {new Date(design.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-              </time>
-            </div>
+            {/* Date — only for curated designs, whose dates are real */}
+            {isCurated && (
+              <div className="flex items-center gap-2 text-xs text-henna-500 mb-4">
+                <Calendar size={12} />
+                <time dateTime={design.createdAt} itemProp="datePublished">
+                  {new Date(design.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                </time>
+              </div>
+            )}
 
             {/* Description — semantic SEO paragraph */}
             <p
@@ -255,14 +277,63 @@ export default function DesignPage({ params }: Props) {
               {design.description}
             </p>
 
-            {/* Extended description — topical authority */}
+            {/* Extended description — composed from this design's own
+                catalogue facts (placement, motifs, occasions), so it reads
+                differently on every page instead of repeating one template */}
             <p className="text-henna-600 dark:text-henna-400 mb-6 leading-relaxed text-sm">
-              This {catName} mehndi design is perfect for{" "}
-              {design.tags.slice(0, 2).join(", ")} occasions.
-              The intricate pattern features traditional motifs with a modern touch,
-              making it suitable for brides, mehndi artists, and mehndi enthusiasts.
-              Download this design for free and recreate it at home.
+              {placement
+                ? <>Drawn for the {placement}, this {catName} pattern
+                  {motifs.length > 0
+                    ? <> is built around {motifs.slice(0, 2).join(" and ")} motifs, with the detailing kept fine enough to copy line by line from the photo.</>
+                    : <> balances its main motif against open space, which makes it straightforward to copy line by line from the photo.</>}
+                  </>
+                : <>This {catName} pattern
+                  {motifs.length > 0
+                    ? <> is built around {motifs.slice(0, 2).join(" and ")} motifs, with the detailing kept fine enough to copy line by line from the photo.</>
+                    : <> balances its main motif against open space, which makes it straightforward to copy line by line from the photo.</>}
+                  </>}
+              {occasions.length > 0 && (
+                <> It is most often chosen for {occasions.join(", ")}, and it works equally well as a full look on its own or as one hand paired with a simpler second design.</>
+              )}
+              {occasions.length === 0 && (
+                <> It works equally well as a full look on its own or as one hand paired with a simpler second design.</>
+              )}
+              {" "}Download it for free and recreate it at home, or show it to your mehndi artist as a reference.
             </p>
+
+            {/* Design details — the facts of this design, from its own data */}
+            <div className="mb-6 rounded-xl border border-henna-200 dark:border-henna-800 bg-henna-50 dark:bg-henna-900/40 p-4">
+              <h2 className="text-sm font-semibold text-henna-900 dark:text-henna-100 mb-3">Design details</h2>
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+                <dt className="text-henna-500">Style</dt>
+                <dd className="text-henna-700 dark:text-henna-300 capitalize">{category?.name ?? catName} mehndi</dd>
+                {placement && (
+                  <>
+                    <dt className="text-henna-500">Placement</dt>
+                    <dd className="text-henna-700 dark:text-henna-300 capitalize">{placement}</dd>
+                  </>
+                )}
+                {motifs.length > 0 && (
+                  <>
+                    <dt className="text-henna-500">Main motifs</dt>
+                    <dd className="text-henna-700 dark:text-henna-300 capitalize">{motifs.slice(0, 3).join(", ")}</dd>
+                  </>
+                )}
+                {occasions.length > 0 && (
+                  <>
+                    <dt className="text-henna-500">Best for</dt>
+                    <dd className="text-henna-700 dark:text-henna-300 capitalize">{occasions.join(", ")}</dd>
+                  </>
+                )}
+                <dt className="text-henna-500">Collection</dt>
+                <dd className="text-henna-700 dark:text-henna-300">
+                  <Link href={`/${design.category}`} className="underline decoration-dotted underline-offset-2 hover:text-henna-500">
+                    {category?.name ?? catName} mehndi designs
+                  </Link>
+                  {category?.description ? <> — {category.description.charAt(0).toLowerCase() + category.description.slice(1)}</> : null}
+                </dd>
+              </dl>
+            </div>
 
             {/* Tags — Semantic keywords */}
             <div className="flex flex-wrap gap-2 mb-6">
@@ -361,6 +432,14 @@ export default function DesignPage({ params }: Props) {
           </Link>
         </div>
       </div>
+
+      {/* Category FAQs — this design's style, answered (real category content) */}
+      {catFaqs.length > 0 && (
+        <FAQSection
+          faqs={catFaqs}
+          title={`${category?.name ?? catName} Mehndi FAQs`}
+        />
+      )}
 
       {/* Related guides + sibling styles — internal linking */}
       <RelatedArticles category={design.category} />
