@@ -17,6 +17,11 @@
 //     src/data/blogFaqs.ts against shared-boilerplate regressions)
 //   - category / design / blog templates emit page-level twitter:card tags
 //     whose title matches the page's own og:title (not the root default)
+//   - design-page deduplication guards: no numbered-duplicate titles
+//     ("Title 2" / "Title 3"), every design page has substantive visible
+//     text and renders its category FAQ schema, lead photos are not
+//     mass-reused, no generated page asserts the 2026-01-01 batch date,
+//     and the homepage HTML stays under the weight ceiling
 //
 // Usage:
 //   npm run build && npm run start        (terminal 1, port 3107 below)
@@ -99,6 +104,20 @@ async function main() {
     const twitterTitle = metaContent("name", "twitter:title");
     const twitterImage = metaContent("name", "twitter:image");
     const ogTitle = metaContent("property", "og:title");
+    const ogImage = metaContent("property", "og:image");
+    // Visible-text word count (scripts/styles stripped) — the thin-content
+    // regression guard for design pages.
+    const visibleText = text
+      .replace(/<script[\s\S]*?<\/script>/g, " ")
+      .replace(/<style[\s\S]*?<\/style>/g, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const visibleWords = visibleText ? visibleText.split(" ").length : 0;
+    const hasFaqSchema = text.includes('"FAQPage"');
+    // The generated-design batch date must never be asserted as a per-page
+    // publication date (visible date line or schema) — false freshness.
+    const hasBatchDate = text.includes("January 1, 2026") || text.includes('"datePublished":"2026-01-01"') || text.includes('"datePublished": "2026-01-01"');
     // FAQPage questions from JSON-LD (blog posts): used to prove no two
     // posts share a generic FAQ block.
     let faqQuestions = [];
@@ -114,7 +133,7 @@ async function main() {
         } catch { /* invalid JSON-LD is caught by hasJsonLd consumers elsewhere */ }
       }
     }
-    return { url, path, status, canonical, robotsMeta, title, h1Count, links, hasJsonLd: text.includes("application/ld+json"), twitterTitle, twitterImage, ogTitle, faqQuestions };
+    return { url, path, status, canonical, robotsMeta, title, h1Count, links, hasJsonLd: text.includes("application/ld+json"), twitterTitle, twitterImage, ogTitle, faqQuestions, ogImage, visibleWords, hasFaqSchema, hasBatchDate, rawBytes: text.length };
   });
 
   const non200 = rows.filter((r) => r.status !== 200);
@@ -178,6 +197,52 @@ async function main() {
       !!sample && sample.twitterTitle.length > 0 && sample.twitterTitle !== GENERIC_TWITTER_TITLE && sample.twitterTitle === sample.ogTitle && sample.twitterImage.length > 0,
       sample ? `${sample.path} twitter:title="${sample.twitterTitle}"` : "no sample row found");
   }
+
+  // ── Design-page deduplication & depth guards ────────────────────
+  // Regression guards for the thin/near-duplicate fix: one published page
+  // per unique title (no "Title 2" / "Title 3" republications), real
+  // content depth on every design page, category FAQs present, lead
+  // images not mass-reused, and no fake batch publication dates.
+  const designRows = rows.filter((r) => r.path.startsWith("/design/"));
+  check("design page count is the deduplicated set (<= 1100)",
+    designRows.length <= 1100, `${designRows.length} design pages in sitemap`);
+
+  const numberedTitles = designRows.filter((r) => {
+    const base = r.title.replace(/ — Free Download.*$/, "").replace(/ \([^)]*\)$/, "");
+    return / \d+$/.test(base) && !/ 2026$/.test(base);
+  });
+  check("no design page has a numbered-duplicate title",
+    numberedTitles.length === 0, numberedTitles.slice(0, 5).map((r) => r.title).join(", "));
+
+  const thinDesigns = designRows.filter((r) => r.visibleWords < 700);
+  check("every design page carries substantive visible text (>= 700 words)",
+    thinDesigns.length === 0,
+    thinDesigns.slice(0, 5).map((r) => `${r.path}:${r.visibleWords}w`).join(", ") ||
+      (designRows.length ? `min ${Math.min(...designRows.map((r) => r.visibleWords))}w` : "no design rows"));
+
+  const designsNoFaq = designRows.filter((r) => !r.hasFaqSchema);
+  check("every design page renders its category FAQ schema",
+    designsNoFaq.length === 0, designsNoFaq.slice(0, 5).map((r) => r.path).join(", "));
+
+  const batchDated = designRows.filter((r) => r.hasBatchDate);
+  check("no design page asserts the generated batch date (2026-01-01)",
+    batchDated.length === 0, batchDated.slice(0, 5).map((r) => r.path).join(", "));
+
+  const photoUse = new Map();
+  for (const r of designRows) {
+    const m = /photo-(\d+-[a-f0-9]+)/.exec(r.ogImage ?? "");
+    if (m) photoUse.set(m[1], (photoUse.get(m[1]) ?? 0) + 1);
+  }
+  const worstPhoto = Math.max(0, ...photoUse.values());
+  check("design lead photos are not mass-reused (>= 40 distinct, worst <= 8% of pages)",
+    photoUse.size >= 40 && worstPhoto <= Math.max(10, designRows.length * 0.08),
+    `${photoUse.size} distinct photos; worst used ${worstPhoto}x of ${designRows.length}`);
+
+  // ── Homepage weight guard ────────────────────────────────────────
+  const homeRow = rows.find((r) => r.path === "/");
+  check("homepage HTML stays lean (< 600 KB)",
+    !!homeRow && homeRow.rawBytes < 600_000,
+    homeRow ? `${(homeRow.rawBytes / 1024).toFixed(0)} KB` : "homepage row missing");
 
   // ── /search behaviour ─────────────────────────────────────────
   const search = await fetchText(`${BASE}/search`);
