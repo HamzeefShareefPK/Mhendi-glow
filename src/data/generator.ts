@@ -468,7 +468,7 @@ const CATEGORY_TITLES: Record<string, string[]> = {
   ],
   "mandala-mehndi-design": [
     "Mandala Palm Mehndi","Back Hand Mandala Design","Bridal Mandala Mehndi",
-    "Half Mandala Mehndi","Lotus Mandala Mehndi","Geometric Mandala Mehndi",
+    "Half Mandala Mehndi","Mandala Lotus Mehndi","Geometric Mandala Mehndi",
     "Floral Mandala Mehndi","Double Mandala Mehndi","Minimal Mandala Mehndi",
     "Arabic Mandala Mehndi","Mandala Wrist Mehndi","Concentric Mandala Design",
     "Mandala Feet Mehndi","Sun Mandala Mehndi","Mandala Finger Mehndi",
@@ -913,14 +913,61 @@ const TIPS = [
   "Recreate it at home in under 30 minutes with a fine-tip cone.",
 ];
 
+// ── Motif / placement derivation ─────────────────────────────────────────────
+// Pull the design's actual motifs out of its title and its placement out of
+// its tags, so descriptions can say something TRUE and specific about this
+// design instead of only rotating generic praise.
+const MOTIF_WORDS = [
+  "peacock", "lotus", "rose", "mandala", "paisley", "vine", "jaal", "tikki",
+  "floral", "flower", "geometric", "heart", "dotwork", "leaf", "feather",
+  "moon", "diamond", "band", "chain", "net", "mesh", "star", "swirl",
+];
+const PLACEMENT_TAGS = [
+  "full hand", "back hand", "front hand", "half hand", "finger", "feet",
+  "ankle", "wrist", "palm", "leg", "shoulder", "arm",
+];
+const MOTIF_LINES = [
+  (m: string) => `The ${m} motif is the centrepiece here, framed by finer filler work that keeps the pattern balanced rather than busy`,
+  (m: string) => `Its defining feature is the ${m} work at the centre of the pattern, with the surrounding detailing kept deliberately lighter`,
+  (m: string) => `Look closely and the ${m} detailing is what gives this pattern its character, echoed in smaller accents towards the edges`,
+];
+const PLACEMENT_LINES = [
+  (p: string) => `It is drawn for the ${p}, following its natural contours so the pattern sits comfortably and photographs cleanly from every angle`,
+  (p: string) => `Placement is the ${p}, where the layout leaves enough breathing room for the main motif to stand out`,
+  (p: string) => `The layout is planned for the ${p}, tapering towards the edges so it flatters the hand's natural shape`,
+];
+
+function motifsOf(titleBase: string): string[] {
+  const t = ` ${titleBase.toLowerCase()} `;
+  return MOTIF_WORDS.filter((m) => t.includes(` ${m}`) || t.includes(`${m} `) || t.includes(` ${m} `));
+}
+
 // Build a unique, multi-sentence description for a generated design.
+// Beyond the rotating phrase banks, every description now carries at least
+// one sentence derived from THIS design's own title motifs and tag
+// placement, so two designs in the same category never read as the same
+// text with the nouns swapped.
 function buildDescription(category: string, titleBase: string, i: number): string {
   const disp = CATEGORY_DISPLAY[category] ?? "mehndi";
   const opener   = OPENERS[i % OPENERS.length];
   const middle   = MIDDLES[(i * 3 + 1) % MIDDLES.length];
   const occasion = OCCASIONS[(i * 5 + 2) % OCCASIONS.length];
   const tip      = TIPS[(i * 7 + 3) % TIPS.length];
-  return `${opener} ${titleBase.toLowerCase()} ${middle}. This ${disp} mehndi design ${occasion.charAt(0).toLowerCase() + occasion.slice(1)} ${tip}`;
+  const parts = [
+    `${opener} ${titleBase.toLowerCase()} ${middle}.`,
+    `This ${disp} mehndi design ${occasion.charAt(0).toLowerCase() + occasion.slice(1)}`,
+  ];
+  const motifs = motifsOf(titleBase);
+  if (motifs.length > 0) {
+    parts.push(`${MOTIF_LINES[i % MOTIF_LINES.length](motifs.slice(0, 2).join(" and "))}.`);
+  }
+  const tags = TAGS[category] ?? [];
+  const placement = tags.find((t) => PLACEMENT_TAGS.includes(t));
+  if (placement) {
+    parts.push(`${PLACEMENT_LINES[(i * 2 + 1) % PLACEMENT_LINES.length](placement)}.`);
+  }
+  parts.push(tip);
+  return parts.join(" ");
 }
 
 // ── All category slugs ───────────────────────────────────────────────────────
@@ -1017,7 +1064,7 @@ export function generateCategoryDesigns(category: string, count = 500): Design[]
       category,
       tags,
       image,
-      alt:         `${title} – ${CATEGORY_DISPLAY[category] ?? "mehndi"} mehndi design 2026 free download`,
+      alt:         `${title} — ${CATEGORY_DISPLAY[category] ?? "mehndi"} mehndi design`,
       description: buildDescription(category, titleBase, i),
       featured:    i < 6,
       trending:    i % 5 === 0,
