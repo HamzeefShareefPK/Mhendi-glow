@@ -735,7 +735,7 @@ export default function HomeContent() {
             {
               icon: <BookOpen size={18} className="text-blue-500" />,
               title: "Reference Designs",
-              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 3000+ high-resolution designs across 50+ categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
+              text: "Good design references are essential for quality mehndi. MehndiDesignPics offers 1000+ high-resolution designs across 50+ categories, all free to browse. Print your chosen design or keep it on your phone screen for reference while applying. Professional artists build a design library over years of practice.",
             },
             {
               icon: <Droplets size={18} className="text-teal-500" />,
@@ -925,11 +925,11 @@ export default function HomeContent() {
               Pakistan&apos;s #1 Free Mehndi Design Gallery
             </h2>
             <p className="text-henna-300/80 text-sm sm:text-base leading-relaxed mb-8">
-              MehndiDesignPics is your ultimate destination for mehndi design inspiration. We curate the most beautiful, trending, and traditional mehndi designs from across South Asia and the Middle East — completely free. Whether you are a bride planning your wedding mehndi, a professional mehndi artist looking for fresh ideas, a girl wanting Eid mehndi inspiration, or simply a mehndi enthusiast who loves this art form, you will find everything you need here. Our collection spans 50+ categories with over 3000 curated designs, updated daily with the latest trends from Pakistan, India, and beyond.
+              MehndiDesignPics is your ultimate destination for mehndi design inspiration. We curate the most beautiful, trending, and traditional mehndi designs from across South Asia and the Middle East — completely free. Whether you are a bride planning your wedding mehndi, a professional mehndi artist looking for fresh ideas, a girl wanting Eid mehndi inspiration, or simply a mehndi enthusiast who loves this art form, you will find everything you need here. Our collection spans 50+ categories with over 1000 curated designs, updated daily with the latest trends from Pakistan, India, and beyond.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {[
-                { value: "3000+", label: "Curated Designs" },
+                { value: "1000+", label: "Curated Designs" },
                 { value: "50+",   label: "Design Categories" },
                 { value: "100%",  label: "Free to Download" },
                 { value: "Daily", label: "New Additions" },

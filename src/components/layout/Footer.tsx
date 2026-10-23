@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs sm:text-sm text-henna-500 mb-4 sm:mb-6 leading-relaxed max-w-[240px]">
-              Your daily dose of mehndi inspiration. 3000+ beautiful designs for every occasion — completely free.
+              Your daily dose of mehndi inspiration. 1000+ beautiful designs for every occasion — completely free.
             </p>
 
             {/* Social icons */}

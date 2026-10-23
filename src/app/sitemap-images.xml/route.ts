@@ -17,7 +17,7 @@ function xml(s: string): string {
 export async function GET() {
   const base = "https://mehndidesignpics.com";
 
-  // Design pages: hardcoded designs + all 60 generated per category,
+  // Design pages: hardcoded designs + all 20 generated per category,
   // deduplicated by slug. Each entry exposes its image to Google Images.
   const seen = new Set<string>();
   const designEntries: string[] = [];
@@ -43,7 +43,7 @@ export async function GET() {
   };
 
   designs.forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
-  getAllDesigns(60).forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
+  getAllDesigns(20).forEach((d) => pushDesign(d.slug, d.image, d.title, d.description));
 
   const categoryUrls = categories
     .map(

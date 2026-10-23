@@ -87,7 +87,7 @@ export function websiteSchema() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: BASE_URL,
-    description: "Discover 3000+ beautiful mehndi designs — bridal, Arabic, Pakistani, Eid and more. Free download.",
+    description: "Discover 1000+ beautiful mehndi designs — bridal, Arabic, Pakistani, Eid and more. Free download.",
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${BASE_URL}/search?q={search_term_string}` },
@@ -137,7 +137,7 @@ export function imageObjectSchema({
   name, description, imageUrl, slug, category, tags, publishedAt,
 }: {
   name: string; description: string; imageUrl: string;
-  slug: string; category: string; tags: string[]; publishedAt: string;
+  slug: string; category: string; tags: string[]; publishedAt?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -151,8 +151,10 @@ export function imageObjectSchema({
     about: { "@type": "Thing", name: category.replace(/-/g, " ") },
     author: organizationSchema(),
     publisher: organizationSchema(),
-    datePublished: publishedAt,
-    dateModified: publishedAt,
+    // Only assert dates we actually know. Generated gallery designs have no
+    // truthful per-design date; a uniform batch date asserted site-wide is
+    // a false freshness signal, so it is omitted for them.
+    ...(publishedAt ? { datePublished: publishedAt, dateModified: publishedAt } : {}),
     license: `${BASE_URL}/terms`,
     acquireLicensePage: `${BASE_URL}/contact`,
     copyrightNotice: `© ${new Date().getFullYear()} ${SITE_NAME}`,
